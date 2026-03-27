@@ -17,8 +17,8 @@
  *   Callback URL:       https://yourdomain.com/oauth/callback
  */
 
-define('OAUTH_CLIENT_ID',     getenv('OAUTH_CLIENT_ID')     ?: 'YOUR_CLIENT_ID_HERE');
-define('OAUTH_CLIENT_SECRET', getenv('OAUTH_CLIENT_SECRET') ?: 'YOUR_CLIENT_SECRET_HERE');
+define('OAUTH_CLIENT_ID',     getenv('OAUTH_CLIENT_ID')     ?: 'Ov23liloSHwASg3FnFD8');
+define('OAUTH_CLIENT_SECRET', getenv('OAUTH_CLIENT_SECRET') ?: '069e9dfb826a458f58e349add2bf249be65c72f7');
 define('OAUTH_PROVIDER',      'github');
 define('OAUTH_SCOPE',         'repo,user');
 
