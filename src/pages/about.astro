@@ -1,5 +1,6 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
+const base = import.meta.env.BASE_URL;
 ---
 
 <PageLayout
@@ -13,7 +14,7 @@ import PageLayout from '../layouts/PageLayout.astro';
   <div class="about-body">
 
     <img
-      src="/images/bettina.jpg"
+      src={`${base}images/bettina.jpg`}
       alt="Bettina Varwig"
       class="about-photo"
     />
@@ -44,11 +45,11 @@ import PageLayout from '../layouts/PageLayout.astro';
       <p>
         For academic enquiries, please contact the Faculty of Music, University of Cambridge.
         For enquiries about performances and events, please use the
-        <a href="/events">Upcoming Events</a> page.
+        <a href={`${base}events`}>Upcoming Events</a> page.
       </p>
 
       <div style="margin-top: var(--space-lg);">
-        <a href="/about-project" class="btn btn--crimson">About the Project</a>
+        <a href={`${base}about-project`} class="btn btn--crimson">About the Project</a>
       </div>
 
     </div>

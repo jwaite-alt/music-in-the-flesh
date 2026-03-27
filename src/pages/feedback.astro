@@ -1,6 +1,7 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
 import { getCollection } from 'astro:content';
+const base = import.meta.env.BASE_URL;
 
 const performances = await getCollection('performances', ({ data }) => !data.draft && !!data.feedbackFormUrl);
 const sorted = performances.sort(
@@ -60,7 +61,7 @@ const sorted = performances.sort(
       <p class="label" style="color: var(--color-crimson); margin-bottom: 0.5em;">Coming soon</p>
       <p>
         After each performance, a feedback form will be published here. You can also find a link
-        to the feedback form on each individual performance page in the <a href="/archive">Archive</a>.
+        to the feedback form on each individual performance page in the <a href={`${base}archive`}>Archive</a>.
       </p>
     </div>
   )}

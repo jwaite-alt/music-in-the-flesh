@@ -16,7 +16,8 @@ interface Props {
 }
 
 const { title, date, venue, description, href, slug, tag } = Astro.props;
-const link = href ?? (slug ? `/archive/${slug}` : undefined);
+const base = import.meta.env.BASE_URL;
+const link = href ?? (slug ? `${base}archive/${slug}` : undefined);
 
 const dateObj = new Date(date);
 const formattedDate = dateObj.toLocaleDateString('en-GB', {

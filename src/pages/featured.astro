@@ -1,11 +1,12 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
 import { getCollection, render } from 'astro:content';
+const base = import.meta.env.BASE_URL;
 
 const performances = await getCollection('performances', ({ data }) => !data.draft);
 const featured = performances.find(p => p.data.featured);
 
-if (!featured) return Astro.redirect('/archive');
+if (!featured) return Astro.redirect(`${base}archive`);
 
 const { Content } = await render(featured);
 
@@ -74,7 +75,7 @@ const formattedDate = dateObj.toLocaleDateString('en-GB', {
 
   <!-- Archive link -->
   <div style="margin-top: var(--space-xl);">
-    <a href="/archive" class="btn btn--ink">View all past performances</a>
+    <a href={`${base}archive`} class="btn btn--ink">View all past performances</a>
   </div>
 
 </PageLayout>

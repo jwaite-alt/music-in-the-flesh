@@ -1,12 +1,13 @@
 ---
+const base = import.meta.env.BASE_URL;
 const navLinks = [
-  { href: '/',               label: 'Home' },
-  { href: '/about',          label: 'About Bettina' },
-  { href: '/about-project',  label: 'About the Project' },
-  { href: '/featured',       label: 'Featured Performance' },
-  { href: '/archive',        label: 'Archive' },
-  { href: '/events',         label: 'Upcoming Events' },
-  { href: '/feedback',       label: 'Feedback' },
+  { href: base,                        label: 'Home' },
+  { href: `${base}about`,              label: 'About Bettina' },
+  { href: `${base}about-project`,      label: 'About the Project' },
+  { href: `${base}featured`,           label: 'Featured Performance' },
+  { href: `${base}archive`,            label: 'Archive' },
+  { href: `${base}events`,             label: 'Upcoming Events' },
+  { href: `${base}feedback`,           label: 'Feedback' },
 ];
 
 const currentPath = Astro.url.pathname;
@@ -14,7 +15,7 @@ const currentPath = Astro.url.pathname;
 
 <nav class="nav" aria-label="Main navigation">
   <div class="nav__inner container container--wide">
-    <a href="/" class="nav__wordmark" aria-label="Music in the Flesh — Home">
+    <a href={base} class="nav__wordmark" aria-label="Music in the Flesh — Home">
       <span class="nav__wordmark-main">Music in the Flesh</span>
       <span class="nav__wordmark-sub">Bettina Varwig</span>
     </a>

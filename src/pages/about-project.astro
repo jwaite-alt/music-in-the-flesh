@@ -1,5 +1,6 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
+const base = import.meta.env.BASE_URL;
 ---
 
 <PageLayout
@@ -57,8 +58,8 @@ import PageLayout from '../layouts/PageLayout.astro';
     </p>
 
     <div style="margin-top: var(--space-lg); display: flex; gap: var(--space-sm); flex-wrap: wrap;">
-      <a href="/featured" class="btn btn--crimson">Featured Performance</a>
-      <a href="/about" class="btn btn--ink">About Bettina</a>
+      <a href={`${base}featured`} class="btn btn--crimson">Featured Performance</a>
+      <a href={`${base}about`} class="btn btn--ink">About Bettina</a>
     </div>
 
   </div>
