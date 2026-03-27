@@ -34,6 +34,6 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
-          server-dir: /public_html/jwaite.com/music-in-the-flesh/
+          server-dir: /
           dangerous-clean-slate: false
           log-level: verbose
