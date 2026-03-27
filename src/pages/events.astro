@@ -1,0 +1,138 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import { getCollection } from 'astro:content';
+
+const events = await getCollection('events', ({ data }) => !data.draft);
+const upcoming = events
+  .filter(e => new Date(e.data.date) >= new Date())
+  .sort((a, b) => new Date(a.data.date).getTime() - new Date(b.data.date).getTime());
+
+const past = events
+  .filter(e => new Date(e.data.date) < new Date())
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+---
+
+<PageLayout
+  title="Upcoming Events"
+  heading="Upcoming Events"
+  subheading="Performances, talks, and experiments"
+  description="Forthcoming Music in the Flesh events — performances, talks, and research experiments."
+>
+
+  {upcoming.length === 0 ? (
+    <p style="color: var(--color-ink-light); font-style: italic; margin-bottom: var(--space-lg);">
+      No events are currently scheduled. Please check back soon, or register your interest below.
+    </p>
+  ) : (
+    <div style="margin-bottom: var(--space-xl);">
+      {upcoming.map(e => {
+        const dateObj = new Date(e.data.date);
+        const formattedDate = dateObj.toLocaleDateString('en-GB', {
+          day: 'numeric', month: 'long', year: 'numeric'
+        });
+        return (
+          <article class="event-listing">
+            <p class="label event-listing__date">{formattedDate}</p>
+            <h3 class="event-listing__title">{e.data.title}</h3>
+            <p class="event-listing__venue">{e.data.venue}{e.data.location ? `, ${e.data.location}` : ''}</p>
+            <p class="event-listing__desc">{e.data.description}</p>
+            {e.data.ticketUrl && (
+              <a href={e.data.ticketUrl} class="btn btn--crimson" target="_blank" rel="noopener">
+                Tickets / more information
+              </a>
+            )}
+          </article>
+        );
+      })}
+    </div>
+  )}
+
+  <!-- Expression of interest form -->
+  <section class="interest-form section--parchment" style="padding: var(--space-lg);">
+    <h2 class="interest-form__heading">Register your interest</h2>
+    <p style="margin-bottom: var(--space-md); max-width: 54ch; color: var(--color-ink-light);">
+      To be notified of future performances and events, please leave your name and email address.
+      We'll be in touch when new events are confirmed.
+    </p>
+    <!-- Replace this with a Mailchimp/Buttondown embed or simple mailto form -->
+    <form class="interest-form__form" action="mailto:placeholder@example.com" method="post" enctype="text/plain">
+      <div class="form-field">
+        <label for="name" class="label">Name</label>
+        <input type="text" id="name" name="name" autocomplete="name" required />
+      </div>
+      <div class="form-field">
+        <label for="email" class="label">Email</label>
+        <input type="email" id="email" name="email" autocomplete="email" required />
+      </div>
+      <button type="submit" class="btn btn--crimson">Register interest</button>
+    </form>
+  </section>
+
+</PageLayout>
+
+<style>
+  .event-listing {
+    border-top: 1px solid var(--color-kraft);
+    padding-block: var(--space-md);
+  }
+
+  .event-listing__date {
+    color: var(--color-ink-light);
+    margin-bottom: 0.25em;
+  }
+
+  .event-listing__title {
+    font-size: var(--size-xl);
+    color: var(--color-ink);
+    margin-bottom: 0.25em;
+  }
+
+  .event-listing__venue {
+    font-family: var(--font-display);
+    font-style: italic;
+    color: var(--color-slate);
+    margin-bottom: var(--space-sm);
+  }
+
+  .event-listing__desc {
+    color: var(--color-ink-light);
+    max-width: 60ch;
+    margin-bottom: var(--space-sm);
+  }
+
+  .interest-form__heading {
+    color: var(--color-crimson);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wide);
+    font-size: var(--size-xl);
+    margin-bottom: 0.5em;
+  }
+
+  .interest-form__form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    max-width: 440px;
+  }
+
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+  }
+
+  .form-field input {
+    font-family: var(--font-body);
+    font-size: var(--size-base);
+    padding: 0.6em 0.8em;
+    border: 1px solid var(--color-kraft);
+    background-color: var(--color-cream);
+    color: var(--color-ink);
+    outline: none;
+    transition: border-color var(--transition);
+  }
+
+  .form-field input:focus {
+    border-color: var(--color-crimson);
+  }
+</style>

@@ -1,0 +1,171 @@
+---
+const navLinks = [
+  { href: '/',               label: 'Home' },
+  { href: '/about',          label: 'About Bettina' },
+  { href: '/about-project',  label: 'About the Project' },
+  { href: '/featured',       label: 'Featured Performance' },
+  { href: '/archive',        label: 'Archive' },
+  { href: '/events',         label: 'Upcoming Events' },
+  { href: '/feedback',       label: 'Feedback' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<nav class="nav" aria-label="Main navigation">
+  <div class="nav__inner container container--wide">
+    <a href="/" class="nav__wordmark" aria-label="Music in the Flesh — Home">
+      <span class="nav__wordmark-main">Music in the Flesh</span>
+      <span class="nav__wordmark-sub">Bettina Varwig</span>
+    </a>
+
+    <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav__links" id="nav-menu" role="list">
+      {navLinks.map(({ href, label }) => (
+        <li>
+          <a
+            href={href}
+            class={`nav__link ${currentPath === href ? 'nav__link--active' : ''}`}
+            aria-current={currentPath === href ? 'page' : undefined}
+          >
+            {label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</nav>
+
+<script>
+  const toggle = document.querySelector('.nav__toggle') as HTMLButtonElement;
+  const menu   = document.getElementById('nav-menu');
+
+  toggle?.addEventListener('click', () => {
+    const open = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!open));
+    menu?.classList.toggle('nav__links--open');
+  });
+</script>
+
+<style>
+  .nav {
+    background-color: var(--color-cream);
+    border-bottom: 1px solid var(--color-kraft);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .nav__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+    padding-block: var(--space-sm);
+  }
+
+  .nav__wordmark {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    color: var(--color-ink);
+    flex-shrink: 0;
+  }
+
+  .nav__wordmark:hover {
+    opacity: 0.75;
+  }
+
+  .nav__wordmark-main {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--size-md);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wide);
+    color: var(--color-crimson);
+  }
+
+  .nav__wordmark-sub {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: var(--size-sm);
+    color: var(--color-slate);
+    letter-spacing: 0.02em;
+  }
+
+  .nav__links {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    list-style: none;
+  }
+
+  .nav__link {
+    font-family: var(--font-display);
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--color-ink);
+    padding-bottom: 2px;
+    border-bottom: 1px solid transparent;
+    transition: color var(--transition), border-color var(--transition);
+  }
+
+  .nav__link:hover,
+  .nav__link--active {
+    color: var(--color-crimson);
+    border-color: var(--color-crimson);
+    opacity: 1;
+  }
+
+  /* Mobile toggle */
+  .nav__toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+  }
+
+  .nav__toggle span {
+    display: block;
+    width: 24px;
+    height: 1px;
+    background-color: var(--color-ink);
+    transition: transform var(--transition);
+  }
+
+  @media (max-width: 900px) {
+    .nav__toggle {
+      display: flex;
+    }
+
+    .nav__links {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      align-items: flex-start;
+      background-color: var(--color-cream);
+      border-bottom: 1px solid var(--color-kraft);
+      padding: var(--space-sm) var(--space-md);
+      gap: var(--space-sm);
+    }
+
+    .nav__links--open {
+      display: flex;
+    }
+
+    .nav {
+      position: sticky;
+    }
+  }
+</style>

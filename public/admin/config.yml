@@ -1,0 +1,60 @@
+backend:
+  name: github
+  repo: jwaite-alt/music-in-the-flesh
+  branch: main
+  auth_endpoint: /oauth/callback
+
+# Where media uploads go
+media_folder: public/images/uploads
+public_folder: /images/uploads
+
+# ── Collections ────────────────────────────────────────────
+
+collections:
+
+  # ── Performances (Featured + Archive) ──────────────────
+  - name: performances
+    label: Performances
+    label_singular: Performance
+    folder: src/content/performances
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    identifier_field: title
+    summary: "{{title}} — {{date}}"
+    sortable_fields: ["date", "title"]
+    fields:
+      - { label: "Title", name: title, widget: string }
+      - { label: "Date", name: date, widget: datetime, format: "YYYY-MM-DD", date_format: "DD MMMM YYYY", time_format: false }
+      - { label: "Venue", name: venue, widget: string }
+      - { label: "Location (city)", name: location, widget: string, required: false }
+      - { label: "Short description", name: description, widget: text, hint: "Used in listings and previews. 1–3 sentences." }
+      - { label: "Featured performance", name: featured, widget: boolean, default: false, hint: "Tick to show this as the current Featured Performance on the home page." }
+      - { label: "Video URL", name: videoUrl, widget: string, required: false, hint: "Paste a YouTube or Vimeo embed URL (e.g. https://www.youtube.com/embed/xxxxx)" }
+      - { label: "Feedback form URL", name: feedbackFormUrl, widget: string, required: false, hint: "Paste the Google Form embed URL for this performance." }
+      - { label: "Images", name: images, widget: list, required: false, field: { label: Image, name: image, widget: image } }
+      - { label: "Body", name: body, widget: markdown, hint: "Full description, programme notes, reflections. This appears on the individual performance page." }
+      - { label: "Draft (hidden)", name: draft, widget: boolean, default: false, hint: "Tick to hide this from the site." }
+
+  # ── Upcoming Events ─────────────────────────────────────
+  - name: events
+    label: Upcoming Events
+    label_singular: Event
+    folder: src/content/events
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    identifier_field: title
+    summary: "{{title}} — {{date}}"
+    sortable_fields: ["date", "title"]
+    fields:
+      - { label: "Title", name: title, widget: string }
+      - { label: "Date", name: date, widget: datetime, format: "YYYY-MM-DD", date_format: "DD MMMM YYYY", time_format: false }
+      - { label: "Venue", name: venue, widget: string }
+      - { label: "Location (city)", name: location, widget: string, required: false }
+      - { label: "Short description", name: description, widget: text, hint: "Shown in the events listing." }
+      - { label: "Ticket / booking URL", name: ticketUrl, widget: string, required: false }
+      - { label: "Body", name: body, widget: markdown, required: false, hint: "Any additional detail shown when the event has its own page." }
+      - { label: "Draft (hidden)", name: draft, widget: boolean, default: false }

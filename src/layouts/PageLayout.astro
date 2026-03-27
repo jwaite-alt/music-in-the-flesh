@@ -1,0 +1,47 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  heading?: string;
+  subheading?: string;
+  narrow?: boolean;
+}
+
+const { title, description, heading, subheading, narrow = false } = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <header class="page-header section--parchment">
+    <div class="container">
+      {heading && <h1 class="page-header__title">{heading}</h1>}
+      {subheading && <p class="page-header__sub display-subtitle">{subheading}</p>}
+    </div>
+  </header>
+
+  <div class={`page-body section ${narrow ? 'container container--prose' : 'container'}`}>
+    <slot />
+  </div>
+</BaseLayout>
+
+<style>
+  .page-header {
+    border-bottom: 1px solid var(--color-kraft);
+    padding-block: var(--space-lg);
+  }
+
+  .page-header__title {
+    color: var(--color-crimson);
+    font-size: var(--size-3xl);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wide);
+  }
+
+  .page-header__sub {
+    margin-top: 0.4em;
+    font-size: var(--size-md);
+    color: var(--color-slate);
+  }
+</style>

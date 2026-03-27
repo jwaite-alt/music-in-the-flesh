@@ -1,17 +1,217 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import EventCard from '../components/EventCard.astro';
+import { getCollection } from 'astro:content';
 
+const performances = await getCollection('performances', ({ data }) => !data.draft);
+const featured = performances.find(p => p.data.featured);
+const recentArchive = performances
+  .filter(p => !p.data.featured)
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+  .slice(0, 2);
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="Music in the Flesh">
+
+  <!-- Hero -->
+  <section class="hero section--parchment">
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <p class="label hero__kicker">Bettina Varwig · University of Cambridge</p>
+        <h1 class="hero__title">
+          <span class="hero__title-music">Music</span>
+          <span class="hero__title-in">in the</span>
+          <span class="hero__title-flesh">Flesh</span>
+        </h1>
+        <p class="hero__subtitle display-subtitle">An Early Modern Musical Physiology</p>
+        <p class="hero__intro">
+          What did music do to the body in the seventeenth century? This project
+          reimagines the lived experiences of music-making subjects — composers,
+          performers, listeners — and asks what those experiences can teach us today.
+        </p>
+        <div class="hero__actions">
+          <a href="/about-project" class="btn btn--crimson">About the Project</a>
+          <a href="/featured" class="btn btn--ink">Featured Performance</a>
+        </div>
+      </div>
+      <div class="hero__book">
+        <img
+          src="/images/book-cover.jpg"
+          alt="Music in the Flesh — An Early Modern Musical Physiology, by Bettina Varwig"
+          class="hero__cover"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Book description -->
+  <section class="section">
+    <div class="container container--prose">
+      <p class="label" style="color: var(--color-crimson); margin-bottom: 1em;">A corporeal history of music-making in early modern Europe</p>
+      <p>
+        <em>Music in the Flesh</em> reimagines the lived experiences of music-making subjects —
+        composers, performers, listeners — in the long seventeenth century. There are countless
+        historical testimonies of the powerful effects of music upon the early modern body; it is
+        described as moving, ravishing, painful, dangerous, curative, and miraculous while affecting
+        "the circulation of the humors, the purification of the blood, the dilation of the vessels and pores."
+      </p>
+      <p>
+        How were these early modern European bodies constituted that music generated such potent
+        bodily-spiritual effects? Bettina Varwig argues that early modern music-making practices
+        challenge our modern understanding of human nature as a mind-body dichotomy. Instead, they
+        persistently affirm a more integrated anthropology, in which body, soul, and spirit remain
+        inextricably entangled.
+      </p>
+      <p>
+        Moving with ease across repertories and regions, sacred and vernacular musics, and domestic
+        and public settings, Varwig sketches a "musical physiology" that is as historically
+        illuminating as it is relevant for present-day performance.
+      </p>
+      <a href="/about" class="btn btn--crimson" style="margin-top: var(--space-md);">About Bettina Varwig</a>
+    </div>
+  </section>
+
+  <!-- Featured performance -->
+  {featured && (
+    <section class="section section--parchment">
+      <div class="container">
+        <p class="label" style="color: var(--color-crimson); margin-bottom: var(--space-sm);">Featured Performance</p>
+        <EventCard
+          title={featured.data.title}
+          date={featured.data.date}
+          venue={featured.data.venue}
+          description={featured.data.description}
+          slug={featured.id}
+          tag="Current"
+        />
+        <a href="/featured" class="btn btn--crimson" style="margin-top: var(--space-sm);">Full details</a>
+      </div>
+    </section>
+  )}
+
+  <!-- Archive preview -->
+  {recentArchive.length > 0 && (
+    <section class="section">
+      <div class="container">
+        <h2 class="section-heading">From the Archive</h2>
+        <hr class="rule rule--crimson" />
+        {recentArchive.map(p => (
+          <EventCard
+            title={p.data.title}
+            date={p.data.date}
+            venue={p.data.venue}
+            description={p.data.description}
+            slug={p.id}
+          />
+        ))}
+        <a href="/archive" class="btn btn--ink" style="margin-top: var(--space-sm);">View full archive</a>
+      </div>
+    </section>
+  )}
+
+</BaseLayout>
+
+<style>
+  .hero {
+    border-bottom: 1px solid var(--color-kraft);
+  }
+
+  .hero__inner {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: var(--space-xl);
+    padding-block: var(--space-2xl);
+  }
+
+  .hero__kicker {
+    margin-bottom: var(--space-sm);
+  }
+
+  .hero__title {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    margin-bottom: 0.5em;
+  }
+
+  .hero__title-music {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--size-4xl);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wide);
+    color: var(--color-crimson);
+  }
+
+  .hero__title-in {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 400;
+    font-size: var(--size-2xl);
+    color: var(--color-slate);
+    margin-left: 0.1em;
+    margin-block: 0.1em;
+  }
+
+  .hero__title-flesh {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--size-4xl);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wide);
+    color: var(--color-crimson);
+  }
+
+  .hero__subtitle {
+    font-size: var(--size-lg);
+    margin-bottom: var(--space-md);
+  }
+
+  .hero__intro {
+    max-width: 54ch;
+    margin-bottom: var(--space-md);
+    color: var(--color-ink-light);
+  }
+
+  .hero__actions {
+    display: flex;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+  }
+
+  .hero__book {
+    flex-shrink: 0;
+    align-self: center;
+  }
+
+  .hero__cover {
+    width: 340px;
+    height: auto;
+    box-shadow: 8px 12px 32px rgba(28, 21, 13, 0.25);
+  }
+
+  .section-heading {
+    color: var(--color-crimson);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wide);
+    font-size: var(--size-xl);
+    margin-bottom: 0.25em;
+  }
+
+  @media (max-width: 768px) {
+    .hero__inner {
+      grid-template-columns: 1fr;
+      padding-block: var(--space-xl);
+    }
+
+    .hero__book {
+      display: none;
+    }
+
+    .hero__title-music,
+    .hero__title-flesh {
+      font-size: var(--size-3xl);
+    }
+  }
+</style>

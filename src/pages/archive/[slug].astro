@@ -1,0 +1,66 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const performances = await getCollection('performances', ({ data }) => !data.draft);
+  return performances.map(p => ({
+    params: { slug: p.id },
+    props: { performance: p },
+  }));
+}
+
+const { performance } = Astro.props;
+const { Content } = await render(performance);
+
+const dateObj = new Date(performance.data.date);
+const formattedDate = dateObj.toLocaleDateString('en-GB', {
+  day: 'numeric', month: 'long', year: 'numeric'
+});
+---
+
+<PageLayout
+  title={performance.data.title}
+  heading={performance.data.title}
+  subheading={`${formattedDate} · ${performance.data.venue}${performance.data.location ? ', ' + performance.data.location : ''}`}
+  description={performance.data.description}
+>
+
+  {performance.data.videoUrl ? (
+    <div class="video-embed" style="margin-bottom: var(--space-lg);">
+      <iframe
+        src={performance.data.videoUrl}
+        title={`Video: ${performance.data.title}`}
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+  ) : null}
+
+  {performance.data.images && performance.data.images.length > 0 && (
+    <div class="gallery" style="margin-bottom: var(--space-lg);">
+      {performance.data.images.map((src, i) => (
+        <img src={src} alt={`${performance.data.title} — image ${i + 1}`} />
+      ))}
+    </div>
+  )}
+
+  <div class="prose">
+    <Content />
+  </div>
+
+  {performance.data.feedbackFormUrl && (
+    <div class="feedback-cta" style="margin-top: var(--space-lg); padding: var(--space-md); background-color: var(--color-parchment);">
+      <p class="label">Attended this performance?</p>
+      <p style="margin-bottom: var(--space-sm);">We'd love to hear about your experience.</p>
+      <a href={performance.data.feedbackFormUrl} class="btn btn--crimson" target="_blank" rel="noopener">
+        Share your feedback
+      </a>
+    </div>
+  )}
+
+  <div style="margin-top: var(--space-xl);">
+    <a href="/archive" class="btn btn--ink">&larr; Back to archive</a>
+  </div>
+
+</PageLayout>

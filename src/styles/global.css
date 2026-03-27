@@ -1,0 +1,304 @@
+/* ============================================================
+   MUSIC IN THE FLESH — Design System
+   Shared design tokens. Sibling sites (Gospel Oak Chorale,
+   Music in Motion) inherit this structure and override variables.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
+/* ── Colour tokens ── */
+:root {
+  --color-cream:     #F5ECD7;   /* lightest page background */
+  --color-parchment: #E8D5B0;   /* warm section backgrounds */
+  --color-kraft:     #C4A882;   /* darker tan, borders, dividers */
+  --color-crimson:   #8C1C13;   /* primary heading / accent */
+  --color-slate:     #4A5E7A;   /* secondary accent (subtitle blue-grey) */
+  --color-ink:       #1C150D;   /* body text */
+  --color-ink-light: #4A3B2A;   /* secondary text, captions */
+
+  /* ── Typography tokens ── */
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'EB Garamond', Georgia, serif;
+
+  --size-xs:   0.8rem;
+  --size-sm:   0.95rem;
+  --size-base: 1.2rem;
+  --size-md:   1.35rem;
+  --size-lg:   1.6rem;
+  --size-xl:   2rem;
+  --size-2xl:  2.75rem;
+  --size-3xl:  3.75rem;
+  --size-4xl:  5rem;
+
+  --leading-tight:  1.15;
+  --leading-prose:  1.7;
+  --leading-loose:  2;
+
+  --tracking-wide:  0.08em;
+  --tracking-wider: 0.15em;
+
+  /* ── Spacing ── */
+  --space-xs:  0.5rem;
+  --space-sm:  1rem;
+  --space-md:  2rem;
+  --space-lg:  3rem;
+  --space-xl:  5rem;
+  --space-2xl: 8rem;
+
+  /* ── Layout ── */
+  --max-prose: 68ch;
+  --max-wide:  1100px;
+  --max-full:  1400px;
+
+  /* ── Transitions ── */
+  --transition: 200ms ease;
+}
+
+/* ── Reset & base ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: var(--size-base);
+  line-height: var(--leading-prose);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--color-crimson);
+  text-decoration: none;
+  transition: opacity var(--transition);
+}
+
+a:hover {
+  opacity: 0.75;
+}
+
+/* ── Typography ── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: var(--leading-tight);
+  color: var(--color-ink);
+}
+
+h1 { font-size: var(--size-3xl); }
+h2 { font-size: var(--size-2xl); }
+h3 { font-size: var(--size-xl); }
+h4 { font-size: var(--size-lg); }
+
+p + p {
+  margin-top: 1em;
+}
+
+em {
+  font-style: italic;
+}
+
+/* ── Utility classes ── */
+.container {
+  width: 100%;
+  max-width: var(--max-wide);
+  margin-inline: auto;
+  padding-inline: var(--space-md);
+}
+
+.container--prose {
+  max-width: var(--max-prose);
+}
+
+.container--wide {
+  max-width: var(--max-full);
+}
+
+.section {
+  padding-block: var(--space-xl);
+}
+
+.section--parchment {
+  background-color: var(--color-parchment);
+}
+
+.section--kraft {
+  background-color: var(--color-kraft);
+}
+
+/* ── Display heading treatment (cover-style) ── */
+.display-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-crimson);
+}
+
+.display-subtitle {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--color-slate);
+  letter-spacing: 0.02em;
+}
+
+.label {
+  font-family: var(--font-display);
+  font-size: var(--size-xs);
+  font-weight: 600;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--color-ink-light);
+}
+
+/* ── Decorative rule ── */
+.rule {
+  border: none;
+  border-top: 1px solid var(--color-kraft);
+  margin-block: var(--space-md);
+}
+
+.rule--crimson {
+  border-color: var(--color-crimson);
+  opacity: 0.4;
+}
+
+/* ── Prose content area ── */
+.prose {
+  max-width: var(--max-prose);
+}
+
+.prose h2 {
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-sm);
+}
+
+.prose h3 {
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-xs);
+}
+
+.prose p {
+  margin-top: 1em;
+}
+
+.prose ul, .prose ol {
+  margin-top: 1em;
+  margin-left: var(--space-md);
+}
+
+.prose li + li {
+  margin-top: 0.4em;
+}
+
+.prose blockquote {
+  border-left: 3px solid var(--color-crimson);
+  padding-left: var(--space-sm);
+  margin-block: var(--space-md);
+  color: var(--color-ink-light);
+  font-style: italic;
+}
+
+/* ── Buttons ── */
+.btn {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: var(--size-sm);
+  font-weight: 600;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  padding: 0.75em 2em;
+  border: 1px solid currentColor;
+  transition: background-color var(--transition), color var(--transition);
+  cursor: pointer;
+}
+
+.btn--crimson {
+  color: var(--color-crimson);
+  border-color: var(--color-crimson);
+}
+
+.btn--crimson:hover {
+  background-color: var(--color-crimson);
+  color: var(--color-cream);
+  opacity: 1;
+}
+
+.btn--ink {
+  color: var(--color-ink);
+  border-color: var(--color-ink);
+}
+
+.btn--ink:hover {
+  background-color: var(--color-ink);
+  color: var(--color-cream);
+  opacity: 1;
+}
+
+/* ── Video embed ── */
+.video-embed {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 */
+  background-color: var(--color-ink);
+}
+
+.video-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ── Image gallery ── */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-sm);
+  margin-block: var(--space-md);
+}
+
+.gallery img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  filter: sepia(10%);
+  transition: filter var(--transition);
+}
+
+.gallery img:hover {
+  filter: sepia(0%);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  :root {
+    --size-3xl: 2.5rem;
+    --size-2xl: 2rem;
+    --size-xl:  1.625rem;
+  }
+
+  .container {
+    padding-inline: var(--space-sm);
+  }
+
+  .section {
+    padding-block: var(--space-lg);
+  }
+}

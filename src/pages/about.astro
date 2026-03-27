@@ -1,0 +1,83 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+---
+
+<PageLayout
+  title="About Bettina"
+  heading="Bettina Varwig"
+  subheading="Professor of Music History · University of Cambridge"
+  description="Bettina Varwig — professor of music history and fellow of Emmanuel College, University of Cambridge."
+  narrow={false}
+>
+
+  <div class="about-body">
+
+    <img
+      src="/images/bettina.jpg"
+      alt="Bettina Varwig"
+      class="about-photo"
+    />
+
+    <div class="prose">
+
+      <p>
+        <strong>Bettina Varwig</strong> is professor of music history and a fellow of Emmanuel College
+        at the University of Cambridge. Her research centres on music in early modern Europe, with
+        particular attention to the intersections between music, the body, theology, and affect.
+      </p>
+
+      <p>
+        She is author of <em>Music in the Flesh: An Early Modern Musical Physiology</em> (University
+        of Chicago Press), <em>Histories of Heinrich Schütz</em>, and editor of <em>Rethinking Bach</em>.
+      </p>
+
+      <h2>Publications</h2>
+
+      <ul>
+        <li><em>Music in the Flesh: An Early Modern Musical Physiology</em> (University of Chicago Press)</li>
+        <li><em>Histories of Heinrich Schütz</em> (Cambridge University Press)</li>
+        <li><em>Rethinking Bach</em> (editor, Oxford University Press)</li>
+      </ul>
+
+      <h2>Contact</h2>
+
+      <p>
+        For academic enquiries, please contact the Faculty of Music, University of Cambridge.
+        For enquiries about performances and events, please use the
+        <a href="/events">Upcoming Events</a> page.
+      </p>
+
+      <div style="margin-top: var(--space-lg);">
+        <a href="/about-project" class="btn btn--crimson">About the Project</a>
+      </div>
+
+    </div>
+  </div>
+
+</PageLayout>
+
+<style>
+  .about-body {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 60ch);
+    gap: var(--space-xl);
+    align-items: start;
+  }
+
+  .about-photo {
+    width: 100%;
+    height: auto;
+    filter: grayscale(20%) sepia(10%);
+    border: 1px solid var(--color-kraft);
+  }
+
+  @media (max-width: 768px) {
+    .about-body {
+      grid-template-columns: 1fr;
+    }
+
+    .about-photo {
+      max-width: 200px;
+    }
+  }
+</style>

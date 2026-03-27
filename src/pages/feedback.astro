@@ -1,0 +1,100 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import { getCollection } from 'astro:content';
+
+const performances = await getCollection('performances', ({ data }) => !data.draft && !!data.feedbackFormUrl);
+const sorted = performances.sort(
+  (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+);
+---
+
+<PageLayout
+  title="Feedback"
+  heading="Feedback"
+  subheading="Share your experience of Music in the Flesh events"
+  description="Audience feedback forms for Music in the Flesh performances."
+>
+
+  <p class="prose" style="margin-bottom: var(--space-lg); color: var(--color-ink-light);">
+    Audience response is an important part of this research project. If you attended a
+    <em>Music in the Flesh</em> performance, we'd welcome your reflections — on the music,
+    your bodily and emotional experience, and anything else that struck you. Responses
+    feed directly into Bettina Varwig's ongoing research.
+  </p>
+
+  {sorted.length === 0 ? (
+    <div class="no-forms">
+      <p style="font-style: italic;">
+        Feedback forms for upcoming performances will appear here after each event.
+      </p>
+    </div>
+  ) : (
+    sorted.map(p => {
+      const dateObj = new Date(p.data.date);
+      const formattedDate = dateObj.toLocaleDateString('en-GB', {
+        day: 'numeric', month: 'long', year: 'numeric'
+      });
+      return (
+        <div class="feedback-entry">
+          <p class="label" style="color: var(--color-ink-light);">{formattedDate} · {p.data.venue}</p>
+          <h2 class="feedback-entry__title">{p.data.title}</h2>
+          <div class="feedback-embed">
+            <iframe
+              src={p.data.feedbackFormUrl}
+              title={`Feedback form: ${p.data.title}`}
+              frameborder="0"
+              marginheight="0"
+              marginwidth="0"
+            >
+              Loading…
+            </iframe>
+          </div>
+        </div>
+      );
+    })
+  )}
+
+  <!-- Placeholder shown when no forms are linked yet -->
+  {sorted.length === 0 && (
+    <div class="feedback-placeholder section--parchment" style="padding: var(--space-lg); margin-top: var(--space-lg);">
+      <p class="label" style="color: var(--color-crimson); margin-bottom: 0.5em;">Coming soon</p>
+      <p>
+        After each performance, a feedback form will be published here. You can also find a link
+        to the feedback form on each individual performance page in the <a href="/archive">Archive</a>.
+      </p>
+    </div>
+  )}
+
+</PageLayout>
+
+<style>
+  .feedback-entry {
+    margin-bottom: var(--space-xl);
+    padding-bottom: var(--space-xl);
+    border-bottom: 1px solid var(--color-kraft);
+  }
+
+  .feedback-entry__title {
+    color: var(--color-crimson);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wide);
+    font-size: var(--size-xl);
+    margin-top: 0.25em;
+    margin-bottom: var(--space-md);
+  }
+
+  .feedback-embed {
+    width: 100%;
+  }
+
+  .feedback-embed iframe {
+    width: 100%;
+    min-height: 600px;
+    border: 1px solid var(--color-kraft);
+  }
+
+  .no-forms {
+    color: var(--color-ink-light);
+    font-style: italic;
+  }
+</style>
