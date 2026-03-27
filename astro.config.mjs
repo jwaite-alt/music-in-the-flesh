@@ -4,5 +4,5 @@ import { defineConfig } from 'astro/config';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://jwaite.com',
-  base: '/music-in-the-flesh',
+  base: '/musicintheflesh',
 });
