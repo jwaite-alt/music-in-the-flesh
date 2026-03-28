@@ -1,5 +1,5 @@
 ---
-hero_intro: What did music do to the body in the seventeenth century? This project reimagines the lived experiences of music-making subjects - composers, performers, listeners - and asks what those experiences can teach us today.
+hero_intro: What did music do to the body in the seventeenth century? This project reimagines the lived experiences of music-making subjects - composers, performers, listeners - and asks what those experiences might teach us today.
 ---
 
 _Music in the Flesh_ reimagines the lived experiences of music-making subjects — composers, performers, listeners — in the long seventeenth century. There are countless historical testimonies of the powerful effects of music upon the early modern body; it is described as moving, ravishing, painful, dangerous, curative, and miraculous while affecting "the circulation of the humors, the purification of the blood, the dilation of the vessels and pores."
