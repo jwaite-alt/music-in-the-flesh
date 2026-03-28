@@ -54,8 +54,12 @@ const past = events
       To be notified of future performances and events, please leave your name and email address.
       We'll be in touch when new events are confirmed.
     </p>
-    <!-- Replace this with a Mailchimp/Buttondown embed or simple mailto form -->
-    <form class="interest-form__form" action="mailto:placeholder@example.com" method="post" enctype="text/plain">
+    <form class="interest-form__form" id="interest-form" novalidate>
+      <!-- Honeypot: hidden from real users, bots fill it in -->
+      <div class="hp-field" aria-hidden="true">
+        <label for="website">Website</label>
+        <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+      </div>
       <div class="form-field">
         <label for="name" class="label">Name</label>
         <input type="text" id="name" name="name" autocomplete="name" required />
@@ -64,9 +68,60 @@ const past = events
         <label for="email" class="label">Email</label>
         <input type="email" id="email" name="email" autocomplete="email" required />
       </div>
-      <button type="submit" class="btn btn--crimson">Register interest</button>
+      <button type="submit" class="btn btn--crimson" id="interest-submit">Register interest</button>
+      <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
     </form>
   </section>
+
+  <script>
+    const FORM_ENDPOINT = 'PASTE_YOUR_APPS_SCRIPT_URL_HERE';
+
+    const form   = document.getElementById('interest-form');
+    const btn    = document.getElementById('interest-submit');
+    const status = document.getElementById('form-status');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const name    = form.name.value.trim();
+      const email   = form.email.value.trim();
+      const website = form.website.value; // honeypot
+
+      if (!name || !email) {
+        showStatus('Please fill in both fields.', 'error');
+        return;
+      }
+
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+      showStatus('', '');
+
+      try {
+        const res = await fetch(FORM_ENDPOINT, {
+          method: 'POST',
+          body: JSON.stringify({ name, email, website }),
+        });
+        const json = await res.json();
+
+        if (json.status === 'ok') {
+          form.reset();
+          btn.textContent = 'Sent';
+          showStatus("Thank you \u2014 we\u2019ll be in touch when new events are confirmed.", 'success');
+        } else {
+          throw new Error(json.message || 'Unexpected error');
+        }
+      } catch (err) {
+        btn.disabled = false;
+        btn.textContent = 'Register interest';
+        showStatus('Something went wrong. Please try again or email us directly.', 'error');
+      }
+    });
+
+    function showStatus(msg, type) {
+      status.textContent = msg;
+      status.className = 'form-status' + (type ? ' form-status--' + type : '');
+    }
+  </script>
 
 </PageLayout>
 
@@ -135,4 +190,21 @@ const past = events
   .form-field input:focus {
     border-color: var(--color-crimson);
   }
+
+  /* Honeypot — visually hidden but not display:none (some bots skip those) */
+  .hp-field {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  .form-status {
+    font-size: var(--size-sm);
+    min-height: 1.4em;
+  }
+
+  .form-status--success { color: var(--color-slate); }
+  .form-status--error   { color: var(--color-crimson); }
 </style>
