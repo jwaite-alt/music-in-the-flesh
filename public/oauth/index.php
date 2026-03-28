@@ -34,8 +34,7 @@ if ($action === 'auth' || $action === 'index.php') {
         'client_id'    => OAUTH_CLIENT_ID,
         'scope'        => OAUTH_SCOPE,
         'state'        => $state,
-        'redirect_uri' => (isset($_SERVER['HTTPS']) ? 'https' : 'http')
-                          . '://' . $_SERVER['HTTP_HOST'] . '/oauth/callback',
+        'redirect_uri' => 'https://jwaite.com/musicintheflesh/oauth/callback',
     ]);
 
     header('Location: https://github.com/login/oauth/authorize?' . $params);
@@ -62,8 +61,7 @@ if ($action === 'callback') {
                 'client_id'     => OAUTH_CLIENT_ID,
                 'client_secret' => OAUTH_CLIENT_SECRET,
                 'code'          => $code,
-                'redirect_uri'  => (isset($_SERVER['HTTPS']) ? 'https' : 'http')
-                                   . '://' . $_SERVER['HTTP_HOST'] . '/oauth/callback',
+                'redirect_uri'  => 'https://jwaite.com/musicintheflesh/oauth/callback',
             ]),
         ]])
     );

@@ -2,7 +2,8 @@ backend:
   name: github
   repo: jwaite-alt/music-in-the-flesh
   branch: main
-  auth_endpoint: /oauth/callback
+  base_url: https://jwaite.com/musicintheflesh
+  auth_endpoint: /oauth/auth
 
 # Where media uploads go
 media_folder: public/images/uploads
