@@ -1,6 +1,7 @@
 <?php
 /**
  * GitHub OAuth handler for Decap CMS
+ * Handshake pattern matches sveltia-cms-auth reference implementation.
  */
 
 define('OAUTH_CLIENT_ID',     getenv('OAUTH_CLIENT_ID')     ?: 'Ov23liloSHwASg3FnFD8');
@@ -39,8 +40,7 @@ if ($action === 'callback') {
     $state = $_GET['state'] ?? '';
 
     if (empty($code) || $state !== ($_COOKIE['oauth_state'] ?? '')) {
-        $cookieStatus = isset($_COOKIE['oauth_state']) ? 'present (mismatch)' : 'MISSING';
-        renderCallback('error', null, 'State check failed — cookie ' . $cookieStatus);
+        renderCallback('error', null, 'State check failed — please try again.');
         exit;
     }
 
@@ -63,7 +63,7 @@ if ($action === 'callback') {
     curl_close($ch);
 
     if ($curlError) {
-        renderCallback('error', null, 'cURL error: ' . $curlError);
+        renderCallback('error', null, 'Connection error: ' . $curlError);
         exit;
     }
 
@@ -72,64 +72,34 @@ if ($action === 'callback') {
     if (!empty($data['access_token'])) {
         renderCallback('success', $data['access_token'], null);
     } else {
-        renderCallback('error', null, $data['error_description'] ?? $response ?? 'Empty response from GitHub');
+        renderCallback('error', null, $data['error_description'] ?? 'Unknown error from GitHub');
     }
     exit;
 }
 
-// ── Render the callback page ─────────────────────────────────────────────────
-function renderCallback(string $status, ?string $token, ?string $errorMsg): void {
+// ── Render callback page ─────────────────────────────────────────────────────
+function renderCallback(string $status, ?string $token, ?string $error): void {
+    $provider = 'github';
+
+    // Build the content object exactly as the reference implementation does
+    if ($status === 'success') {
+        $content = json_encode(['provider' => $provider, 'token' => $token]);
+    } else {
+        $content = json_encode(['provider' => $provider, 'error' => $error]);
+    }
+
+    $message = 'authorization:' . $provider . ':' . $status . ':' . $content;
 ?>
-<!doctype html>
-<html>
-<head><meta charset="utf-8"><title>Authenticating…</title></head>
-<body>
-<p id="st">Completing sign-in…</p>
-<script>
-(function () {
-    var STATUS   = <?= json_encode($status) ?>;
-    var TOKEN    = <?= json_encode($token) ?>;
-    var ERROR    = <?= json_encode($errorMsg) ?>;
-    var PROVIDER = 'github';
-
-    // Build message exactly as Decap expects
-    var payload = STATUS === 'success'
-        ? JSON.stringify({ token: TOKEN, provider: PROVIDER })
-        : JSON.stringify({ error: ERROR,  provider: PROVIDER });
-    var msg = 'authorization:' + PROVIDER + ':' + STATUS + ':' + payload;
-
-    document.getElementById('st').textContent =
-        STATUS === 'success' ? 'Signed in — you may close this window.' : 'Error: ' + ERROR;
-
-    if (!window.opener) {
-        document.getElementById('st').textContent += ' (No opener — please close this tab manually.)';
-        return;
+<!doctype html><html><head><meta charset="utf-8"><title>Authenticating…</title></head><body><script>
+(() => {
+  const msg = <?= json_encode($message) ?>;
+  window.addEventListener('message', ({ data, origin }) => {
+    if (data === 'authorizing:github') {
+      window.opener?.postMessage(msg, origin);
     }
-
-    var sent = false;
-    function send(targetOrigin) {
-        if (sent) return;
-        sent = true;
-        window.opener.postMessage(msg, targetOrigin || '*');
-        // Give the message time to deliver before closing
-        setTimeout(function () { window.close(); }, 800);
-    }
-
-    // Approach 1 (older Decap / reference impl): handshake — opener responds to
-    // "authorizing:github", we reply with the token using its origin.
-    window.addEventListener('message', function (e) {
-        if (e.data === 'authorizing:' + PROVIDER || typeof e.data === 'string') {
-            send(e.origin);
-        }
-    }, false);
-    window.opener.postMessage('authorizing:' + PROVIDER, '*');
-
-    // Approach 2 (newer Decap): post directly without waiting for handshake.
-    // Fires after 1 s if the handshake never comes back.
-    setTimeout(function () { send('*'); }, 1000);
+  });
+  window.opener?.postMessage('authorizing:github', '*');
 })();
-</script>
-</body>
-</html>
+</script></body></html>
 <?php
 }
