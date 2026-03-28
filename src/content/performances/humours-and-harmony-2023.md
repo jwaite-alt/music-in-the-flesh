@@ -4,7 +4,7 @@ date: 2026-03-28
 venue: Emmanuel College Chapel
 location: Cambridge
 description: A chamber performance exploring the intersection of early modern medical thought and vocal polyphony. This event served as a pilot for the embodied listening experiments that would develop into the Bodies in Sound series.
-featured: false
+featured: true
 videoUrl: ''
 feedbackFormUrl: ''
 images: []
