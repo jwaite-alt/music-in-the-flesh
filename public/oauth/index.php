@@ -1,13 +1,49 @@
 <?php
 /**
- * GitHub OAuth handler for Decap CMS
+ * GitHub OAuth handler for Sveltia/Decap CMS
  * Handshake pattern matches sveltia-cms-auth reference implementation.
+ *
+ * CREDENTIALS
+ * -----------
+ * This script needs a GitHub OAuth App Client ID and Secret.
+ * Two ways to provide them (in order of preference):
+ *
+ * 1. Server environment variables (recommended):
+ *    Set OAUTH_CLIENT_ID and OAUTH_CLIENT_SECRET via your server config,
+ *    cPanel Environment Variables, or .htaccess SetEnv directives.
+ *
+ * 2. Local credentials file (simpler for shared hosting):
+ *    Copy credentials.php.example → credentials.php in this directory,
+ *    fill in the values, and ensure credentials.php is NOT committed to git.
+ *
+ * REDIRECT URI (update when moving to a new domain)
+ * -----------
+ * Also set OAUTH_REDIRECT_URI as an environment variable, or update
+ * credentials.php. Must match the callback URL in the GitHub OAuth App.
  */
 
-define('OAUTH_CLIENT_ID',     getenv('OAUTH_CLIENT_ID')     ?: 'Ov23liloSHwASg3FnFD8');
-define('OAUTH_CLIENT_SECRET', getenv('OAUTH_CLIENT_SECRET') ?: '069e9dfb826a458f58e349add2bf249be65c72f7');
-define('OAUTH_SCOPE',         'repo,user');
-define('REDIRECT_URI',        'https://jwaite.com/musicintheflesh/oauth/callback');
+// ── Load credentials ─────────────────────────────────────────────────────────
+$clientId     = getenv('OAUTH_CLIENT_ID');
+$clientSecret = getenv('OAUTH_CLIENT_SECRET');
+$redirectUri  = getenv('OAUTH_REDIRECT_URI');
+
+// Fall back to local credentials file if env vars not set
+$credFile = __DIR__ . '/credentials.php';
+if ((!$clientId || !$clientSecret) && file_exists($credFile)) {
+    require_once $credFile;
+}
+
+if (!$clientId || !$clientSecret) {
+    http_response_code(500);
+    die('OAuth credentials not configured. See comments in index.php.');
+}
+
+if (!$redirectUri) {
+    http_response_code(500);
+    die('OAUTH_REDIRECT_URI not configured. See comments in index.php.');
+}
+
+define('OAUTH_SCOPE', 'repo,user');
 
 $path   = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $action = basename($path);
@@ -24,10 +60,10 @@ if ($action === 'auth' || $action === 'index.php') {
     ]);
 
     $params = http_build_query([
-        'client_id'    => OAUTH_CLIENT_ID,
+        'client_id'    => $clientId,
         'scope'        => OAUTH_SCOPE,
         'state'        => $state,
-        'redirect_uri' => REDIRECT_URI,
+        'redirect_uri' => $redirectUri,
     ]);
 
     header('Location: https://github.com/login/oauth/authorize?' . $params);
@@ -49,10 +85,10 @@ if ($action === 'callback') {
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_POST           => true,
         CURLOPT_POSTFIELDS     => http_build_query([
-            'client_id'     => OAUTH_CLIENT_ID,
-            'client_secret' => OAUTH_CLIENT_SECRET,
+            'client_id'     => $clientId,
+            'client_secret' => $clientSecret,
             'code'          => $code,
-            'redirect_uri'  => REDIRECT_URI,
+            'redirect_uri'  => $redirectUri,
         ]),
         CURLOPT_HTTPHEADER     => ['Accept: application/json'],
         CURLOPT_SSL_VERIFYPEER => true,
@@ -81,7 +117,6 @@ if ($action === 'callback') {
 function renderCallback(string $status, ?string $token, ?string $error): void {
     $provider = 'github';
 
-    // Build the content object exactly as the reference implementation does
     if ($status === 'success') {
         $content = json_encode(['provider' => $provider, 'token' => $token]);
     } else {
