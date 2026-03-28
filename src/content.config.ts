@@ -39,6 +39,7 @@ const events = defineCollection({
 const pages = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/pages' }),
   schema: z.object({
+    title: z.string().optional(),
     hero_intro: z.string().optional(),
   }),
 });

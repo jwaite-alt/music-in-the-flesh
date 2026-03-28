@@ -27,11 +27,13 @@ collections:
         label: About Bettina
         file: src/content/pages/about.md
         fields:
+          - { label: "Title", name: title, widget: string }
           - { label: "Bio", name: body, widget: markdown, hint: "Biography, publications, contact information." }
       - name: about-project
         label: About the Project
         file: src/content/pages/about-project.md
         fields:
+          - { label: "Title", name: title, widget: string }
           - { label: "Project description", name: body, widget: markdown, hint: "Full description of the project and its intellectual aims." }
 
   # ── Performances (Featured + Archive) ──────────────────

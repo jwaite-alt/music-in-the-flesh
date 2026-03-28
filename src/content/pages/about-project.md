@@ -1,4 +1,5 @@
 ---
+title: About the Project
 ---
 
 *Music in the Flesh* began as a scholarly monograph and has grown into a broader project connecting academic research with live performance. The performance experiments documented on this site explore what early modern ideas about music and the body might mean in practice — for performers, for listeners, and for the ways we think about musical experience today.
