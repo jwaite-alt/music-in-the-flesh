@@ -1,19 +1,19 @@
 ---
-title: "Humours and Harmony"
-date: "2023-05-08"
-venue: "Emmanuel College Chapel"
-location: "Cambridge"
-description: "A chamber performance exploring the intersection of early modern medical thought and vocal polyphony. This event served as a pilot for the embodied listening experiments that would develop into the Bodies in Sound series."
+title: Humours and Harmony
+date: 2026-03-28
+venue: Emmanuel College Chapel
+location: Cambridge
+description: A chamber performance exploring the intersection of early modern medical thought and vocal polyphony. This event served as a pilot for the embodied listening experiments that would develop into the Bodies in Sound series.
 featured: false
-videoUrl: ""
-feedbackFormUrl: ""
+videoUrl: ''
+feedbackFormUrl: ''
 images: []
 draft: false
 ---
 
 ## About this performance
 
-*Humours and Harmony* was a pilot performance held at Emmanuel College, Cambridge, in May 2023. The event brought together a small ensemble of early music performers with an invited audience of musicologists, historians of medicine, and interested members of the public.
+_Humours and Harmony_ was a pilot performance held at Emmanuel College, Cambridge, in May 2023. The event brought together a small ensemble of early music performers with an invited audience of musicologists, historians of medicine, and interested members of the public.
 
 ### Context
 
