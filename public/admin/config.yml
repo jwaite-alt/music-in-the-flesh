@@ -13,6 +13,27 @@ public_folder: /images/uploads
 
 collections:
 
+  # ── Pages ────────────────────────────────────────────────
+  - name: pages
+    label: Pages
+    files:
+      - name: home
+        label: Home Page
+        file: src/content/pages/home.md
+        fields:
+          - { label: "Hero introduction", name: hero_intro, widget: text, hint: "Short paragraph shown in the hero banner." }
+          - { label: "Book description", name: body, widget: markdown, hint: "Descriptive text about the book, shown below the hero." }
+      - name: about
+        label: About Bettina
+        file: src/content/pages/about.md
+        fields:
+          - { label: "Bio", name: body, widget: markdown, hint: "Biography, publications, contact information." }
+      - name: about-project
+        label: About the Project
+        file: src/content/pages/about-project.md
+        fields:
+          - { label: "Project description", name: body, widget: markdown, hint: "Full description of the project and its intellectual aims." }
+
   # ── Performances (Featured + Archive) ──────────────────
   - name: performances
     label: Performances

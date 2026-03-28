@@ -1,6 +1,9 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
+import { getEntry, render } from 'astro:content';
 const base = import.meta.env.BASE_URL;
+const aboutPage = await getEntry('pages', 'about');
+const { Content: AboutContent } = await render(aboutPage);
 ---
 
 <PageLayout
@@ -20,38 +23,10 @@ const base = import.meta.env.BASE_URL;
     />
 
     <div class="prose">
-
-      <p>
-        <strong>Bettina Varwig</strong> is professor of music history and a fellow of Emmanuel College
-        at the University of Cambridge. Her research centres on music in early modern Europe, with
-        particular attention to the intersections between music, the body, theology, and affect.
-      </p>
-
-      <p>
-        She is author of <em>Music in the Flesh: An Early Modern Musical Physiology</em> (University
-        of Chicago Press), <em>Histories of Heinrich Schütz</em>, and editor of <em>Rethinking Bach</em>.
-      </p>
-
-      <h2>Publications</h2>
-
-      <ul>
-        <li><em>Music in the Flesh: An Early Modern Musical Physiology</em> (University of Chicago Press)</li>
-        <li><em>Histories of Heinrich Schütz</em> (Cambridge University Press)</li>
-        <li><em>Rethinking Bach</em> (editor, Oxford University Press)</li>
-      </ul>
-
-      <h2>Contact</h2>
-
-      <p>
-        For academic enquiries, please contact the Faculty of Music, University of Cambridge.
-        For enquiries about performances and events, please use the
-        <a href={`${base}events`}>Upcoming Events</a> page.
-      </p>
-
+      <AboutContent />
       <div style="margin-top: var(--space-lg);">
         <a href={`${base}about-project`} class="btn btn--crimson">About the Project</a>
       </div>
-
     </div>
   </div>
 

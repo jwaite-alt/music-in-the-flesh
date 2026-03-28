@@ -36,4 +36,11 @@ const events = defineCollection({
   }),
 });
 
-export const collections = { performances, events };
+const pages = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/pages' }),
+  schema: z.object({
+    hero_intro: z.string().optional(),
+  }),
+});
+
+export const collections = { performances, events, pages };
