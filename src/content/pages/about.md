@@ -2,15 +2,16 @@
 title: About Bettina
 ---
 
-**Bettina Varwig** is professor of music history and a fellow of Emmanuel College at the University of Cambridge. Her research centres on music in early modern Europe, with particular attention to the intersections between music, the body, theology, and affect.
+**Bettina Varwig** is Professor of Music History at the Faculty of Music and a fellow of Emmanuel College at the University of Cambridge. Her research on music-making in early modern Europe centres on the history of listening, the body, the senses and the emotions. She works in close collaboration with performers in order to bring historical insight into productive dialogue with musical practice. 
 
-She is author of *Music in the Flesh: An Early Modern Musical Physiology* (University of Chicago Press), *Histories of Heinrich Schütz*, and editor of *Rethinking Bach*.
+She is editor of _Rethinking Bach_ (Oxford, 2021) and author of two monographs: _Histories of Heinrich Schütz_ (Cambridge, 2011) and _Music in the Flesh: An Early Modern Musical Physiology_ (Chicago, 2023), which won the Otto Kinkeldey Award of the American Musicological Society. In 2025 she was awarded the Dent Medal of the Royal Musical Association. 
 
-## Publications
+## Selected Publications
 
-- *Music in the Flesh: An Early Modern Musical Physiology* (University of Chicago Press)
-- *Histories of Heinrich Schütz* (Cambridge University Press)
-- *Rethinking Bach* (editor, Oxford University Press)
+- _Music in the Flesh: An Early Modern Musical Physiology_ (Chicago: University of Chicago Press, 2023)
+- _Rethinking Bach_ (New York: Oxford University Press, 2021)
+- _Histories of Heinrich Schütz_ (Cambridge: Cambridge University Press, 2011)
+- 
 
 ## Contact
 
