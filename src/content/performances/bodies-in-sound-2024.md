@@ -1,19 +1,19 @@
 ---
-title: "Bodies in Sound: A Performance Experiment"
-date: "2024-11-15"
-venue: "West Road Concert Hall"
-location: "Cambridge"
-description: "An experimental concert exploring the embodied dimensions of early modern music-making, drawing directly on ideas from Music in the Flesh. Performers and audience members were invited to attend to the physical sensations of sound — vibration, breath, posture — as a way of recovering something of the early modern experience of music as a bodily-spiritual event."
-featured: true
-videoUrl: ""
-feedbackFormUrl: ""
+title: 'Bodies in Sound: A Performance Experiment'
+date: 2024-11-15
+venue: West Road Concert Hall
+location: Cambridge
+description: An experimental concert exploring the embodied dimensions of early modern music-making, drawing directly on ideas from Music in the Flesh. Performers and audience members were invited to attend to the physical sensations of sound — vibration, breath, posture — as a way of recovering something of the early modern experience of music as a bodily-spiritual event.
+featured: false
+videoUrl: ''
+feedbackFormUrl: ''
 images: []
 draft: false
 ---
 
 ## About this performance
 
-*Bodies in Sound* was the inaugural performance experiment emerging from the research behind *Music in the Flesh*. The evening brought together early music specialists, historians, and a general audience to explore what it might mean to experience seventeenth-century music on its own physical and spiritual terms.
+_Bodies in Sound_ was the inaugural performance experiment emerging from the research behind _Music in the Flesh_. The evening brought together early music specialists, historians, and a general audience to explore what it might mean to experience seventeenth-century music on its own physical and spiritual terms.
 
 ### Programme
 
