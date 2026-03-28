@@ -97,19 +97,18 @@ const past = events
       showStatus('', '');
 
       try {
-        const res = await fetch(FORM_ENDPOINT, {
+        // mode: 'no-cors' is required for Google Apps Script endpoints —
+        // they use a redirect that blocks cross-origin response reading.
+        // The data still reaches the sheet; we just can't read the response.
+        await fetch(FORM_ENDPOINT, {
           method: 'POST',
+          mode: 'no-cors',
           body: JSON.stringify({ name, email, website }),
         });
-        const json = await res.json();
 
-        if (json.status === 'ok') {
-          form.reset();
-          btn.textContent = 'Sent';
-          showStatus("Thank you \u2014 we\u2019ll be in touch when new events are confirmed.", 'success');
-        } else {
-          throw new Error(json.message || 'Unexpected error');
-        }
+        form.reset();
+        btn.textContent = 'Sent';
+        showStatus("Thank you \u2014 we\u2019ll be in touch when new events are confirmed.", 'success');
       } catch (err) {
         btn.disabled = false;
         btn.textContent = 'Register interest';
