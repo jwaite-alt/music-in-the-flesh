@@ -39,11 +39,11 @@ if ($action === 'callback') {
     $state = $_GET['state'] ?? '';
 
     if (empty($code) || $state !== ($_COOKIE['oauth_state'] ?? '')) {
-        postAndClose('error', null, 'State mismatch — cookie ' . (isset($_COOKIE['oauth_state']) ? 'present' : 'MISSING'));
+        $cookieStatus = isset($_COOKIE['oauth_state']) ? 'present (mismatch)' : 'MISSING';
+        renderCallback('error', null, 'State check failed — cookie ' . $cookieStatus);
         exit;
     }
 
-    // Exchange code for token
     $ch = curl_init('https://github.com/login/oauth/access_token');
     curl_setopt_array($ch, [
         CURLOPT_RETURNTRANSFER => true,
@@ -63,43 +63,70 @@ if ($action === 'callback') {
     curl_close($ch);
 
     if ($curlError) {
-        postAndClose('error', null, 'cURL error: ' . $curlError);
+        renderCallback('error', null, 'cURL error: ' . $curlError);
         exit;
     }
 
     $data = json_decode($response, true);
 
     if (!empty($data['access_token'])) {
-        postAndClose('success', $data['access_token'], null);
+        renderCallback('success', $data['access_token'], null);
     } else {
-        postAndClose('error', null, $data['error_description'] ?? $response ?? 'empty response');
+        renderCallback('error', null, $data['error_description'] ?? $response ?? 'Empty response from GitHub');
     }
     exit;
 }
 
-// ── Helper ───────────────────────────────────────────────────────────────────
-function postAndClose(string $status, ?string $token, ?string $error): void {
-    $payload = json_encode([
-        'token'    => $token,
-        'provider' => 'github',
-        'status'   => $status,
-    ]);
-    $msg = 'authorization:github:' . $status . ':' . $payload;
-    ?>
+// ── Render the callback page ─────────────────────────────────────────────────
+function renderCallback(string $status, ?string $token, ?string $errorMsg): void {
+?>
 <!doctype html>
 <html>
 <head><meta charset="utf-8"><title>Authenticating…</title></head>
 <body>
-<p id="status"><?= $status === 'success' ? 'Signing in…' : 'Error: ' . htmlspecialchars($error ?? '') ?></p>
+<p id="st">Completing sign-in…</p>
 <script>
 (function () {
-    var msg = <?= json_encode($msg) ?>;
-    if (window.opener) {
-        window.opener.postMessage(msg, '*');
-        window.close();
-    } else {
-        document.getElementById('status').textContent = 'No opener window found — please close this tab and try again.';
+    var STATUS   = <?= json_encode($status) ?>;
+    var TOKEN    = <?= json_encode($token) ?>;
+    var ERROR    = <?= json_encode($errorMsg) ?>;
+    var PROVIDER = 'github';
+
+    // Build message exactly as Decap expects
+    var payload = STATUS === 'success'
+        ? JSON.stringify({ token: TOKEN, provider: PROVIDER })
+        : JSON.stringify({ error: ERROR,  provider: PROVIDER });
+    var msg = 'authorization:' + PROVIDER + ':' + STATUS + ':' + payload;
+
+    document.getElementById('st').textContent =
+        STATUS === 'success' ? 'Signed in — you may close this window.' : 'Error: ' + ERROR;
+
+    if (!window.opener) {
+        document.getElementById('st').textContent += ' (No opener — please close this tab manually.)';
+        return;
     }
+
+    var sent = false;
+    function send(targetOrigin) {
+        if (sent) return;
+        sent = true;
+        window.opener.postMessage(msg, targetOrigin || '*');
+        // Give the message time to deliver before closing
+        setTimeout(function () { window.close(); }, 800);
+    }
+
+    // Approach 1 (older Decap / reference impl): handshake — opener responds to
+    // "authorizing:github", we reply with the token using its origin.
+    window.addEventListener('message', function (e) {
+        if (e.data === 'authorizing:' + PROVIDER || typeof e.data === 'string') {
+            send(e.origin);
+        }
+    }, false);
+    window.opener.postMessage('authorizing:' + PROVIDER, '*');
+
+    // Approach 2 (newer Decap): post directly without waiting for handshake.
+    // Fires after 1 s if the handshake never comes back.
+    setTimeout(function () { send('*'); }, 1000);
 })();
 </script>
 </body>
