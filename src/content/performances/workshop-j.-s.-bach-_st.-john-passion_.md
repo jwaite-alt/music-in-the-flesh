@@ -1,5 +1,5 @@
 ---
-title: 'Workshop: J. S. Bach, _St. John Passion_'
+title: 'Workshop: J. S. Bach, St. John Passion'
 date: 2025-06-09
 venue: Royal Academy of Music
 location: London
