@@ -2,20 +2,18 @@
 title: About the Project
 ---
 
-*Music in the Flesh* began as a scholarly monograph and has grown into a broader project connecting academic research with live performance. The performance experiments documented on this site explore what early modern ideas about music and the body might mean in practice — for performers, for listeners, and for the ways we think about musical experience today.
+_Music in the Flesh_ began as a scholarly monograph and has grown into a much more expansive project that explores the synergies between historical research and live performance. The performance events and experiments documented on this site explore how early modern ideas about music and the body might inspire us to imagine different ways of performing,  listening and being in music how. 
 
-The project sits at the intersection of musicology, history of the body, and performance practice. It asks not only historical questions — how did people in the seventeenth century understand what music does? — but also present-day ones: what might it mean to perform or listen with those assumptions in mind?
+## The History
 
-## Intellectual Territory
+My book unearths an extraordinary body of testimony about the physical and spiritual effects of music from the seventeenth and early eighteenth centuries. Philosophers, music theorists, theologians, devotional writers, poets, anatomists, medics and listeners described music as moving, ravishing, painful, dangerous, curative, and miraculous. 
 
-The long seventeenth century produced an extraordinary body of testimony about the effects of music. Composers, physicians, theologians, and listeners described music as moving, ravishing, painful, dangerous, curative, and miraculous — a force that acted upon "the circulation of the humors, the purification of the blood, the dilation of the vessels and pores."
+Music could soften your heart, pierce your brain, make your teeth grate and rattle, melt your earwax, contract your innards, constrict your chest like it was bound with ropes, flood you with honeyed sweetness or taste like vinegar in your throat. It could induce melancholy or drive out the plague. It could draw your soul out of your body. 
 
-These are not merely metaphors. They reflect a coherent anthropology — one in which body, soul, and spirit are not separate domains but inextricably entangled. Bettina Varwig's work takes this entanglement seriously, exploring what it reveals about early modern musical practice and what it might offer present-day performers and listeners.
+These were not merely metaphors. They described real experiences of bodily and spiritual transformation. These early modern subjects inhabited bodies that were ensouled, porous, fluid, volatile and open to influxes from the environment. As music spread contagiously within and between their bodies, it produced affective responses of ecstasy, despair and catharsis. 
 
-## Performance Experiments
+## The Practice 
 
-[Bettina to describe the nature and aims of the performance experiments, how they relate to the book's arguments, and what she hopes audiences will take from them.]
+The historical ideas unearthed in my research came to form the foundation for a long-standing collaboration with the distinguished violinist Maggie Faultless and the internationally renowned tenor Nicholas Mulroy. We have taken these early modern musical experiences as an inspiration for experimenting with how we listen and perform today. We work with professional and student musicians, classical music audiences and those who have never heard this music.  
 
-## Public Engagement
-
-[Bettina to describe the dual academic and public audience for this work, and the role of audience feedback in the ongoing research.]
+We invite our participants to feel themselves into unfamiliar, porous, flowing ways of being-in-the-body. We play with aspects of traditional concert ritual; we use movement, physical proximity and touch, alternative kinds of seating and multi-sensory immersion as ways to  foreground bodily presence. We invite participants to use their whole being as a resonator; to open their minds and bodies to being suffused with musical affect.
