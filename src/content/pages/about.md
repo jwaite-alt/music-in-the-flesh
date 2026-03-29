@@ -2,9 +2,11 @@
 title: About Bettina
 ---
 
-**Bettina Varwig** is Professor of Music History at the Faculty of Music and a fellow of Emmanuel College at the University of Cambridge. Her research on music-making in early modern Europe centres on the history of listening, the body, the senses and the emotions. She works in close collaboration with performers in order to bring historical insight into productive dialogue with musical practice.
+**Bettina Varwig** is Professor of Music History at the Faculty of Music and an Official Fellow at Emmanuel College, University of Cambridge. Her research on music-making in early modern Europe centres on the history of listening, the body, the senses and the emotions. She works in close collaboration with performers in order to bring historical insight into productive dialogue with musical practice.
 
-She is editor of _Rethinking Bach_ (Oxford, 2021) and author of two monographs: _Histories of Heinrich Schütz_ (Cambridge, 2011) and _Music in the Flesh: An Early Modern Musical Physiology_ (Chicago, 2023), which won the Otto Kinkeldey Award of the American Musicological Society. In 2025 she was awarded the Dent Medal of the Royal Musical Association.
+Originally from Germany, Bettina took her undergraduate degree in Music at King's College London and a PhD in Music at Harvard University (2006). She was a Fellow by Examination at Magdalen College, Oxford (2005-8) and a British Academy Fellow at the University of Cambridge (2008-9) before taking up a post as Lecturer/Senior Lecturer in Music at King's College London (2009). She has held her current post at the University of Cambridge since 2017.
+
+Bettina's work has been honoured with several prizes, including the Jerome Roche Prize of the Royal Musical Association and the William H. Scheide Prize of the American Bach Society. Her latest monograph, _Music in the Flesh: An Early Modern Musical Physiology_ (Chicago, 2023), won the Otto Kinkeldey Award of the American Musicological Society. In 2025 she received the Dent Medal of the Royal Musical Association.
 
 ## Selected Publications
 
