@@ -1,5 +1,5 @@
 ---
-title: _Music in the Flesh_ at the Cambridge Festival
+title: Music in the Flesh at the Cambridge Festival
 date: 2026-03-17
 venue: Emmanuel College Chapel
 location: Cambridge
@@ -15,7 +15,7 @@ In this workshop, we explore how we perform and listen to music in the Western c
 
 We will play and sing our way through a range of music from the 17th and 18th centuries (Bach, Corelli, Purcell, Vivaldi) and discuss how this music takes shape gesturally and affectively in our musicians’ bodies, fingers and throats. We will invite our listeners, in turn, to attend resonantly with their whole bodies, and thereby tune into the power of this music to transform its participants in body, mind and spirit.
 
-Performers: 
+Performers:
 Maggie Faultless (violin)
 Rachel Stroud (violin)
 Andrew Skidmore (cello)
