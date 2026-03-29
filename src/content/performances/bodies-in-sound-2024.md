@@ -1,5 +1,5 @@
 ---
-title: 'J. S. Bach: St. John Passion'
+title: 'J. S. Bach: _St. John Passion_'
 date: 2024-03-27
 venue: Girton College
 location: Cambridge
