@@ -23,18 +23,31 @@ collections:
         fields:
           - { label: "Hero introduction", name: hero_intro, widget: text, hint: "Short paragraph shown in the hero banner." }
           - { label: "Book description", name: body, widget: markdown, hint: "Descriptive text about the book, shown below the hero." }
-      - name: about
-        label: About Bettina
-        file: src/content/pages/about.md
-        fields:
-          - { label: "Title", name: title, widget: string }
-          - { label: "Bio", name: body, widget: markdown, hint: "Biography, publications, contact information." }
       - name: about-project
         label: About the Project
         file: src/content/pages/about-project.md
         fields:
           - { label: "Title", name: title, widget: string }
           - { label: "Project description", name: body, widget: markdown, hint: "Full description of the project and its intellectual aims." }
+
+  # ── Biographies ─────────────────────────────────────────
+  - name: bios
+    label: Biographies
+    label_singular: Biography
+    folder: src/content/bios
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    identifier_field: name
+    summary: "{{name}}"
+    sortable_fields: ["order", "name"]
+    fields:
+      - { label: "Full name", name: name, widget: string }
+      - { label: "Role / affiliation", name: role, widget: string, required: false, hint: "Shown beneath the name, e.g. 'Professor of Music History · University of Cambridge'" }
+      - { label: "Display order", name: order, widget: number, default: 99, hint: "1 = first. Bettina Varwig is 1." }
+      - { label: "Photo", name: photo, widget: image, required: false }
+      - { label: "Biography", name: body, widget: markdown, hint: "Full biography text, publications, contact details etc." }
 
   # ── Performances (Featured + Archive) ──────────────────
   - name: performances

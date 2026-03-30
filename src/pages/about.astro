@@ -1,59 +1,159 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
-import { getEntry, render } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 const base = import.meta.env.BASE_URL;
-const aboutPage = await getEntry('pages', 'about');
-const { Content: AboutContent } = await render(aboutPage);
+
+const bios = (await getCollection('bios'))
+  .sort((a, b) => (a.data.order ?? 99) - (b.data.order ?? 99));
+
+// Render markdown body for each bio
+const rendered = await Promise.all(
+  bios.map(async (bio) => {
+    const { Content } = await render(bio);
+    return { bio, Content };
+  })
+);
 ---
 
 <PageLayout
-  title="About Bettina"
-  heading="Bettina Varwig"
-  subheading="Professor of Music History · University of Cambridge"
-  description="Bettina Varwig — professor of music history and fellow of Emmanuel College, University of Cambridge."
+  title="Biographies"
+  heading="Biographies"
+  description="Biographies of Bettina Varwig and collaborators involved in Music in the Flesh."
   narrow={false}
 >
 
-  <div class="about-body">
+  <!-- Anchor list -->
+  <nav class="bio-index" aria-label="Jump to biography">
+    <span class="label bio-index__label">Jump to</span>
+    <ul class="bio-index__list" role="list">
+      {bios.map(b => (
+        <li>
+          <a href={`#${b.id}`} class="bio-index__link">{b.data.name}</a>
+        </li>
+      ))}
+    </ul>
+  </nav>
 
-    <img
-      src={`${base}images/bettina.jpg`}
-      alt="Bettina Varwig"
-      class="about-photo"
-    />
-
-    <div class="prose">
-      <AboutContent />
-      <div style="margin-top: var(--space-lg);">
-        <a href={`${base}about-project`} class="btn btn--crimson">About the Project</a>
+  <!-- Bio sections -->
+  {rendered.map(({ bio, Content }) => (
+    <section class="bio-section" id={bio.id}>
+      <div class="bio-header">
+        <h2 class="bio-name">{bio.data.name}</h2>
+        {bio.data.role && <p class="bio-role">{bio.data.role}</p>}
       </div>
-    </div>
-  </div>
+
+      <div class="bio-body">
+        {bio.data.photo && (
+          <img
+            src={base.replace(/\/$/, '') + bio.data.photo}
+            alt={bio.data.name}
+            class="bio-photo"
+          />
+        )}
+        <div class="prose">
+          <Content />
+        </div>
+      </div>
+    </section>
+  ))}
 
 </PageLayout>
 
 <style>
-  .about-body {
+  /* Anchor navigation */
+  .bio-index {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+    border-top: 1px solid var(--color-kraft);
+    border-bottom: 1px solid var(--color-kraft);
+    padding-block: var(--space-sm);
+    margin-bottom: var(--space-xl);
+  }
+
+  .bio-index__label {
+    color: var(--color-ink-light);
+    flex-shrink: 0;
+  }
+
+  .bio-index__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25em 0;
+    list-style: none;
+  }
+
+  .bio-index__list li + li::before {
+    content: '·';
+    margin-inline: 0.6em;
+    color: var(--color-kraft);
+  }
+
+  .bio-index__link {
+    font-family: var(--font-display);
+    font-size: var(--size-sm);
+    color: var(--color-crimson);
+    border-bottom: 1px solid transparent;
+    transition: border-color var(--transition);
+  }
+
+  .bio-index__link:hover {
+    border-color: var(--color-crimson);
+    opacity: 1;
+  }
+
+  /* Individual bio section */
+  .bio-section {
+    border-top: 1px solid var(--color-kraft);
+    padding-top: var(--space-lg);
+    margin-bottom: var(--space-xl);
+    scroll-margin-top: 5rem; /* clears sticky nav on jump */
+  }
+
+  .bio-header {
+    margin-bottom: var(--space-md);
+  }
+
+  .bio-name {
+    font-size: var(--size-2xl);
+    color: var(--color-ink);
+    margin-bottom: 0.2em;
+  }
+
+  .bio-role {
+    font-family: var(--font-display);
+    font-style: italic;
+    color: var(--color-slate);
+    font-size: var(--size-md);
+  }
+
+  .bio-body {
     display: grid;
     grid-template-columns: 220px minmax(0, 60ch);
     gap: var(--space-xl);
     align-items: start;
   }
 
-  .about-photo {
+  .bio-photo {
     width: 100%;
     height: auto;
     filter: grayscale(20%) sepia(10%);
     border: 1px solid var(--color-kraft);
-    margin-top: 1em;
+    margin-top: 0.25em;
+  }
+
+  /* No photo: prose spans full width */
+  .bio-body:not(:has(.bio-photo)) {
+    grid-template-columns: minmax(0, 60ch);
   }
 
   @media (max-width: 768px) {
-    .about-body {
+    .bio-body {
       grid-template-columns: 1fr;
     }
 
-    .about-photo {
+    .bio-photo {
       max-width: 200px;
     }
   }
