@@ -1,8 +1,8 @@
 backend:
   name: github
   repo: jwaite-alt/music-in-the-flesh
-  branch: main
-  base_url: https://musicintheflesh.org
+  branch: staging
+  base_url: https://staging.musicintheflesh.org
   auth_endpoint: /oauth/auth
 
 # Where media uploads go
