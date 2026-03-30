@@ -1,18 +1,20 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
-import { getCollection, render } from 'astro:content';
 const base = import.meta.env.BASE_URL;
 
-const bios = (await getCollection('bios'))
-  .sort((a, b) => (a.data.order ?? 99) - (b.data.order ?? 99));
+// Read all bio markdown files directly — no content collection needed
+const bioFiles = import.meta.glob('../content/bios/*.md', { eager: true });
 
-// Render markdown body for each bio
-const rendered = await Promise.all(
-  bios.map(async (bio) => {
-    const { Content } = await render(bio);
-    return { bio, Content };
-  })
-);
+const bios = Object.entries(bioFiles)
+  .map(([path, mod]: [string, any]) => ({
+    id:      path.split('/').pop()!.replace('.md', ''),
+    name:    mod.frontmatter.name   as string,
+    role:    mod.frontmatter.role   as string | undefined,
+    order:   mod.frontmatter.order  as number ?? 99,
+    photo:   mod.frontmatter.photo  as string | undefined,
+    Content: mod.default,
+  }))
+  .sort((a, b) => a.order - b.order);
 ---
 
 <PageLayout
@@ -28,25 +30,25 @@ const rendered = await Promise.all(
     <ul class="bio-index__list" role="list">
       {bios.map(b => (
         <li>
-          <a href={`#${b.id}`} class="bio-index__link">{b.data.name}</a>
+          <a href={`#${b.id}`} class="bio-index__link">{b.name}</a>
         </li>
       ))}
     </ul>
   </nav>
 
   <!-- Bio sections -->
-  {rendered.map(({ bio, Content }) => (
-    <section class="bio-section" id={bio.id}>
+  {bios.map(({ id, name, role, photo, Content }) => (
+    <section class="bio-section" id={id}>
       <div class="bio-header">
-        <h2 class="bio-name">{bio.data.name}</h2>
-        {bio.data.role && <p class="bio-role">{bio.data.role}</p>}
+        <h2 class="bio-name">{name}</h2>
+        {role && <p class="bio-role">{role}</p>}
       </div>
 
-      <div class="bio-body">
-        {bio.data.photo && (
+      <div class={`bio-body${photo ? '' : ' bio-body--no-photo'}`}>
+        {photo && (
           <img
-            src={base.replace(/\/$/, '') + bio.data.photo}
-            alt={bio.data.name}
+            src={base.replace(/\/$/, '') + photo}
+            alt={name}
             class="bio-photo"
           />
         )}
@@ -108,7 +110,7 @@ const rendered = await Promise.all(
     border-top: 1px solid var(--color-kraft);
     padding-top: var(--space-lg);
     margin-bottom: var(--space-xl);
-    scroll-margin-top: 5rem; /* clears sticky nav on jump */
+    scroll-margin-top: 5rem;
   }
 
   .bio-header {
@@ -135,17 +137,16 @@ const rendered = await Promise.all(
     align-items: start;
   }
 
+  .bio-body--no-photo {
+    grid-template-columns: minmax(0, 60ch);
+  }
+
   .bio-photo {
     width: 100%;
     height: auto;
     filter: grayscale(20%) sepia(10%);
     border: 1px solid var(--color-kraft);
     margin-top: 0.25em;
-  }
-
-  /* No photo: prose spans full width */
-  .bio-body:not(:has(.bio-photo)) {
-    grid-template-columns: minmax(0, 60ch);
   }
 
   @media (max-width: 768px) {
