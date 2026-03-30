@@ -31,7 +31,7 @@
 const SHEET_NAME = 'Registrations'; // Name of the sheet tab to write to
 
 function doPost(e) {
-  const ALLOWED_ORIGIN = 'https://jwaite.com'; // Update if domain changes
+  const ALLOWED_ORIGIN = 'https://musicintheflesh.org';
 
   const headers = {
     'Access-Control-Allow-Origin': ALLOWED_ORIGIN,

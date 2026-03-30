@@ -1,0 +1,6 @@
+# Place this file as .htaccess in the old jwaite.com/musicintheflesh/ folder
+# to redirect all traffic to the new domain.
+# Rename to .htaccess when uploading.
+
+RewriteEngine On
+RewriteRule ^ https://musicintheflesh.org%{REQUEST_URI} [R=301,L]

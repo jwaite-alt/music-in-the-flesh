@@ -1,4 +1,4 @@
-name: Build and deploy to jwaite.com
+name: Build and deploy to musicintheflesh.org
 
 on:
   push:
@@ -27,12 +27,12 @@ jobs:
       - name: Build site
         run: npm run build
 
-      - name: Deploy to cPanel via FTP
+      - name: Deploy to musicintheflesh.org via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
+          server: ${{ secrets.MITF_FTP_SERVER }}
+          username: ${{ secrets.MITF_FTP_USERNAME }}
+          password: ${{ secrets.MITF_FTP_PASSWORD }}
           local-dir: ./dist/
           server-dir: /
           dangerous-clean-slate: false
