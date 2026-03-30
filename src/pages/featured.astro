@@ -46,7 +46,7 @@ const formattedDate = dateObj.toLocaleDateString('en-GB', {
     {featured.data.images && featured.data.images.length > 0 ? (
       <div class="gallery">
         {featured.data.images.map((src, i) => (
-          <img src={src} alt={`${featured.data.title} — image ${i + 1}`} />
+          <img src={base.replace(/\/$/, '') + src} alt={`${featured.data.title} — image ${i + 1}`} />
         ))}
       </div>
     ) : (
