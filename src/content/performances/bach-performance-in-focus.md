@@ -1,5 +1,5 @@
 ---
-title: 'Embodying Bach: Performance Workshop'
+title: 'Performance Workshop: Embodying Bach'
 date: 2024-07-09
 venue: Madingley Hall
 location: Cambridge
