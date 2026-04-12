@@ -1,16 +1,18 @@
 ---
-title: Bach Performance in Focus
+title: 'Embodying Bach: Performance Workshop'
 date: 2024-07-09
 venue: Madingley Hall
 location: Cambridge
-description: |-
-  With Maggie Faultless (Violin) and ensemble, curated by Bettina Varwig 
-  Sponsored by the AHRC Impact Grant ’Transforming the Classical Concert’
+description: A public performance and discussion session presented as part of the  11th Bach Dialogue Meeting at Madingley Hall in Cambridge.
 featured: false
 videoUrl: ''
 feedbackFormUrl: ''
-images: []
+images:
+  - /images/uploads/2024-07-09 15.10.11.jpg
+  - /images/uploads/2024-07-09 14.56.03.jpg
 draft: false
 ---
 
-Part of Bach Dialogue Meeting
+With Nicholas Mulroy (tenor), Margaret Faultess (violin), Stephane Crayton (violin), Mika Hyman (cello), Alexander Semple (organ)
+
+Sponsored by the AHRC Impact Grant ’Transforming the Classical Concert’
