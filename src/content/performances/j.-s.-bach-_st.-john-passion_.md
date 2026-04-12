@@ -1,5 +1,5 @@
 ---
-title: J. S. Bach, _St. John Passion_
+title: 'Performance: J. S. Bach, _St. John Passion_'
 date: 2025-07-13
 venue: Alton Priors, Wiltshire
 location: ''
