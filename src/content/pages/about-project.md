@@ -2,7 +2,7 @@
 title: About the Project
 ---
 
-_Music in the Flesh_ began as a scholarly monograph and has grown into a much more expansive project that explores the synergies between historical research and live performance. The performance events and experiments documented on this site explore how early modern ideas about music and the body might inspire us to imagine different ways of performing,  listening and being in music how. 
+_Music in the Flesh_ began as a scholarly monograph and has grown into a much more expansive project that explores the synergies between historical research and live performance. The performance events and experiments documented on this site explore how early modern ideas about music and the body might inspire us to imagine different ways of performing,  listening to and being in music how. 
 
 ## The History
 
