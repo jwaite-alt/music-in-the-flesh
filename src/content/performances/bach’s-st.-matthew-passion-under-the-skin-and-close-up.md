@@ -1,9 +1,9 @@
 ---
 title: 'J. S. Bach’s St. Matthew Passion:  Under the Skin and Close Up'
 date: 2026-03-31
-venue: Dutch Church
+venue: Dutch Church, London
 location: London
-description: A _Matthew Passion_ study day for Arcangelo
+description: A study day for early music ensemble Arcangelo
 featured: false
 videoUrl: ''
 feedbackFormUrl: ''
