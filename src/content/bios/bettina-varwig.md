@@ -2,7 +2,7 @@
 name: Bettina Varwig
 role: Professor of Music History · University of Cambridge
 order: 1
-photo: ''
+photo: /images/uploads/DSC00745 2.jpg
 ---
 
 **Bettina Varwig** is Professor of Music History at the Faculty of Music and an Official Fellow at Emmanuel College, University of Cambridge. Her research on music-making in early modern Europe centres on the history of listening, the body, the senses and the emotions. She works in close collaboration with performers in order to bring historical insight into productive dialogue with musical practice.
