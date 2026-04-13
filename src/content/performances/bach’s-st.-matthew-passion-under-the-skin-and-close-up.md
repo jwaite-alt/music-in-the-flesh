@@ -1,5 +1,5 @@
 ---
-title: 'Bach’s St. Matthew Passion:  Under the Skin and Close Up'
+title: 'J. S. Bach’s St. Matthew Passion:  Under the Skin and Close Up'
 date: 2026-03-31
 venue: Dutch Church
 location: London
