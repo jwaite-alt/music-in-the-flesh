@@ -14,7 +14,7 @@ These were not merely metaphors. They described real experiences of bodily and s
 
 ## The Practice 
 
-The historical ideas unearthed in my research came to form the foundation for a long-standing collaboration with the distinguished violinist Maggie Faultless and the internationally renowned tenor Nicholas Mulroy. We have taken these early modern musical experiences as an inspiration for experimenting with how we listen and perform today. We work with professional and student musicians, classical music audiences and those who have never heard this music.  
+The historical ideas unearthed in my research form the foundation for a long-standing collaboration with the distinguished violinist Maggie Faultless and the internationally renowned tenor Nicholas Mulroy. We have taken these early modern musical experiences as an inspiration for experimenting with how we listen and perform today. We work with professional and student musicians, classical music audiences and those who have never heard this music.  
 
 Our music making strives to be fleshy, gutsy, alive, humane and from the heart. We prize  collaborative spontaneity, collective attunement and affective immediacy over the delivery of a perfectly polished product. We embrace the technological and physical challenges posed by historical instrument technologies as catalysts of enhanced expression. We move when we feel moved.  
 
