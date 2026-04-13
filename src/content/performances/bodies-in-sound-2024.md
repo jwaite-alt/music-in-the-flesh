@@ -3,7 +3,7 @@ title: 'Performance: J. S. Bach, _St. John Passion_'
 date: 2024-03-27
 venue: Girton College
 location: Cambridge
-description: An immersive in-the-round performance of Johann Sebastian Bach's _St. John Passion_ directed by Maggie Faultless (violin) and Nicholas Mulroy (Evangelist).
+description: An immersive in-the-round performance of Johann Sebastian Bach's _St. John Passion_ directed by Margaret Faultless (violin) and Nicholas Mulroy (Evangelist).
 featured: true
 videoUrl: ''
 feedbackFormUrl: ''
