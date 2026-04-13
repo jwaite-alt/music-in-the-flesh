@@ -2,7 +2,7 @@
 title: About the Project
 ---
 
-_Music in the Flesh_ began as a scholarly monograph and has grown into a much more expansive project that explores the synergies between historical research and live performance. The performance events and experiments documented on this site explore how early modern ideas about music and the body might inspire us to imagine different ways of performing,  listening to and being in music how. 
+_Music in the Flesh_ began as a scholarly monograph and has grown into a much more expansive project that explores the synergies between historical research and live performance. The performance events and experiments documented on this site explore how early modern ideas about music and the body might inspire us to imagine different ways of performing,  listening to and being in music now. 
 
 ## The History
 
@@ -14,6 +14,8 @@ These were not merely metaphors. They described real experiences of bodily and s
 
 ## The Practice 
 
-The historical ideas unearthed in my research came to form the foundation for a long-standing collaboration with the distinguished violinist Maggie Faultless and the internationally renowned tenor Nicholas Mulroy. We have taken these early modern musical experiences as an inspiration for experimenting with how we listen and perform today. We work with professional and student musicians, classical music audiences and those who have never heard this music.  
+The historical ideas unearthed in my research form the foundation for a long-standing collaboration with the distinguished violinist Maggie Faultless and the internationally renowned tenor Nicholas Mulroy. We have taken these early modern musical experiences as an inspiration for experimenting with how we listen and perform today. We work with professional and student musicians, classical music audiences and those who have never heard this music.  
 
-We invite our participants to feel themselves into unfamiliar, porous, flowing ways of being-in-the-body. We play with aspects of traditional concert ritual; we use movement, physical proximity and touch, alternative kinds of seating and multi-sensory immersion as ways to  foreground bodily presence. We invite participants to use their whole being as a resonator; to open their minds and bodies to being suffused with musical affect.
+Our music making strives to be fleshy, gutsy, alive, humane and from the heart. We prize  collaborative spontaneity, collective attunement and affective immediacy over the delivery of a perfectly polished product. We embrace the technological and physical challenges posed by historical instrument technologies as catalysts of enhanced expression. We move when we feel moved.  
+
+We encourage our participants to feel themselves into unfamiliar, porous, flowing ways of being-in-the-body. We play with aspects of traditional concert ritual; we use movement, physical proximity and touch, alternative kinds of seating and multi-sensory immersion as ways to  foreground bodily presence. We invite participants to use their whole being as a resonator; to open their minds and bodies to being suffused with musical affect.
