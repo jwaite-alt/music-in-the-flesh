@@ -3,9 +3,7 @@ title: Listening Workshop
 date: 2025-05-01
 venue: Emmanuel College Chapel
 location: Cambridge
-description: |-
-  With the Cambridge String Quartet
-  Part of Symposium on 'Listening', with Tim Ingold
+description: A workshop with the Cambridge String Quartet, part of a Symposium on 'Listening' with Prof. Tim Ingold.
 featured: false
 videoUrl: ''
 feedbackFormUrl: ''
