@@ -4,7 +4,7 @@ date: 2024-03-27
 venue: Girton College
 location: Cambridge
 description: An immersive in-the-round performance of Johann Sebastian Bach's  St. John Passion directed by Margaret Faultless (violin) and Nicholas Mulroy (Evangelist).
-featured: true
+featured: false
 videoUrl: ''
 feedbackFormUrl: ''
 images:
