@@ -13,7 +13,7 @@ draft: false
 
 A study day session with live performance exploring the power of music in Bach's time to transform mortal human bodies and to offer a foretaste of the lightness of the transfigured body after death. 
 
-Part of the Bedford Music Club Festival 'Bach and Mortality, 8-18 April 2026.
+Part of the [Bedford Music Club](https://www.bedfordmusicclub.com) Festival 'Bach and Mortality, 8-18 April 2026.
 
 Performers: 
 
