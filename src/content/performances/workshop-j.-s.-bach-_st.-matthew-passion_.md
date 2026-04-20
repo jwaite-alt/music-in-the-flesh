@@ -11,4 +11,4 @@ images: []
 draft: false
 ---
 
-TBC
+List of performers, video documentation and feedback to follow!
