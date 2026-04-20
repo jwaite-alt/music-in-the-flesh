@@ -11,7 +11,9 @@ images: []
 draft: false
 ---
 
-A discussion with live performance exploring the power of music in Bach's time to transform mortal human bodies and to offer a foretaste of the lightness of the transfigured body after death. 
+A study day session with live performance exploring the power of music in Bach's time to transform mortal human bodies and to offer a foretaste of the lightness of the transfigured body after death. 
+
+Part of the Bedford Music Club Festival 'Bach and Mortality, 8-18 April 2026.
 
 Performers: 
 
@@ -22,3 +24,11 @@ Stephane Crayton (violin)
 Conor Gricmanis (violin)
 
 Pablo Tejedor-Gutiérrez (cello)
+
+Repertoire: 
+
+BWV 150 (excerpts)
+
+BWV 478
+
+BWV 1039 (excerpts)
