@@ -27,8 +27,6 @@ Voice      Laura Newey, Maryam Giraud, Myriam Lowe, Rachel Segman
 Violin      Stephane Crayton, Rachel Stroud
 Cello            Mika Hyman
 
-Read a blogpost about the event here: https://musicatcambridge.wordpress.com/2025/11/18/bettina-varwig-on-creative-conversations/
-
 Selected feedback: 
 
 'Being taken to a place where we were on edge and outside our comfort zones meant we interacted with the music in a state of high alertness. It was not always comfortable but it was provoking, particularly to consider how we can disrupt the traditional concert model and open up ourselves to different ways of listening. I loved the element of surprise and the way the soundscape and the live music blended into each other.'
@@ -36,3 +34,5 @@ Selected feedback:
 'It felt like we were experiencing the music visually and physically in the space, as well as aurally - feeling like the music was enveloping everyone in the space together.'
 
 'I had never experienced this kind of performance before. It is very different from normal concerts, where the music is ‘frontal’. It was nice to be among the musicians - to hear baroque music in an almost domestic context. Many congratulations to all involved in putting together an original and beautiful concert.'
+
+Read a blogpost about the event here: https://musicatcambridge.wordpress.com/2025/11/18/bettina-varwig-on-creative-conversations/
