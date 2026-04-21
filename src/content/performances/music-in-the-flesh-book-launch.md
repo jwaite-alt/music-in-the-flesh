@@ -7,22 +7,23 @@ description: An unorthodox celebration of the publication of _Music in the Flesh
 featured: false
 videoUrl: ''
 feedbackFormUrl: ''
-images: []
+images:
+  - /images/uploads/book event 5.jpeg
 draft: false
 ---
 
-**Heinrich Ignaz Biber**, _Mensa sonora:_ Sonata No. 1 in D Major: I. Grave – Allegro
+Heinrich Ignaz Biber, _Mensa sonora:_ Sonata No. 1 in D Major: I. Grave – Allegro
 
-**Reinhard Keiser**, _Croesus:_ ‘Liebe, sag, was fängst du an?’
+Reinhard Keiser, _Croesus:_ ‘Liebe, sag, was fängst du an?’
 
-**Johann Sebastian Bach**, _Well-Tempered Clavier I:_ Fugue in B Minor (BWV 869)
+Johann Sebastian Bach, _Well-Tempered Clavier I:_ Fugue in B Minor (BWV 869)
 
- **Georg Philipp Telemann,** _Burlesque de Quichotte:_ ‘Ses soupirs amoureux après la Princesse Dulcinée’
+ Georg Philipp Telemann, _Burlesque de Quichotte:_ ‘Ses soupirs amoureux après la Princesse Dulcinée’
 
-**Johann Sebastian Bach**_, St. Matthew Passion:_  ‘Gebt mir meinen Jesum wieder’
+Johann Sebastian Bach_, St. Matthew Passion:_  ‘Gebt mir meinen Jesum wieder’
 
-**Heinrich Schütz**_, Symphoniae Sacrae I:_  ‘O quam tu pulchra es’
-  
+Heinrich Schütz_, Symphoniae Sacrae I:_  ‘O quam tu pulchra es’
+
 Margaret Faultless, _violin and direction_
 
 Alana Mailes, _soprano_
