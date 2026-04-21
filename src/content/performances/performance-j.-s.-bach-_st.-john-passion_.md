@@ -14,15 +14,15 @@ draft: false
 Cambridge University Chamber Choir
 
 Nicholas Mulroy Evangelist and Director
- 
+
 Cambridge University Collegium Musicum
 
 Margaret Faultless Violin and Director
- 
+
 J.S Bach                        O Mensch bewein' dein' Sünde groß, BWV 622
 
 J.S Bach                        St John Passion BWV 245
 
 Jacob Handl                  Ecce, quomodo moritur iustus (sung by all performers)
- 
+
 Pre-concert talk by Professor Bettina Varwig
