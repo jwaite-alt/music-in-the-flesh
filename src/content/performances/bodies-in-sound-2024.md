@@ -18,6 +18,14 @@ draft: false
 
 Bach's _St. John Passion_stages an immersive dramatic-musical experience that invites listeners to participate directly in the emotional intensity of the story of Jesus' crucifixion. The work thereby offers a visceral encounter with some of most affectively charged aspects of the human condition, from violence and grief to love and redemption. Our performance in the round was designed to bring our audience into direct contact with the bodily enactment of this affective journey by our group of musicians. By creatively reshaping some elements of traditional classical concert ritual, we encouraged a holistic mode of music making that fully encompassed us all as embodied beings.
 
+Cambridge University Chamber Choir
+
+Nicholas Mulroy Evangelist and Director
+
+Cambridge University Collegium Musicum
+
+Margaret Faultless Violin and Director
+
 Selected feedback: 
 
 _I have never seen a performance of a sacred music that was so immersive, and aimed to include the audience in the performance. Having the singers move around the space allowed us to hear each individual line and it’s important role in the harmony, which is such a vast difference from the ‘normal’ way where it is all presented as one unit. I really hope that there will be more concerts like this, as it is such a rewarding and enlightening experience as both a performer and audience member. Oe of my biggest takeaways from this experience as a performer is, if the music makes you want to move, then move!_
