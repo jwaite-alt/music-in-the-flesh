@@ -8,6 +8,7 @@ featured: false
 videoUrl: ''
 feedbackFormUrl: ''
 images:
+  - /images/uploads/IMG_1432.JPG
   - /images/uploads/book event 5.jpeg
 draft: false
 ---
