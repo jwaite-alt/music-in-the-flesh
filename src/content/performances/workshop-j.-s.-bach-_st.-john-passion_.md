@@ -7,7 +7,12 @@ description: A two-day workshop with professional musicians and students explori
 featured: false
 videoUrl: ''
 feedbackFormUrl: ''
-images: []
+images:
+  - /images/uploads/Lasset.jpg
+  - /images/uploads/kreuzigten2.jpg
+  - /images/uploads/Eilt4.jpg
+  - /images/uploads/Erwäge2.jpg
+  - /images/uploads/Ich folge dir.jpg
 draft: false
 ---
 
