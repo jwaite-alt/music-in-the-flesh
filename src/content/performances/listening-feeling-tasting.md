@@ -1,9 +1,9 @@
 ---
 title: 'Workshop: Listening, Feeling, Tasting'
 date: 2025-03-06
-venue: St John' College
+venue: Emmanuel College
 location: Cambridge
-description: Hosted by the Material Culture Forum, University of Cambridge
+description: Hosted by the Material Culture Forum, University of Cambridge.
 featured: false
 videoUrl: ''
 feedbackFormUrl: ''
@@ -11,23 +11,7 @@ images: []
 draft: false
 ---
 
-Event Date
-
-Thursday, March 6, 2025
-
-Event Time
-
-15:00 to 18:00
-
-MCF Event Speakers
-
-Professor Bettina Varwig (Music, Cambridge)
-
-Stephane Crayton (Music, Cambridge)
-
-Anna Brownsted
-
-Event Location
+Professor Bettina Varwig, Stephane Crayton, Anna Brownsted
 
 Old Library, Emmanuel College
 
