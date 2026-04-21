@@ -33,14 +33,12 @@ Selected Feedback:
 
 'Such an incredible way to see Prof. Varwig's work in the flesh! This will make it much easier to feel connected with my own body and the magic of performance!'
 
-'Liberation from the usual social norms of a concert. Fantastic. Grazie!'
-
-'The encouragement to listen with my whole body-soul-senses was an extraordinarily effective path to engaging with the music. Lying on the floor, dancing, but also being so close to the wonderful physicality of the musicians in this outstandingly beautiful place. I'm so glad I came. An extraordinary experience.'
-
 'I realised how embodied music is - and especially classical music. I would now love to play a musical instrument.'
 
 'Enjoyed the movement of the performers. Enjoyed the chocolate! Lovely space. Very impressive!'
 
-'This was **revelatory**. I love music. I know nothing about it. I'm probably a bit tone deaf. I love moving to music (but I'm hopeless at dancing). This was a glimpse into an entirely new and fascinating world! The collaboration of the musicians, singer and Bettina - the spontaneity - being so close - I would like to lear more about music, maybe to play. Thank you so much!'
-
 'The braveness, risk taking, openness - being free in expressing the inner and outer body - Bravo!'
+
+'The encouragement to listen with my whole body-soul-senses was an extraordinarily effective path to engaging with the music. Lying on the floor, dancing, but also being so close to the wonderful physicality of the musicians in this outstandingly beautiful place. I'm so glad I came. An extraordinary experience.'
+
+'This was **revelatory**. I love music. I know nothing about it. I'm probably a bit tone deaf. I love moving to music (but I'm hopeless at dancing). This was a glimpse into an entirely new and fascinating world! The collaboration of the musicians, singer and Bettina - the spontaneity - being so close - I would like to lear more about music, maybe to play. Thank you so much!'
