@@ -21,6 +21,7 @@ images:
   - /images/uploads/DSCF0921.jpg
   - /images/uploads/DSCF0998.jpg
   - /images/uploads/DSCF1009.jpg
+  - /images/uploads/DSCF0651.jpg
   - /images/uploads/DSCF1003.jpg
 draft: false
 ---
