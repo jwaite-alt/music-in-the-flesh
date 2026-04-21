@@ -11,4 +11,6 @@ images: []
 draft: false
 ---
 
-This event explores some of the material and embodied dimensions of music making. In the workshop, led by Cambridge-based artist Anna Brownsted, violinist Stephane Crayton and Bettina Varwig, we will work with a group of musicians to illuminate these material aspects of both performance and listening. We will focus in particular on music’s capacity to induce as well as alleviate pain. Participants will be invited to experiment with different multisensory modes of listening: tasting musical sweetness, feeling the softness of musical harmony through your feet and hands.  within an early modern Christian framework of original sin and penitence.
+This event explored some of the material and embodied dimensions of music making, from a historical perspective and in live performance now. Led by Cambridge-based artist Anna Brownsted, violinist Stephane Crayton and Bettina Varwig, we worked with a group of musicians to illuminate these material aspects of both performance and listening. We focused in particular on music’s capacity to induce as well as alleviate pain. 
+
+Participants were invited to experiment with different multisensory modes of listening: feeling breath; tasting musical sweetness; feeling the softness of musical harmony through your feet and hands.
