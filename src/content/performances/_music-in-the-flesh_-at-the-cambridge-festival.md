@@ -21,7 +21,7 @@ In this workshop, we explored how we perform and listen to music in the Western 
 
 We played and sang our way through a range of music from the 17th and 18th centuries (Bach, Corelli, Purcell, Vivaldi) and discussed how this music takes shape gesturally and affectively in our musicians’ bodies, fingers and throats. We invited our listeners, in turn, to attend resonantly with their whole bodies, and thereby tune into the power of this music to transform its participants in body, mind and spirit.
 
-Selected Feedback: 
+Selected audience feedback: 
 
 'A revelation: "Seeing" the music as the violinists move their bows ... changing position in the room to experience the music differently, and being closer to the musicians. Wonderful! So glad we came!'
 
