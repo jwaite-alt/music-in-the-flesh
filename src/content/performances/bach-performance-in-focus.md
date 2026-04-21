@@ -15,4 +15,6 @@ draft: false
 
 With Nicholas Mulroy (tenor), Margaret Faultess (violin), Stephane Crayton (violin), Mika Hyman (cello), Alexander Semple (organ)
 
-Sponsored by the AHRC Impact Grant ’Transforming the Classical Concert’
+J. S. Bach, arias from _St. John Passion_
+
+Sponsored by the AHRC Impact Grant 'Transforming the Classical Concert'
