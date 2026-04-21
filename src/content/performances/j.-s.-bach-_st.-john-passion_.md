@@ -7,7 +7,22 @@ description: An immersive performance of Bach's _St. John Passion_  that formed 
 featured: false
 videoUrl: ''
 feedbackFormUrl: ''
-images: []
+images:
+  - /images/uploads/DSCF0831.jpg
+  - /images/uploads/DSCF0591.jpg
+  - /images/uploads/DSCF0382.jpg
+  - /images/uploads/DSCF0620.jpg
+  - /images/uploads/DSCF0590.jpg
+  - /images/uploads/DSCF0748.jpg
+  - /images/uploads/DSCF0806.jpg
+  - /images/uploads/DSCF0826.jpg
+  - /images/uploads/DSCF0843.jpg
+  - /images/uploads/DSCF0865.jpg
+  - /images/uploads/DSCF0899.jpg
+  - /images/uploads/DSCF0921.jpg
+  - /images/uploads/DSCF0998.jpg
+  - /images/uploads/DSCF1003.jpg
+  - /images/uploads/DSCF1009.jpg
 draft: false
 ---
 
