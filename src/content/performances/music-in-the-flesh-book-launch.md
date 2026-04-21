@@ -3,7 +3,7 @@ title: 'Music in the Flesh: Book Launch'
 date: 2023-10-17
 venue: Old Library, Emmanuel College
 location: Cambridge
-description: An unorthodox celebration of the publication of _Music in the Flesh_, with music, chat and bean bags.
+description: An unorthodox celebration of the publication of _Music in the Flesh_, with music, chat, bubbly and bean bags.
 featured: false
 videoUrl: ''
 feedbackFormUrl: ''
