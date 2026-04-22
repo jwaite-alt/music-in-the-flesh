@@ -11,6 +11,8 @@ images: []
 draft: false
 ---
 
+An intimate, full-bodied, fleshy performance of Bach's _St. John Passion_.
+
 Cambridge University Chamber Choir
 
 Nicholas Mulroy Evangelist and Director
