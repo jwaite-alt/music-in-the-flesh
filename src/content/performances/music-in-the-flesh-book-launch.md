@@ -13,6 +13,8 @@ images:
 draft: false
 ---
 
+An unorthodox celebration of the publication of _Music in the Flesh_, with music, chat, bubbly and bean bags. The event aimed to bring to life some of the historical insights from the book in the moment of live performance. 
+
 Heinrich Ignaz Biber, _Mensa sonora:_ Sonata No. 1 in D Major: I. Grave – Allegro
 
 Reinhard Keiser, _Croesus:_ ‘Liebe, sag, was fängst du an?’
