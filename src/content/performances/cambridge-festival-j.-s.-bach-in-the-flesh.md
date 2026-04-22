@@ -11,7 +11,7 @@ images: []
 draft: false
 ---
 
-Presented by Prof. Margaret Faultless (Violin) and Prof. Bettina Varwig. 
+A public performance workshop presented by Maggie Faultless and Bettina Varwig.
 
 With 
 
