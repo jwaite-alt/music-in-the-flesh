@@ -7,7 +7,9 @@ description: A workshop with the Cambridge String Quartet, organised as part of 
 featured: false
 videoUrl: ''
 feedbackFormUrl: ''
-images: []
+images:
+  - /images/uploads/IMG_0964.JPG
+  - /images/uploads/IMG_0961.JPG
 draft: false
 ---
 
