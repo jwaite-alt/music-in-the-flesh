@@ -1,5 +1,5 @@
 ---
-title: 'Performance: J. S. Bach, _St. John Passion_'
+title: 'Performance: J. S. Bach, *St. John Passion*'
 date: 2025-07-13
 venue: Alton Priors, Wiltshire
 location: ''
@@ -36,13 +36,13 @@ Performers were able to inhabit the music intuitively with their bodies, to move
 
 For those precious two hours, we were porous body-souls, permeated by waves of sound and affect that spread contagiously amongst all present. We emerged lost for words, transfixed and transformed. Painfully cathartic and joyously affirmative, this performance plumbed the depths of what we might be able to feel individually and collectively. It revealed, gloriously, the shared humanity that binds us together against all the odds.   
 
-Selected participant feedback: 
+##### Selected participant feedback: 
 
 _This was a transformative experience. It was more visceral, emotional, spiritual and physical, as well as aural and cerebral, than anything I’ve experienced before._
 
-_The music, the closeness, the atmosphere, singers sitting alongside, one really felt involved--in the middle of it all._ 
+_The music, the closeness, the atmosphere, singers sitting alongside, one really felt involved--in the middle of it all._
 
-_I hung on every word and every note. The intensity was almost disconcerting._ 
+_I hung on every word and every note. The intensity was almost disconcerting._
 
 _All of the musicians were coming together as complete equals. The effect for the audience is extraordinary. The experience was magical._ 
 
@@ -52,13 +52,13 @@ _The instruction to engage with the audience, in the audience we all felt it, it
 
 _The movement was a great way to break the barrier that is so often present, that fourth wall … when the musicians are at the front of the audience, there is that invisible barrier, it is always an us and them relationship, whereas when I have for instance the bassoonist come sit next to me, you think “oh, wow, we really are part of everything”._
 
-_What an amazing experience that was and thank you for enabling us all to feel so much part of the music. The final motet was altogether overwhelming for me - I had to go away and weep in the churchyard._ 
+_What an amazing experience that was and thank you for enabling us all to feel so much part of the music. The final motet was altogether overwhelming for me - I had to go away and weep in the churchyard._
 
 _It almost became a new piece when [you are] entirely immersed in it. In that small space, we really did feel part of it and it was very moving._ 
 
 _In an age of constant digital distraction, of endless content and consumption, of restless minds: the ability to share something profoundly human like that is no small thing. The heat, the shared moisture and breath, the glorious moments of flow, of connection, the moments of overwhelm, of sensory overload, even fear and risk: the important process of simply being there together to make music, to look for something beyond the everyday, to spark change in the minds and hearts of everyone present._ 
 
-_That was one of the most extraordinary … [I’m] completely sort of wrung out, moved … I could sit through it all over again … that was one of the most wonderful things I have ever witnessed._ 
+_That was one of the most extraordinary … [I’m] completely sort of wrung out, moved … I could sit through it all over again … that was one of the most wonderful things I have ever witnessed._
 
 _Bach in the Flesh_ has taken performers and listeners on an extraordinary journey, and the project would not have been possible without support from The Cecil King Memorial Foundation, an anonymous Trust, Music for Awhile, The Royal Academy of Music, Continuo Foundation, the Faculty of Music and School of Arts and Humanities (University of Cambridge), the Churches Conservation Trust and The OAE Experience Scheme. We are deeply grateful for their support.
 
