@@ -36,7 +36,7 @@ Performers were able to inhabit the music intuitively with their bodies, to move
 
 For those precious two hours, we were porous body-souls, permeated by waves of sound and affect that spread contagiously amongst all present. We emerged lost for words, transfixed and transformed. Painfully cathartic and joyously affirmative, this performance plumbed the depths of what we might be able to feel individually and collectively. It revealed, gloriously, the shared humanity that binds us together against all the odds.   
 
-### Selected participant feedback: 
+##### Selected participant feedback: 
 
 _This was a transformative experience. It was more visceral, emotional, spiritual and physical, as well as aural and cerebral, than anything I’ve experienced before._
 
