@@ -18,6 +18,7 @@ interface Props {
 const { title, date, venue, description, href, slug, tag } = Astro.props;
 const base = import.meta.env.BASE_URL;
 const link = href ?? (slug ? `${base}archive/${slug}` : undefined);
+const titleHtml = title.replace(/\*(.*?)\*/g, '<em>$1</em>');
 
 const dateObj = new Date(date);
 const formattedDate = dateObj.toLocaleDateString('en-GB', {
@@ -31,7 +32,7 @@ const formattedDate = dateObj.toLocaleDateString('en-GB', {
   {tag && <span class="event-card__tag label">{tag}</span>}
   <p class="event-card__date label">{formattedDate}</p>
   <h3 class="event-card__title">
-    {link ? <a href={link}>{title}</a> : title}
+    {link ? <a href={link} set:html={titleHtml} /> : <span set:html={titleHtml} />}
   </h3>
   <p class="event-card__venue">{venue}</p>
   <p class="event-card__desc">{description}</p>
@@ -89,7 +90,6 @@ const formattedDate = dateObj.toLocaleDateString('en-GB', {
   }
 
   .event-card__more {
-    font-size: var(--size-xs);
     padding: 0.5em 1.5em;
   }
 </style>
