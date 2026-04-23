@@ -3,7 +3,7 @@ title: 'Performance: J. S. Bach, _St. John Passion_'
 date: 2024-03-26
 venue: St. John's College Chapel
 location: Cambridge
-description: An intimate, full-bodied, fleshy performance of Bach's _St. John Passion_.
+description: An intimate, full-bodied, fleshy performance of Bach's *St. John Passion*.
 featured: false
 videoUrl: ''
 feedbackFormUrl: ''
@@ -14,24 +14,20 @@ draft: false
 An intimate, full-bodied, fleshy performance of Bach's _St. John Passion_.
 
 Cambridge University Chamber Choir
-
-Nicholas Mulroy Evangelist and Director
+Nicholas Mulroy, Evangelist and Director
 
 Cambridge University Collegium Musicum
+Maggie Faultless, Violin and Director
 
-Margaret Faultless Violin and Director
-
-### Programme
+##### Programme
 
 J.S Bach                        O Mensch bewein' dein' Sünde groß, BWV 622
-
 J.S Bach                        St John Passion BWV 245
-
-Jacob Handl                  Ecce, quomodo moritur iustus (sung by all performers)
+Jacob Handl                  Ecce, quomodo moritur iustus 
 
 Pre-concert talk by Professor Bettina Varwig
 
-### Selected Feedback
+##### Selected Feedback
 
 _It was really wonderful and profoundly moving to go into a performance not just with whole voice, but all aspects of mind and self almost in a flow state of total focus._ 
 
