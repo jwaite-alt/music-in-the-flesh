@@ -9,9 +9,8 @@
  * ------------------
  * 1. Open the Google Sheet used for registrations.
  *    Ensure it has these sheet tabs (create if missing):
- *      - Registrations  → Timestamp | Name | Email
+ *      - Registrations  → Timestamp | Name | Email  (shared by Upcoming Events sign-ups and Contact updates opt-ins)
  *      - Contact        → Timestamp | Name | Email | Message | Updates opt-in
- *      - Updates        → Timestamp | Name | Email
  *
  * 2. In the sheet, go to Extensions → Apps Script.
  *    Delete any existing code and paste this entire file.
@@ -78,13 +77,10 @@ function doPost(e) {
       }
       contactSheet.appendRow([new Date(), name, email, message, updates]);
 
-      // If opted in to updates, also write to Updates sheet
+      // If opted in to updates, also write to Registrations sheet
       if (data.updates) {
-        const updatesSheet = ss.getSheetByName('Updates') || ss.insertSheet('Updates');
-        if (updatesSheet.getLastRow() === 0) {
-          updatesSheet.appendRow(['Timestamp', 'Name', 'Email']);
-        }
-        updatesSheet.appendRow([new Date(), name, email]);
+        const registrationsSheet = ss.getSheetByName('Registrations') || ss.getActiveSheet();
+        registrationsSheet.appendRow([new Date(), name, email]);
       }
 
     } else {
