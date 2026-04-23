@@ -16,12 +16,6 @@ const sorted = performances.sort(
   description="A record of all past Music in the Flesh performances and research events."
 >
 
-  <p style="margin-bottom: var(--space-lg); color: var(--color-ink-light);">
-    The archive documents each performance experiment arising from the research behind
-    <em>Music in the Flesh</em> — including programme notes, contextual essays, images, and
-    where available, video documentation and audience feedback.
-  </p>
-
   {sorted.map(p => (
     <EventCard
       title={p.data.title}
