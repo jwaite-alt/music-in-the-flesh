@@ -15,14 +15,14 @@ A study day session with live performance exploring the power of music in Bach's
 
 Part of the [Bedford Music Club](https://www.bedfordmusicclub.com) Festival 'Bach and Mortality, 8-18 April 2026.
 
-### Performers: 
+##### Performers: 
 
 Rachel Segman (soprano)
 Stephane Crayton (violin)
 Conor Gricmanis (violin)
 Pablo Tejedor-Gutiérrez (cello)
 
-### Repertoire: 
+##### Repertoire: 
 
 BWV 150 (excerpts)
 BWV 478
