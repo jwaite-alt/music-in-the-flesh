@@ -21,6 +21,8 @@ Cambridge University Collegium Musicum
 
 Margaret Faultless Violin and Director
 
+### Programme
+
 J.S Bach                        O Mensch bewein' dein' Sünde groß, BWV 622
 
 J.S Bach                        St John Passion BWV 245
@@ -28,3 +30,9 @@ J.S Bach                        St John Passion BWV 245
 Jacob Handl                  Ecce, quomodo moritur iustus (sung by all performers)
 
 Pre-concert talk by Professor Bettina Varwig
+
+### Selected Feedback
+
+_It was really wonderful and profoundly moving to go into a performance not just with whole voice, but all aspects of mind and self almost in a flow state of total focus._ 
+
+_An original performance - overwhelmingly beautiful._
