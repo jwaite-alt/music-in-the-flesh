@@ -20,15 +20,15 @@
   --font-display: 'Cormorant Garamond', Georgia, serif;
   --font-body:    'EB Garamond', Georgia, serif;
 
-  --size-xs:   0.8rem;
-  --size-sm:   0.95rem;
-  --size-base: 1.2rem;
-  --size-md:   1.35rem;
-  --size-lg:   1.6rem;
-  --size-xl:   2rem;
-  --size-2xl:  2.75rem;
-  --size-3xl:  3.75rem;
-  --size-4xl:  5rem;
+  --size-xs:   0.85rem;
+  --size-sm:   1rem;
+  --size-base: 1.5rem;   /* 18pt — minimum body copy */
+  --size-md:   1.75rem;
+  --size-lg:   2rem;
+  --size-xl:   2.5rem;
+  --size-2xl:  3rem;
+  --size-3xl:  4rem;
+  --size-4xl:  5.5rem;
 
   --leading-tight:  1.15;
   --leading-prose:  1.7;
@@ -103,6 +103,8 @@ h1 { font-size: var(--size-3xl); }
 h2 { font-size: var(--size-2xl); }
 h3 { font-size: var(--size-xl); }
 h4 { font-size: var(--size-lg); }
+h5 { font-size: var(--size-base); }
+h6 { font-size: var(--size-sm); }
 
 p + p {
   margin-top: 1em;
@@ -289,9 +291,9 @@ em {
 /* ── Responsive ── */
 @media (max-width: 768px) {
   :root {
-    --size-3xl: 2.5rem;
-    --size-2xl: 2rem;
-    --size-xl:  1.625rem;
+    --size-3xl: 2.75rem;
+    --size-2xl: 2.25rem;
+    --size-xl:  2rem;
   }
 
   .container {
