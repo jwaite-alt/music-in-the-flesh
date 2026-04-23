@@ -10,12 +10,13 @@ interface Props {
 }
 
 const { title, description, heading, subheading, narrow = false } = Astro.props;
+const headingHtml = heading?.replace(/[*_](.*?)[*_]/g, '<em>$1</em>');
 ---
 
 <BaseLayout title={title} description={description}>
   <header class="page-header section--parchment">
     <div class="container">
-      {heading && <h1 class="page-header__title">{heading}</h1>}
+      {headingHtml && <h1 class="page-header__title" set:html={headingHtml} />}
       {subheading && <p class="page-header__sub display-subtitle">{subheading}</p>}
     </div>
   </header>
