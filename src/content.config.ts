@@ -44,4 +44,32 @@ const pages = defineCollection({
   }),
 });
 
-export const collections = { performances, events, pages };
+const videos = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/videos' }),
+  schema: z.object({
+    title: z.string(),
+    date: dateField,
+    description: z.string(),
+    embedUrl: z.string(),
+    thumbnail: z.string().optional(),
+    featured: z.boolean().default(false),
+    draft: z.boolean().default(false),
+  }),
+});
+
+const galleries = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/galleries' }),
+  schema: z.object({
+    title: z.string(),
+    date: dateField,
+    description: z.string(),
+    images: z.array(z.object({
+      image: z.string(),
+      caption: z.string().optional(),
+    })).default([]),
+    featured: z.boolean().default(false),
+    draft: z.boolean().default(false),
+  }),
+});
+
+export const collections = { performances, events, pages, videos, galleries };

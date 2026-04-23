@@ -1,0 +1,254 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const galleries = await getCollection('galleries', ({ data }) => !data.draft);
+  return galleries.map(g => ({ params: { slug: g.id }, props: { gallery: g } }));
+}
+
+const { gallery } = Astro.props;
+const { Content } = await render(gallery);
+const base = import.meta.env.BASE_URL;
+
+const dateObj = new Date(gallery.data.date);
+const formattedDate = dateObj.toLocaleDateString('en-GB', {
+  day: 'numeric', month: 'long', year: 'numeric',
+});
+
+const titleHtml = gallery.data.title.replace(/[*_](.*?)[*_]/g, '<em>$1</em>');
+const images = gallery.data.images;
+---
+
+<BaseLayout title={`${gallery.data.title} — Photos`}>
+
+  <header class="page-header section--parchment">
+    <div class="container">
+      <p class="label" style="color: var(--color-crimson); margin-bottom: 0.5em;">Photography</p>
+      <h1 class="page-header__title" set:html={titleHtml} />
+      <p class="page-header__sub display-subtitle">{formattedDate} · {images.length} photos</p>
+    </div>
+  </header>
+
+  <div class="container gallery-body">
+
+    {gallery.data.description && (
+      <p class="gallery-desc">{gallery.data.description}</p>
+    )}
+
+    <!-- Slideshow -->
+    <div class="slideshow" id="slideshow">
+      <div class="slideshow__stage">
+        {images.map((item, i) => (
+          <figure class="slideshow__slide" data-index={i}>
+            <img src={item.image} alt={item.caption || `${gallery.data.title} — photo ${i + 1}`} />
+            {item.caption && <figcaption>{item.caption}</figcaption>}
+          </figure>
+        ))}
+      </div>
+
+      <div class="slideshow__controls">
+        <button class="slideshow__btn" id="prev" aria-label="Previous photo">&#8592;</button>
+        <span class="slideshow__counter" id="counter">1 / {images.length}</span>
+        <button class="slideshow__btn" id="next" aria-label="Next photo">&#8594;</button>
+      </div>
+
+      <!-- Thumbnail strip -->
+      <div class="slideshow__thumbs">
+        {images.map((item, i) => (
+          <button class="slideshow__thumb" data-index={i} aria-label={`Go to photo ${i + 1}`}>
+            <img src={item.image} alt="" />
+          </button>
+        ))}
+      </div>
+    </div>
+
+    <div class="prose" style="margin-top: var(--space-lg);">
+      <Content />
+    </div>
+
+    <div class="gallery-nav">
+      <a href={`${base}media#photos`} class="btn btn--ink">&larr; All photos</a>
+    </div>
+
+  </div>
+
+</BaseLayout>
+
+<script>
+  const slides = document.querySelectorAll<HTMLElement>('.slideshow__slide');
+  const thumbs = document.querySelectorAll<HTMLButtonElement>('.slideshow__thumb');
+  const counter = document.getElementById('counter');
+  let current = 0;
+
+  function show(index: number) {
+    slides[current].classList.remove('active');
+    thumbs[current].classList.remove('active');
+    current = (index + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    thumbs[current].classList.add('active');
+    if (counter) counter.textContent = `${current + 1} / ${slides.length}`;
+    slides[current].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  // Initialise
+  if (slides.length > 0) {
+    slides[0].classList.add('active');
+    thumbs[0]?.classList.add('active');
+  }
+
+  document.getElementById('prev')?.addEventListener('click', () => show(current - 1));
+  document.getElementById('next')?.addEventListener('click', () => show(current + 1));
+  thumbs.forEach((t, i) => t.addEventListener('click', () => show(i)));
+
+  // Keyboard navigation
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowLeft') show(current - 1);
+    if (e.key === 'ArrowRight') show(current + 1);
+  });
+</script>
+
+<style>
+  .page-header {
+    border-bottom: 1px solid var(--color-kraft);
+    padding-block: var(--space-lg);
+  }
+
+  .page-header__title {
+    color: var(--color-crimson);
+    font-size: var(--size-3xl);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wide);
+  }
+
+  .page-header__sub {
+    margin-top: 0.4em;
+    font-size: var(--size-md);
+    color: var(--color-slate);
+  }
+
+  .gallery-body {
+    padding-block: var(--space-xl);
+  }
+
+  .gallery-desc {
+    color: var(--color-ink-light);
+    max-width: var(--max-prose);
+    margin-bottom: var(--space-lg);
+  }
+
+  /* Slideshow */
+  .slideshow__stage {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3/2;
+    background-color: var(--color-ink);
+    overflow: hidden;
+    margin-bottom: var(--space-sm);
+  }
+
+  .slideshow__slide {
+    position: absolute;
+    inset: 0;
+    display: none;
+    margin: 0;
+  }
+
+  .slideshow__slide.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .slideshow__slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .slideshow__slide figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(28, 21, 13, 0.6);
+    color: var(--color-parchment);
+    font-size: var(--size-sm);
+    font-style: italic;
+    padding: 0.5em 1em;
+    text-align: center;
+  }
+
+  .slideshow__controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-md);
+    padding-block: var(--space-sm);
+  }
+
+  .slideshow__btn {
+    font-family: var(--font-display);
+    font-size: var(--size-lg);
+    background: none;
+    border: 1px solid var(--color-kraft);
+    color: var(--color-ink);
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+    transition: background-color var(--transition), color var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .slideshow__btn:hover {
+    background-color: var(--color-ink);
+    color: var(--color-cream);
+    border-color: var(--color-ink);
+  }
+
+  .slideshow__counter {
+    font-family: var(--font-display);
+    font-size: var(--size-sm);
+    letter-spacing: var(--tracking-wide);
+    color: var(--color-ink-light);
+    min-width: 5ch;
+    text-align: center;
+  }
+
+  .slideshow__thumbs {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: var(--space-sm);
+  }
+
+  .slideshow__thumb {
+    width: 72px;
+    height: 54px;
+    padding: 0;
+    border: 2px solid transparent;
+    background: none;
+    cursor: pointer;
+    overflow: hidden;
+    transition: border-color var(--transition);
+  }
+
+  .slideshow__thumb.active {
+    border-color: var(--color-crimson);
+  }
+
+  .slideshow__thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .gallery-nav {
+    margin-top: var(--space-xl);
+  }
+</style>

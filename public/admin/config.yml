@@ -29,6 +29,12 @@ collections:
         fields:
           - { label: "Title", name: title, widget: string }
           - { label: "Project description", name: body, widget: markdown, hint: "Full description of the project and its intellectual aims." }
+      - name: media
+        label: Media Page
+        file: src/content/pages/media.md
+        fields:
+          - { label: "Title", name: title, widget: string }
+          - { label: "Text section", name: body, widget: markdown, hint: "Written content shown in the Text section of the Media page — reflections, responses, programme notes." }
 
   # ── Biographies ─────────────────────────────────────────
   - name: bios
@@ -49,7 +55,56 @@ collections:
       - { label: "Photo", name: photo, widget: image, required: false }
       - { label: "Biography", name: body, widget: markdown, hint: "Full biography text, publications, contact details etc." }
 
-  # ── Performances (Featured + Archive) ──────────────────
+  # ── Videos ──────────────────────────────────────────────
+  - name: videos
+    label: Videos
+    label_singular: Video
+    folder: src/content/videos
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    identifier_field: title
+    summary: "{{title}} — {{date}}"
+    sortable_fields: ["date", "title"]
+    fields:
+      - { label: "Title", name: title, widget: string }
+      - { label: "Date", name: date, widget: datetime, format: "YYYY-MM-DD", date_format: "DD MMMM YYYY", time_format: false }
+      - { label: "Short description", name: description, widget: text, hint: "Shown in listings and previews." }
+      - { label: "Embed URL", name: embedUrl, widget: string, hint: "YouTube or Vimeo embed URL (e.g. https://www.youtube.com/embed/xxxxx)" }
+      - { label: "Thumbnail image", name: thumbnail, widget: image, required: false, hint: "Optional. YouTube thumbnails are generated automatically — only needed for Vimeo or custom images." }
+      - { label: "Feature on homepage", name: featured, widget: boolean, default: false, hint: "Tick to show this item in the homepage media preview." }
+      - { label: "Notes", name: body, widget: markdown, required: false, hint: "Optional additional text shown on the video page." }
+      - { label: "Draft (hidden)", name: draft, widget: boolean, default: false }
+
+  # ── Photo Galleries ──────────────────────────────────────
+  - name: galleries
+    label: Photo Galleries
+    label_singular: Gallery
+    folder: src/content/galleries
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    identifier_field: title
+    summary: "{{title}} — {{date}}"
+    sortable_fields: ["date", "title"]
+    fields:
+      - { label: "Title", name: title, widget: string }
+      - { label: "Date", name: date, widget: datetime, format: "YYYY-MM-DD", date_format: "DD MMMM YYYY", time_format: false }
+      - { label: "Short description", name: description, widget: text, hint: "Shown in listings and previews." }
+      - { label: "Feature on homepage", name: featured, widget: boolean, default: false, hint: "Tick to show this item in the homepage media preview." }
+      - label: "Photos"
+        name: images
+        widget: list
+        hint: "Add photos one by one. Captions are optional."
+        fields:
+          - { label: Image, name: image, widget: image }
+          - { label: Caption, name: caption, widget: string, required: false }
+      - { label: "Notes", name: body, widget: markdown, required: false, hint: "Optional text shown on the gallery page." }
+      - { label: "Draft (hidden)", name: draft, widget: boolean, default: false }
+
+  # ── Performances (Archive) ──────────────────────────────
   - name: performances
     label: Performances
     label_singular: Performance
@@ -67,7 +122,7 @@ collections:
       - { label: "Venue", name: venue, widget: string }
       - { label: "Location (city)", name: location, widget: string, required: false }
       - { label: "Short description", name: description, widget: text, hint: "Used in listings and previews. 1–3 sentences." }
-      - { label: "Featured performance", name: featured, widget: boolean, default: false, hint: "Tick to show this as the current Featured Performance on the home page." }
+      - { label: "Featured performance", name: featured, widget: boolean, default: false, hint: "Tick to show this as a current/upcoming performance on the home page." }
       - { label: "Video URL", name: videoUrl, widget: string, required: false, hint: "Paste a YouTube or Vimeo embed URL (e.g. https://www.youtube.com/embed/xxxxx)" }
       - { label: "Feedback form URL", name: feedbackFormUrl, widget: string, required: false, hint: "Paste the Google Form embed URL for this performance." }
       - { label: "Images", name: images, widget: list, required: false, field: { label: Image, name: image, widget: image } }

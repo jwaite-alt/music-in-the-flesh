@@ -1,0 +1,188 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, getEntry, render } from 'astro:content';
+
+const base = import.meta.env.BASE_URL;
+
+const mediaPage = await getEntry('pages', 'media');
+const { Content: MediaContent } = await render(mediaPage);
+
+const allVideos = (await getCollection('videos', ({ data }) => !data.draft))
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+
+const allGalleries = (await getCollection('galleries', ({ data }) => !data.draft))
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+
+function youtubeThumbnail(embedUrl: string) {
+  const match = embedUrl.match(/youtube\.com\/embed\/([^?]+)/);
+  return match ? `https://img.youtube.com/vi/${match[1]}/hqdefault.jpg` : '';
+}
+
+function titleHtml(title: string) {
+  return title.replace(/[*_](.*?)[*_]/g, '<em>$1</em>');
+}
+---
+
+<BaseLayout title="Media — Music in the Flesh">
+
+  <header class="page-header section--parchment">
+    <div class="container">
+      <h1 class="page-header__title">Media</h1>
+    </div>
+  </header>
+
+  <div class="container media-body">
+
+    <!-- Videos -->
+    <section class="media-section" id="videos">
+      <h2 class="media-section__heading">
+        <span class="label">Videos</span>
+      </h2>
+      <hr class="rule rule--crimson" />
+      {allVideos.length > 0 ? (
+        <div class="media-grid">
+          {allVideos.map(v => {
+            const thumb = v.data.thumbnail || youtubeThumbnail(v.data.embedUrl);
+            return (
+              <a href={`${base}media/videos/${v.id}`} class="media-card">
+                <div class="media-card__thumb">
+                  {thumb && <img src={thumb} alt={v.data.title} />}
+                  <span class="media-card__play">▶</span>
+                </div>
+                <p class="media-card__title" set:html={titleHtml(v.data.title)} />
+                <p class="media-card__desc">{v.data.description}</p>
+              </a>
+            );
+          })}
+        </div>
+      ) : (
+        <p class="media-placeholder">Video documentation will be added here.</p>
+      )}
+    </section>
+
+    <!-- Photos -->
+    <section class="media-section" id="photos">
+      <h2 class="media-section__heading">
+        <span class="label">Photos</span>
+      </h2>
+      <hr class="rule rule--crimson" />
+      {allGalleries.length > 0 ? (
+        <div class="media-grid">
+          {allGalleries.map(g => (
+            <a href={`${base}media/photos/${g.id}`} class="media-card">
+              <div class="media-card__thumb">
+                {g.data.images[0] && <img src={g.data.images[0].image} alt={g.data.title} />}
+              </div>
+              <p class="media-card__title" set:html={titleHtml(g.data.title)} />
+              <p class="media-card__desc">{g.data.description}</p>
+            </a>
+          ))}
+        </div>
+      ) : (
+        <p class="media-placeholder">Photography will be added here.</p>
+      )}
+    </section>
+
+    <!-- Text -->
+    <section class="media-section" id="text">
+      <h2 class="media-section__heading">
+        <span class="label">Notes</span>
+      </h2>
+      <hr class="rule rule--crimson" />
+      <div class="prose">
+        <MediaContent />
+      </div>
+    </section>
+
+  </div>
+
+</BaseLayout>
+
+<style>
+  .page-header {
+    border-bottom: 1px solid var(--color-kraft);
+    padding-block: var(--space-lg);
+  }
+
+  .page-header__title {
+    color: var(--color-crimson);
+    font-size: var(--size-3xl);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wide);
+  }
+
+  .media-body {
+    padding-block: var(--space-xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+  }
+
+  .media-section__heading {
+    margin-bottom: var(--space-sm);
+  }
+
+  .media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+  }
+
+  .media-card {
+    display: block;
+    color: var(--color-ink);
+    text-decoration: none;
+    transition: opacity var(--transition);
+  }
+
+  .media-card:hover {
+    opacity: 0.85;
+  }
+
+  .media-card__thumb {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    background-color: var(--color-parchment);
+    overflow: hidden;
+    margin-bottom: var(--space-xs);
+  }
+
+  .media-card__thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .media-card__play {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: var(--color-cream);
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    opacity: 0.85;
+  }
+
+  .media-card__title {
+    font-family: var(--font-display);
+    font-size: var(--size-md);
+    font-weight: 600;
+    margin-bottom: 0.25em;
+  }
+
+  .media-card__desc {
+    font-size: var(--size-sm);
+    color: var(--color-ink-light);
+  }
+
+  .media-placeholder {
+    color: var(--color-ink-light);
+    font-style: italic;
+    padding-block: var(--space-md);
+  }
+</style>
