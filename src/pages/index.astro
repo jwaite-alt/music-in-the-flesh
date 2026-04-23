@@ -34,11 +34,13 @@ const recentArchive = performances
         </div>
       </div>
       <div class="hero__book">
-        <img
-          src={`${base}images/book-cover.jpg`}
-          alt="Music in the Flesh — An Early Modern Musical Physiology, by Bettina Varwig"
-          class="hero__cover"
-        />
+        <a href="https://press.uchicago.edu/ucp/books/book/chicago/M/bo196672081.html" target="_blank" rel="noopener" class="hero__book-link">
+          <img
+            src={`${base}images/book-cover.jpg`}
+            alt="Music in the Flesh — An Early Modern Musical Physiology, by Bettina Varwig"
+            class="hero__cover"
+          />
+        </a>
       </div>
     </div>
   </section>
@@ -166,10 +168,21 @@ const recentArchive = performances
     align-self: center;
   }
 
+  .hero__book-link {
+    display: block;
+  }
+
   .hero__cover {
     width: 340px;
     height: auto;
     box-shadow: 8px 12px 32px rgba(28, 21, 13, 0.25);
+    transition: box-shadow var(--transition), transform var(--transition);
+  }
+
+  .hero__book-link:hover .hero__cover {
+    box-shadow: 12px 18px 40px rgba(28, 21, 13, 0.4);
+    transform: translateY(-3px);
+    opacity: 1;
   }
 
   .section-heading {
