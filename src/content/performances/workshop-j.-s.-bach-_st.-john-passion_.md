@@ -18,7 +18,7 @@ draft: false
 
 A two-day musicking workshop that was intended as a space for experimentation, not a rehearsal for a concert, though we presented a public performance at Alton Priors, Wiltshire a month later. We invited a group of musicians (professionals and students) to join us in exploring how we might be in our musical bodies. There was no conductor and no choreography, only an invitation to be porous, supported by some historical quotes and images to get the juices flowing; an invitation to be traversed by musical flows and to _move when you feel moved_.
 
-Selected participant feedback:
+### Selected participant feedback:
 
 _I found myself singing and hearing one of the pieces that I've performed most in my life very differently. Not because of any sudden new meaning or instruction, but I think because I have rarely felt so free whilst “performing,” and in the moment being free to move and feel meant being free to react, without things feeling contrived or “staged.” The result for me was something that felt so immediate, so engaging, but I don't think at all self-indulgent, because it really felt I was part of this body that we all became._ 
 
