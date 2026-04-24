@@ -1,7 +1,7 @@
 ---
-title: 'J. S. Bach, _St. John Passion_ — Alton Priors'
+title: J. S. Bach, *St. John Passion* — Alton Priors, Wiltshire
 date: 2025-07-13
-description: Photography from the Music in the Flesh performance at All Saints' Church, Alton Priors, Wiltshire, July 2025.
+description: Photography from our performance at All Saints' Church, Alton Priors, Wiltshire, July 2025.
 featured: true
 images:
   - image: /images/uploads/DSCF0899.jpg
