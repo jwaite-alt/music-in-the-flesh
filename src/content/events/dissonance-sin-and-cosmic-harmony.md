@@ -4,7 +4,7 @@ date: 2026-07-07
 venue: York Early Music Festival
 location: York
 description: A talk with discussion at the York Early Music Festival.
-ticketUrl: https://ncem.ticketsolve.com/ticketbooth/shows/1173675875
+ticketUrl: https://ncem.co.uk/events/dissonance-sin-and-cosmic-harmony/
 draft: false
 ---
 
