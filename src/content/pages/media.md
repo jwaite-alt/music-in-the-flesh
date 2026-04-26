@@ -2,4 +2,4 @@
 title: Media
 ---
 
-Documentation and records of _Music in the Flesh_ performances, workshops and events — video, photography and written reflections.
+A selection of video, photo and written documentation of our performance events and experiments.
