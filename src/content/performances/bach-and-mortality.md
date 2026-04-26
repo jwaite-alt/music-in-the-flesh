@@ -3,7 +3,7 @@ title: Bach and Mortality
 date: 2026-04-16
 venue: Bedford Bach Festival
 location: Bedford Heights
-description: A performance and discussion session around the theme of music, bodies and death.
+description: A performance and discussion session around the themes of music, bodies and death.
 featured: false
 videoUrl: ''
 feedbackFormUrl: ''
