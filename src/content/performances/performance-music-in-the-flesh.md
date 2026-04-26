@@ -3,7 +3,7 @@ title: 'Performance: Music in the Flesh'
 date: 2025-11-07
 venue: Churchill College
 location: Cambridge
-description: Experience Baroque Music in a Distinctly Different Way.
+description: Baroque Music From the Heart
 featured: false
 videoUrl: ''
 feedbackFormUrl: ''
