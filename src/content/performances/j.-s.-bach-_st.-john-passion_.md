@@ -34,8 +34,8 @@ A unique performance of J. S. Bach’s _St. John Passion_ that invited a profo
 
 Performers were able to inhabit the music intuitively with their bodies, to move when they felt moved, to communicate naturally and honestly with each other. Listeners became immersed in scenes of staggering candour and intimacy. They found themselves right up close to individual musicians, feeling a singer’s breath on their skin and the vibrations of a low bass note through their feet. At the height of an exceptionally hot English summer, with dazzling evening light pouring in through the open portal of the medieval church, voices, sweat and tears flowed abundantly – a powerful reminder that we are all made of flesh and blood; that we are ensouled bodies that pulsate and resonate. 
 
-For those precious two hours, we were porous body-souls, permeated by waves of sound and affect that spread contagiously amongst all present. We emerged lost for words, transfixed and transformed. Painfully cathartic and joyously affirmative, this performance plumbed the depths of what we might be able to feel individually and collectively. It revealed, gloriously, the shared humanity that binds us together against all the odds.   
-
+For those precious two hours, we were porous body-souls, permeated by waves of sound and affect that spread contagiously amongst all present. We emerged lost for words, transfixed and transformed. Painfully cathartic and joyously affirmative, this performance plumbed the depths of what we might be able to feel individually and collectively. It revealed, gloriously, the shared humanity that binds us together against all the odds.
+   
 #### Selected participant feedback: 
 
 _This was a transformative experience. It was more visceral, emotional, spiritual and physical, as well as aural and cerebral, than anything I’ve experienced before._
