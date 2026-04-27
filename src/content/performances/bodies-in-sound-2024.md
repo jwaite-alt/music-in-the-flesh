@@ -32,7 +32,9 @@ Read a review of the event [here](https://www.girton.cam.ac.uk/news/immersive-ba
 
 #### Selected feedback
 
-_Being given permission to respond and feel it all - sitting **with** the performers - what what MAGIC! I can't believe I was so luck to have 'taken part'_ 
+_Being given permission to respond and feel it all - sitting **with** the performers - what what MAGIC! I can't believe I was so luck to have 'taken part'_ .
+
+_I loved the life of the performance and the movement of the singers - I heard parts I had never really heard before. The way that the singers and musicians were so **present** to us and to each other - not full-blown acting but incredibly expressive portrayal - more please!_ 
 
 _A memorable experience and more engaging than anything I have ever seen or heard. The chorus at the end will live on forever._
 
@@ -42,4 +44,10 @@ _The movement and interaction of the performers with each other and the audience
 
 _Very innovative way of performing, I was spellbound! One of the best concerts I have attended (I am 54!)_
 
+_Being surrounded by the sound was wonderful. The singers performing from within the audience, the audience participation with the chorales, the communication between all the musicians - please more like this!_
+
 _I have never seen a performance of a sacred music that was so immersive, and aimed to include the audience in the performance. Having the singers move around the space allowed us to hear each individual line and it’s important role in the harmony, which is such a vast difference from the ‘normal’ way where it is all presented as one unit. I really hope that there will be more concerts like this, as it is such a rewarding and enlightening experience as both a performer and audience member. Oe of my biggest takeaways from this experience as a performer is, if the music makes you want to move, then move!_
+
+_Being part of the performance is **so** involving and fantastic. The players and singers being 'at one' with each other - and with the audience too. **Please** do this again - and again! We want to bring all our friends: they would **love** it._ 
+
+_A triumph! Transformative, fantastic!_
