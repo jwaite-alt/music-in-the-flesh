@@ -1,5 +1,5 @@
 ---
-hero_intro: How can music move us? This project uses my research into historical ways of music-making as an inspiration for transforming live performance now. How did it feel to be an early modern musical body? And how might we use this historical insight to imagine alternative ways of playing, hearing and loving this music now?
+hero_intro: How can music move us? This project brings together groundbreaking research into historical ways of music-making with practical performance expertise, as an inspiration for transforming live performance now. How did it feel to be an early modern musical body? And how might we use this historical insight to imagine alternative ways of playing, hearing and loving this music now?
 ---
 
 My book _Music in the Flesh: An Early Modern Musical Physiology_ (Chicago, 2023) reimagines the lived experiences of people making music—composers, performers, listeners—in seventeenth- and early eighteenth-century Europe. It explores how music affected and reshaped them in body, soul and spirit. 
