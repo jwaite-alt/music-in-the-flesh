@@ -1,9 +1,9 @@
 ---
-title: 'Performance: J. S. Bach, *St. John Passion*'
+title: 'Performance: J. S. Bach, _St. John Passion_'
 date: 2024-03-27
 venue: Girton College
 location: Cambridge
-description: An immersive in-the-round performance of Johann Sebastian Bach's  *St. John Passion* directed by Maggie Faultless (violin) and Nicholas Mulroy (Evangelist).
+description: An immersive in-the-round performance of Johann Sebastian Bach's  _St. John Passion_ directed by Maggie Faultless (violin) and Nicholas Mulroy (Evangelist).
 featured: false
 videoUrl: ''
 feedbackFormUrl: ''
@@ -36,10 +36,10 @@ _Being given permission to respond and feel it all - sitting **with** the perfor
 
 _A memorable experience and more engaging than anything I have ever seen or heard. The chorus at the end will live on forever._
 
-_Very innovative way of performing, I was spellbound! One of the best concerts I have attended (I am 54!)_
+_I certainly felt this urge to shout out and clap during the performance at Girton. The first chorus, when the choir emerged from the audience and sang that crisp ‘Herr’ gave me goosebumps and almost brought me to tears. I noticed the two older gentlemen next to me in tears. The closeness to the performers and the interactions between audience and musicans were fantastic._
 
 _The movement and interaction of the performers with each other and the audience (paradoxically) made it seem more of a **human** story._ 
 
-_I have never seen a performance of a sacred music that was so immersive, and aimed to include the audience in the performance. Having the singers move around the space allowed us to hear each individual line and it’s important role in the harmony, which is such a vast difference from the ‘normal’ way where it is all presented as one unit. I really hope that there will be more concerts like this, as it is such a rewarding and enlightening experience as both a performer and audience member. Oe of my biggest takeaways from this experience as a performer is, if the music makes you want to move, then move!_
+_Very innovative way of performing, I was spellbound! One of the best concerts I have attended (I am 54!)_
 
-_I certainly felt this urge to shout out and clap during the performance at Girton. The first chorus, when the choir emerged from the audience and sang that crisp ‘Herr’ gave me goosebumps and almost brought me to tears. I noticed the two older gentlemen next to me in tears. The closeness to the performers and the interactions between audience and musicans were fantastic._
+_I have never seen a performance of a sacred music that was so immersive, and aimed to include the audience in the performance. Having the singers move around the space allowed us to hear each individual line and it’s important role in the harmony, which is such a vast difference from the ‘normal’ way where it is all presented as one unit. I really hope that there will be more concerts like this, as it is such a rewarding and enlightening experience as both a performer and audience member. Oe of my biggest takeaways from this experience as a performer is, if the music makes you want to move, then move!_
