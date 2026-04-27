@@ -15,7 +15,7 @@ draft: false
 
 An unorthodox celebration of the publication of _Music in the Flesh_, with music, chat, bubbly and bean bags. The event aimed to bring to life some of the historical insights from the book in the moment of live performance. 
 
-##### Programme
+### Programme
 
 Heinrich Ignaz Biber, _Mensa sonora:_ Sonata No. 1 in D Major: I. Grave – Allegro
 Reinhard Keiser, _Croesus:_ ‘Liebe, sag, was fängst du an?’
@@ -33,7 +33,7 @@ Stephane Crayton, _violin_
 Leon Sturdee, _viola_
 Max Todes, _cello_
 
-##### Selected Feedback
+### Selected Feedback
 
 _Bettina's work is revelatory - I've already shared her approach in sever professional contexts to the great delight of other musicians. This is a historical approach that quite literally gives heart and body to the music - it's liberating yet completely natural to play like this._
 
