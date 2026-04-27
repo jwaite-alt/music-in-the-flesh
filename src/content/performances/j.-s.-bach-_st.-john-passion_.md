@@ -56,7 +56,7 @@ _What an amazing experience that was and thank you for enabling us all to feel s
 
 _It almost became a new piece when [you are] entirely immersed in it. In that small space, we really did feel part of it and it was very moving._ 
 
-_In an age of constant digital distraction, of endless content and consumption, of restless minds: the ability to share something profoundly human like that is no small thing. The heat, the shared moisture and breath, the glorious moments of flow, of connection, the moments of overwhelm, of sensory overload, even fear and risk: the important process of simply being there together to make music, to look for something beyond the everyday, to spark change in the minds and hearts of everyone present._ 
+_What we did on Sunday was elevate an ordinary period of two-hours into something truly extraordinary – and none of us who were present will ever forget it; the experience has already indelibly inscribed itself into the minds of bodies of performers and listeners alike. In an age of constant digital distraction, of endless content and consumption, of restless minds: the ability to share something profoundly human like that is no small thing. The heat, the shared moisture and breath, the glorious moments of flow, of connection, the moments of overwhelm, of sensory overload, even fear and risk: the important process of simply being there together to make music, to look for something beyond the everyday, to spark change in the minds and hearts of everyone present._ 
 
 _That was one of the most extraordinary … [I’m] completely sort of wrung out, moved … I could sit through it all over again … that was one of the most wonderful things I have ever witnessed._
 
