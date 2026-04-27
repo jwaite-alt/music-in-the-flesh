@@ -1,5 +1,5 @@
 ---
-title: Feeling (Like) Bach? At the Cambridge Festival of Ideas
+title: 'Cambridge Festival of Ideas: Feeling (Like) Bach?'
 date: 2019-10-21
 venue: Emmanuel College
 location: Cambridge
