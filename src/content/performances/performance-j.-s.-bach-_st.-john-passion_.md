@@ -25,8 +25,6 @@ J.S Bach                        O Mensch bewein' dein' S
 J.S Bach                        St John Passion BWV 245
 Jacob Handl                  Ecce, quomodo moritur iustus 
 
-Pre-concert talk by Professor Bettina Varwig
-
 #### Selected Feedback
 
 _It was really wonderful and profoundly moving to go into a performance not just with whole voice, but all aspects of mind and self almost in a flow state of total focus._ 
