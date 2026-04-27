@@ -40,7 +40,7 @@ _A memorable experience and more engaging than anything I have ever seen or hear
 
 _I certainly felt this urge to shout out and clap during the performance at Girton. The first chorus, when the choir emerged from the audience and sang that crisp ‘Herr’ gave me goosebumps and almost brought me to tears. I noticed the two older gentlemen next to me in tears. The closeness to the performers and the interactions between audience and musicans were fantastic._
 
-_The movement and interaction of the performers with each other and the audience (paradoxically) made it seem more of a **human** story._ 
+_Bettina’s research has uncovered the possibility of an enhanced sensory relationship with music that has largely been lost in 19th-century concert-going behaviour. Both performers and audiences were encouraged and enabled by an understanding of historical performance and listening practices to rediscover a more visceral relationship with the music. As performers, we began to experience the music on a more physical, embodied level, finding a physical freedom to move as we played and sang, producing an intensity of the listening experience that resulted in ‘feeling’ the emotional content of the music with the audience._ 
 
 _Very innovative way of performing, I was spellbound! One of the best concerts I have attended (I am 54!)_
 
