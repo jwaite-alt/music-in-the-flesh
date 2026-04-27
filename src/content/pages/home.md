@@ -1,6 +1,10 @@
 ---
-hero_intro: How can music move us? This project brings groundbreaking research on past ways of music-making into dialogue with practical performance expertise, as an inspiration for transforming live performance now. How did it feel to be an early modern musical body? And how might we use this historical insight to imagine alternative ways of playing, hearing and loving this music now?
+hero_intro: How can music move us? This project brings together historical research with present-day performance practice. We use historical insight into past ways of music-making - flowing, fleshy, visceral, contagious - as an inspiration for transforming live performance now. How did it feel to be an early modern musical body? And how might these past experiences inspire us to imagine new ways of playing, hearing and loving this music now?
 ---
+
+_Musically life-changing_ - Maggie Faultless
+
+_At times, it felt as though the whole Hall was moving. The sense of being inside the performance was completely unforgettable and mind-blowing!_ - audience member, March 2024
 
 My book _Music in the Flesh: An Early Modern Musical Physiology_ (Chicago, 2023) reimagines the lived experiences of people making music—composers, performers, listeners—in seventeenth- and early eighteenth-century Europe. It explores how music affected and reshaped them in body, soul and spirit. 
 
