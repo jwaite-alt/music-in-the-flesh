@@ -4,11 +4,11 @@ hero_intro: How can music move us? This project brings together historical resea
 
 _Unforgettably enriching and inspiring_ - Nicholas Mulroy
 
-_Affective contagion...passionate and impassioned performance...rituals and repression...compressed hearts...overflowing, porous bodies. These were just some of the things that came up during two days of powerful exploration and experimentation … It culminated in a performance of Bach's St John Passion that left us gasping for breath, unable to speak, utterly changed. Bettina's work on early-modern listening is going to transform the world of performance as we know it. We've started a revolution_. - Rachel Stroud
-
 _At times, it felt as though the whole Hall was moving. The sense of being inside the performance was completely unforgettable and mind-blowing!_ - audience member, March 2024
 
-_The most engaging and moving musical occurrence I've ever been part of_. - student participant 
+_Affective contagion...passionate and impassioned performance...rituals and repression...compressed hearts...overflowing, porous bodies. These were just some of the things that came up during two days of powerful exploration and experimentation … It culminated in a performance of Bach's St John Passion that left us gasping for breath, unable to speak, utterly changed. Bettina's work on early-modern listening is going to transform the world of performance as we know it. We've started a revolution_. - Rachel Stroud
+
+_The most engaging and moving musical occurrence I've ever been part of_. - student participant, June 2025 
 
 _Musically life-changing_ - Maggie Faultless
 
