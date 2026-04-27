@@ -32,8 +32,12 @@ _Especially when not playing, I felt that performers and singers were always inv
 
 _One particularly striking moment for me was when singers stood right in front of me, “blocking” my view of the rest of the ensemble. I suddenly realized how much I rely on visual contact – especially with you, Maggie – and I was briefly unsettled. But then something shifted. It was so liberating to realize that the ensemble was so connected, so in tune with one another, that there was only one possible moment for the next note to happen. It made me feel how an ensemble can become one organism – not just a group of people making music at the same time._ 
 
+_Apologies for dashing off afterwards. I didn’t really know where to put myself as I feel I’d experienced something beyond words. You hit the nail on the head with your comments about the sharing of love and humanity. That’s really what it all boils down to. Whether it’s a deeply religious feeling or a musical connection I wish all humans the chance to experience this richness. I believe it is possible that this exists for us all. I just feel so lucky that I get to experience it in my workplace. What a blessing!_
+
 _I’ve just experimented with my pupils. I ran a double bass sectional [rehearsing Mahler’s Fifth Symphony] and asked them to be open to the idea of how they experienced each other’s bodies, movements, breaths, and how they could pass information down the section through this … I think they all thought I’d lost the plot, but the result was a new sound of togetherness and listening._
 
+_I keep saying to myself … that I'll carry what we did forward with me. I've not often been so aware of the memory of the body as well as the mind, and recollections come back very vividly which is rarely the case in more conventional settings. I feel incredibly fortunate to have somehow been in the right place at the right time and been involved in this unforgettably enriching and inspiring process._ 
+ 
 Link to documentary (short/long) TBC
 
 Link to article TBC
