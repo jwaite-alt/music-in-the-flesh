@@ -6,4 +6,4 @@ My book _Music in the Flesh: An Early Modern Musical Physiology_ (Chicago, 2023)
 
 There are countless historical testimonies describing the powerful effects of music on the human body. My book explores musical, philosophical, anatomical, medical, theological and devotional writings of the time to show that these historical bodies were porous, flowing, ensouled, and easily permeated and transformed by musical sound.  
 
-These early modern experiences challenge our modern-day dualistic understanding of human nature: an immaterial mind housed in an inert material container. Instead, they affirm a more integrated vision of human nature, in which body, soul and spirit are inextricably entangled. And music could make those whole human body-souls resonate, expand with joy, contract with despair, cry and dance.
+These ideas challenge the mind-body dualism that underpins our modern-day understanding of human nature. Instead, they affirm a more integrated vision, in which body, soul and spirit are inextricably entangled. Music could make those whole human body-souls resonate, expand with joy, contract with despair, cry and dance.
