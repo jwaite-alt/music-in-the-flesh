@@ -8,6 +8,8 @@ _Affective contagion...passionate and impassioned performance...rituals and repr
 
 _At times, it felt as though the whole Hall was moving. The sense of being inside the performance was completely unforgettable and mind-blowing!_ - audience member, March 2024
 
+_The most engaging and moving musical occurrence I've ever been part of_. - student participant 
+
 _Musically life-changing_ - Maggie Faultless
 
 We start from and within the bodies: how seventeenth- and eighteenth-century bodies experienced music and emotions, and how differently a modern audience often feels. We hope these ideas can inspire us to experiment with performing in an even freer way and to communicate more closely with each other and our listeners. We want to really harness the power of Bach’s music to move us physically and sometimes push us to the limits emotionally and physically. Some of this music is difficult, with awkwardness built into the notes on the page. Many of these challenges can be ironed out with sufficient rehearsal time and technical prowess, but what emotional richness might be lost thereby? 
