@@ -34,7 +34,7 @@ A unique performance of J. S. Bach’s _St. John Passion_ that invited a profo
 
 Performers were able to inhabit the music intuitively with their bodies, to move when they felt moved, to communicate naturally and honestly with each other. Listeners became immersed in scenes of staggering candour and intimacy. They found themselves right up close to individual musicians, feeling a singer’s breath on their skin and the vibrations of a low bass note through their feet. At the height of an exceptionally hot English summer, with dazzling evening light pouring in through the open portal of the medieval church, voices, sweat and tears flowed abundantly – a powerful reminder that we are all made of flesh and blood; that we are ensouled bodies that pulsate and resonate. 
 
-For those precious two hours, we were porous body-souls, permeated by waves of sound and affect that spread contagiously amongst all present. We emerged lost for words, transfixed and transformed. Painfully cathartic and joyously affirmative, this performance plumbed the depths of what we might be able to feel individually and collectively. It revealed, gloriously, the shared humanity that binds us together against all the odds.   
+For those precious two hours, we were porous body-souls, permeated by waves of sound and affect that spread contagiously amongst all present. We emerged lost for words, transfixed and transformed. Painfully cathartic and joyously affirmative, this performance plumbed the depths of what we might be able to feel individually and collectively. It revealed, gloriously, the shared humanity that binds us together against all the odds.
 
 #### Selected participant feedback: 
 
@@ -60,6 +60,6 @@ _In an age of constant digital distraction, of endless content and consumption, 
 
 _That was one of the most extraordinary … [I’m] completely sort of wrung out, moved … I could sit through it all over again … that was one of the most wonderful things I have ever witnessed._
 
-_Bach in the Flesh_ has taken performers and listeners on an extraordinary journey, and the project would not have been possible without support from The Cecil King Memorial Foundation, an anonymous Trust, Music for Awhile, The Royal Academy of Music, Continuo Foundation, the Faculty of Music and School of Arts and Humanities (University of Cambridge), the Churches Conservation Trust and The OAE Experience Scheme. We are deeply grateful for their support.
+This project would not have been possible without support from The Cecil King Memorial Foundation, an anonymous Trust, Music for Awhile, The Royal Academy of Music, Continuo Foundation, the Faculty of Music and School of Arts and Humanities (University of Cambridge), the Churches Conservation Trust and The OAE Experience Scheme. We are deeply grateful for their support.
 
 Link to film TBC
