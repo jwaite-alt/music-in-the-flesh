@@ -6,6 +6,8 @@ _Music in the Flesh_ began as a scholarly monograph and has grown into a much bi
 
 ## The History
 
+Music is made by and received by human bodies. But in present-day classical concert culture, music is often presented and received as a disembodied artefact. Performers are placed at a safe distance from the audience, clad in body-effacing black dress; listeners, seated in neat rows, are asked not to move, make a noise or otherwise share their affective responses to the music - we are asked to leave our own bodies at the door. 
+
 My book unearths an extraordinary body of testimony about the physical and spiritual effects of music from the seventeenth and early eighteenth centuries. Philosophers, music theorists, theologians, devotional writers, poets, anatomists, medics and listeners described music as moving, ravishing, painful, dangerous, curative, and miraculous. 
 
 Music could soften your heart, pierce your brain, make your teeth grate and rattle, melt your earwax, contract your innards, constrict your chest like it was bound with ropes, flood you with honeyed sweetness or taste like vinegar in your throat. It could induce melancholy or drive out the plague. It could draw your soul out of your body. 
