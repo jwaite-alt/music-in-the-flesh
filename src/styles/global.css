@@ -278,10 +278,15 @@ em {
 
 .gallery img {
   width: 100%;
-  aspect-ratio: 4/3;
-  object-fit: cover;
+  height: auto;
   filter: sepia(10%);
   transition: filter var(--transition);
+}
+
+/* For uniform thumbnail grids (landscape images only) */
+.gallery--grid img {
+  aspect-ratio: 4/3;
+  object-fit: cover;
 }
 
 .gallery img:hover {
