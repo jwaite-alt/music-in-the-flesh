@@ -89,14 +89,55 @@ function titleHtml(title: string) {
         <span class="label">Words</span>
       </h2>
       <hr class="rule rule--crimson" />
-      <div class="prose">
-        <MediaContent />
+      <div class="book-preview">
+        <a href={`${base}book`} class="book-preview__cover-link">
+          <img
+            src={`${base}images/book-cover.jpg`}
+            alt="Music in the Flesh — An Early Modern Musical Physiology, by Bettina Varwig"
+            class="book-preview__cover"
+          />
+        </a>
+        <div class="book-preview__text">
+          <p>My book <em>Music in the Flesh: An Early Modern Musical Physiology</em> (Chicago, 2023) reimagines the lived experiences of people making music—composers, performers, listeners—in seventeenth- and early eighteenth-century Europe. It explores how music affected and reshaped them in body, soul and spirit.</p>
+          <a href={`${base}book`} class="btn btn--crimson" style="margin-top: var(--space-md);">About the book</a>
+        </div>
       </div>
     </section>
 
   </div>
 
 </BaseLayout>
+
+<script>
+  async function sizeBookCover() {
+    await document.fonts.ready;
+
+    const link  = document.querySelector<HTMLElement>('.book-preview__cover-link');
+    const cover = document.querySelector<HTMLImageElement>('.book-preview__cover');
+    const text  = document.querySelector<HTMLElement>('.book-preview__text');
+    if (!link || !cover || !text) return;
+
+    // Wait for image to load so naturalWidth/Height are available
+    if (!cover.complete) {
+      await new Promise(r => cover.addEventListener('load', r, { once: true }));
+    }
+
+    const ratio = cover.naturalWidth / cover.naturalHeight; // e.g. ~0.69 for this cover
+
+    // Iterate: setting link width changes text column width → changes text height
+    // → changes required image width. 3 passes converges completely.
+    link.style.width = '';
+    for (let i = 0; i < 3; i++) {
+      const textH = text.getBoundingClientRect().height;
+      link.style.width = Math.round(textH * ratio) + 'px';
+      void link.offsetWidth; // force reflow before next measurement
+    }
+  }
+
+  sizeBookCover();
+  window.addEventListener('resize', sizeBookCover);
+</script>
+
 
 <style>
   .page-header {
@@ -184,5 +225,46 @@ function titleHtml(title: string) {
     color: var(--color-ink-light);
     font-style: italic;
     padding-block: var(--space-md);
+  }
+
+  .book-preview {
+    display: flex;
+    gap: var(--space-lg);
+    align-items: flex-start;
+    margin-top: var(--space-md);
+  }
+
+  .book-preview__cover-link {
+    flex-shrink: 0;
+    display: block;
+  }
+
+  .book-preview__cover {
+    display: block;
+    width: 100%;
+    height: auto;
+    box-shadow: 4px 6px 16px rgba(28, 21, 13, 0.2);
+    transition: box-shadow var(--transition), transform var(--transition);
+  }
+
+  .book-preview__cover-link:hover .book-preview__cover {
+    box-shadow: 6px 10px 24px rgba(28, 21, 13, 0.35);
+    transform: translateY(-2px);
+    opacity: 1;
+  }
+
+  .book-preview__text {
+    flex: 1;
+    min-width: 0;
+  }
+
+  @media (max-width: 600px) {
+    .book-preview {
+      flex-direction: column;
+    }
+
+    .book-preview__cover-link {
+      width: 180px !important;
+    }
   }
 </style>
