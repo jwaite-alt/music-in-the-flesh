@@ -148,8 +148,14 @@ const bios = Object.entries(bioFiles)
     border: 1px solid var(--color-kraft);
   }
 
+  /* Remove paragraph leading above first line, then nudge prose down
+     by the font's half-leading so cap-height aligns with image top */
   .bio-body .prose :global(p:first-child) {
     margin-top: 0;
+  }
+
+  .bio-body .prose {
+    padding-top: 0.35rem;
   }
 
   @media (max-width: 768px) {
