@@ -12,6 +12,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^6.1.1"
+    "astro": "^6.1.1",
+    "remark-breaks": "^4.0.0"
   }
 }
