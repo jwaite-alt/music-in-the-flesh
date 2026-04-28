@@ -8,8 +8,8 @@ featured: false
 videoUrl: ''
 feedbackFormUrl: ''
 images:
-  - /images/uploads/img_6370_54913431062_o.jpg
-  - /images/uploads/img_6568_54914293556_o.jpg
+  - image: /images/uploads/img_6370_54913431062_o.jpg
+  - image: /images/uploads/img_6568_54914293556_o.jpg
 draft: false
 ---
 

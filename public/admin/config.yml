@@ -125,7 +125,14 @@ collections:
       - { label: "Featured performance", name: featured, widget: boolean, default: false, hint: "Tick to show this as a current/upcoming performance on the home page." }
       - { label: "Video URL", name: videoUrl, widget: string, required: false, hint: "Paste a YouTube or Vimeo embed URL (e.g. https://www.youtube.com/embed/xxxxx)" }
       - { label: "Feedback form URL", name: feedbackFormUrl, widget: string, required: false, hint: "Paste the Google Form embed URL for this performance." }
-      - { label: "Images", name: images, widget: list, required: false, field: { label: Image, name: image, widget: image } }
+      - label: "Images"
+        name: images
+        widget: list
+        required: false
+        hint: "Add photos for this performance. For multiple images a slideshow will be shown automatically."
+        fields:
+          - { label: "Image", name: image, widget: image }
+          - { label: "Caption", name: caption, widget: string, required: false, hint: "Optional caption shown beneath the image." }
       - { label: "Body", name: body, widget: markdown, hint: "Full description, programme notes, reflections. This appears on the individual performance page." }
       - { label: "Draft (hidden)", name: draft, widget: boolean, default: false, hint: "Tick to hide this from the site." }
 

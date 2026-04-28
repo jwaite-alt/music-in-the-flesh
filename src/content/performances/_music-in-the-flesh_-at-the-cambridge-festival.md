@@ -8,12 +8,12 @@ featured: false
 videoUrl: ''
 feedbackFormUrl: ''
 images:
-  - /images/uploads/DSC00684.jpg
-  - /images/uploads/DSC00829.jpg
-  - /images/uploads/DSC01009.jpg
-  - /images/uploads/DSC01389.jpg
-  - /images/uploads/DSC01787.jpg
-  - /images/uploads/DSC01556.jpg
+  - image: /images/uploads/DSC00684.jpg
+  - image: /images/uploads/DSC00829.jpg
+  - image: /images/uploads/DSC01009.jpg
+  - image: /images/uploads/DSC01389.jpg
+  - image: /images/uploads/DSC01787.jpg
+  - image: /images/uploads/DSC01556.jpg
 draft: false
 ---
 

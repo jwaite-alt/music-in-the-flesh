@@ -8,10 +8,10 @@ featured: false
 videoUrl: ''
 feedbackFormUrl: ''
 images:
-  - /images/uploads/IMG-20251120-WA0016.jpeg
-  - /images/uploads/IMG_2349.JPG
-  - /images/uploads/IMG_2346.JPG
-  - /images/uploads/acdab49a-ec26-4aa0-bb71-57670722a3f3.JPG
+  - image: /images/uploads/IMG-20251120-WA0016.jpeg
+  - image: /images/uploads/IMG_2349.JPG
+  - image: /images/uploads/IMG_2346.JPG
+  - image: /images/uploads/acdab49a-ec26-4aa0-bb71-57670722a3f3.JPG
 draft: false
 ---
 

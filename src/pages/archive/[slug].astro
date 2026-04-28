@@ -1,5 +1,6 @@
 ---
 import PageLayout from '../../layouts/PageLayout.astro';
+import Slideshow from '../../components/Slideshow.astro';
 import { getCollection, render } from 'astro:content';
 const base = import.meta.env.BASE_URL;
 
@@ -39,10 +40,14 @@ const formattedDate = dateObj.toLocaleDateString('en-GB', {
   ) : null}
 
   {performance.data.images && performance.data.images.length > 0 && (
-    <div class="gallery" style="margin-bottom: var(--space-lg);">
-      {performance.data.images.map((src, i) => (
-        <img src={base.replace(/\/$/, '') + src} alt={`${performance.data.title} — image ${i + 1}`} />
-      ))}
+    <div style="margin-bottom: var(--space-lg);">
+      <Slideshow
+        images={performance.data.images.map(img => ({
+          image: typeof img === 'string' ? img : img.image,
+          caption: typeof img === 'string' ? undefined : img.caption,
+        }))}
+        title={performance.data.title}
+      />
     </div>
   )}
 

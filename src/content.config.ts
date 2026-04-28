@@ -18,7 +18,10 @@ const performances = defineCollection({
     featured: z.boolean().default(false),
     videoUrl: z.string().optional(),
     feedbackFormUrl: z.string().optional(),
-    images: z.array(z.string()).optional(),
+    images: z.array(z.union([
+      z.string().transform(s => ({ image: s, caption: undefined as string | undefined })),
+      z.object({ image: z.string(), caption: z.string().optional() }),
+    ])).default([]),
     draft: z.boolean().default(false),
   }),
 });

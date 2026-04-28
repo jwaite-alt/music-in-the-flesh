@@ -8,7 +8,7 @@ featured: false
 videoUrl: ''
 feedbackFormUrl: ''
 images:
-  - /images/uploads/13crucif.jpg
+  - image: /images/uploads/13crucif.jpg
 draft: false
 ---
 
