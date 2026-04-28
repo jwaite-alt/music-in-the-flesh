@@ -16,8 +16,8 @@ const currentPath = Astro.url.pathname;
 <nav class="nav" aria-label="Main navigation">
   <div class="nav__inner container container--wide">
     <a href={base} class="nav__wordmark" aria-label="Music in the Flesh — Home">
-      <span class="nav__wordmark-main">Music in the Flesh</span>
-      <span class="nav__wordmark-sub">Bettina Varwig</span>
+      <span class="nav__wordmark-main">Music <em>in the</em> Flesh</span>
+      <span class="nav__wordmark-sub">Bettina Varwig · University of Cambridge</span>
     </a>
 
     <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
@@ -87,6 +87,14 @@ const currentPath = Astro.url.pathname;
     text-transform: uppercase;
     letter-spacing: var(--tracking-wide);
     color: var(--color-crimson);
+  }
+
+  .nav__wordmark-main em {
+    color: var(--color-slate);
+    font-style: italic;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0.02em;
   }
 
   .nav__wordmark-sub {

@@ -38,27 +38,28 @@ function titleHtml(title: string) {
   <section class="hero section--parchment">
     <div class="container hero__inner">
       <div class="hero__text">
-        <p class="label hero__kicker">Bettina Varwig · University of Cambridge</p>
         <h1 class="hero__title">
           <span class="hero__title-music">Music</span>
           <span class="hero__title-in">in the</span>
           <span class="hero__title-flesh">Flesh</span>
         </h1>
-        <p class="hero__subtitle display-subtitle">An Early Modern Musical Physiology</p>
+        <p class="hero__subtitle display-subtitle">History, Performance, Experiment</p>
         <p class="hero__intro">{homePage.data.hero_intro}</p>
         <div class="hero__actions">
           <a href={`${base}about-project`} class="btn btn--crimson">About the Project</a>
           <a href={`${base}media`} class="btn btn--ink">Media</a>
+          <a href={`${base}about`} class="btn btn--ink">Biographies</a>
         </div>
       </div>
       <div class="hero__book">
-        <a href="https://press.uchicago.edu/ucp/books/book/chicago/M/bo196672081.html" target="_blank" rel="noopener" class="hero__book-link">
+        <a href={`${base}book`} class="hero__book-link">
           <img
             src={`${base}images/book-cover.jpg`}
             alt="Music in the Flesh — An Early Modern Musical Physiology, by Bettina Varwig"
             class="hero__cover"
           />
         </a>
+        <p class="hero__award">Winner, Otto Kinkeldey Award,<br/>American Musicological Society</p>
       </div>
     </div>
   </section>
@@ -66,9 +67,7 @@ function titleHtml(title: string) {
   <!-- Book description -->
   <section class="section">
     <div class="container container--prose">
-      <p class="label" style="color: var(--color-crimson); margin-bottom: 1em;">A corporeal history of music-making in early modern Europe</p>
       <div class="prose"><HomeContent /></div>
-      <a href={`${base}about`} class="btn btn--crimson" style="margin-top: var(--space-md);">Biographies</a>
     </div>
   </section>
 
@@ -76,7 +75,7 @@ function titleHtml(title: string) {
   {featuredMedia.length > 0 && (
     <section class="section section--parchment">
       <div class="container">
-        <p class="label" style="color: var(--color-crimson); margin-bottom: var(--space-sm);">Media</p>
+        <h2 class="section-heading">Media</h2>
         <hr class="rule rule--crimson" />
         <div class="media-preview">
           {featuredMedia.map(({ type, item }) => {
@@ -110,7 +109,6 @@ function titleHtml(title: string) {
     <section class="section">
       <div class="container">
         <h2 class="section-heading">From the Archive</h2>
-        <hr class="rule rule--crimson" />
         {recentArchive.map(p => (
           <EventCard
             title={p.data.title}
@@ -146,15 +144,19 @@ function titleHtml(title: string) {
 
   .hero__title {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: baseline;
+    flex-wrap: nowrap;
     line-height: 1;
     margin-bottom: 0.5em;
+    gap: 0.25em;
   }
 
-  .hero__title-music {
+  .hero__title-music,
+  .hero__title-flesh {
     font-family: var(--font-display);
     font-weight: 700;
-    font-size: var(--size-4xl);
+    font-size: clamp(2.5rem, 4.5vw, 4.5rem);
     text-transform: uppercase;
     letter-spacing: var(--tracking-wide);
     color: var(--color-crimson);
@@ -164,19 +166,8 @@ function titleHtml(title: string) {
     font-family: var(--font-display);
     font-style: italic;
     font-weight: 400;
-    font-size: var(--size-2xl);
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
     color: var(--color-slate);
-    margin-left: 0.1em;
-    margin-block: 0.1em;
-  }
-
-  .hero__title-flesh {
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: var(--size-4xl);
-    text-transform: uppercase;
-    letter-spacing: var(--tracking-wide);
-    color: var(--color-crimson);
   }
 
   .hero__subtitle {
@@ -203,6 +194,16 @@ function titleHtml(title: string) {
 
   .hero__book-link {
     display: block;
+  }
+
+  .hero__award {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: var(--size-sm);
+    color: var(--color-ink-light);
+    text-align: center;
+    margin-top: var(--space-sm);
+    line-height: 1.4;
   }
 
   .hero__cover {
@@ -287,9 +288,8 @@ function titleHtml(title: string) {
       display: none;
     }
 
-    .hero__title-music,
-    .hero__title-flesh {
-      font-size: var(--size-3xl);
+    .hero__title {
+      flex-wrap: wrap;
     }
   }
 </style>
