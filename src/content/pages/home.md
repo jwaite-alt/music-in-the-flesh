@@ -10,11 +10,11 @@ _Unforgettably enriching and inspiring._
 _At times, it felt as though the whole hall was moving. The sense of being inside the performance was completely unforgettable and mind-blowing!_
 ⎻ Audience member, March 2024
 
-_Affective contagion...passionate and impassioned performance...rituals and repression...compressed hearts...overflowing, porous bodies. These were just some of the things that came up during two days of powerful exploration and experimentation … It culminated in a performance of Bach's St John Passion that left us gasping for breath, unable to speak, utterly changed. Bettina's work on early-modern listening is going to transform the world of performance as we know it. We've started a revolution_. 
-⎻ Rachel Stroud
-
 _The most engaging and moving musical occurrence I've ever been part of._
 ⎻ Student participant, June 2025 
+
+_Affective contagion...passionate and impassioned performance...rituals and repression...compressed hearts...overflowing, porous bodies. These were just some of the things that came up during two days of powerful exploration and experimentation … It culminated in a performance of Bach's St John Passion that left us gasping for breath, unable to speak, utterly changed. Bettina's work on early-modern listening is going to transform the world of performance as we know it. We've started a revolution_. 
+⎻ Rachel Stroud
 
 _Musically life-changing_. 
 ⎻ Maggie Faultless
