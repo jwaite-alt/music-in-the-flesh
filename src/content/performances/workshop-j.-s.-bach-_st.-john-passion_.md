@@ -8,11 +8,11 @@ featured: false
 videoUrl: ''
 feedbackFormUrl: ''
 images:
-  - /images/uploads/Lasset.jpg
-  - /images/uploads/kreuzigten2.jpg
-  - /images/uploads/Eilt4.jpg
-  - /images/uploads/Erwäge2.jpg
-  - /images/uploads/Ich folge dir.jpg
+  - image: /images/uploads/Lasset.jpg
+  - image: /images/uploads/kreuzigten2.jpg
+  - image: /images/uploads/Eilt4.jpg
+  - image: /images/uploads/Erwäge2.jpg
+  - image: /images/uploads/Ich folge dir.jpg
 draft: false
 ---
 

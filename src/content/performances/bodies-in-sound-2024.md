@@ -8,11 +8,11 @@ featured: false
 videoUrl: ''
 feedbackFormUrl: ''
 images:
-  - /images/uploads/St Johns Passion-03883.jpg
-  - /images/uploads/St Johns Passion-03679.jpg
-  - /images/uploads/St Johns Passion-03448.jpg
-  - /images/uploads/St Johns Passion-03516.jpg
-  - /images/uploads/St Johns Passion-03543.jpg
+  - image: /images/uploads/St Johns Passion-03883.jpg
+  - image: /images/uploads/St Johns Passion-03679.jpg
+  - image: /images/uploads/St Johns Passion-03448.jpg
+  - image: /images/uploads/St Johns Passion-03516.jpg
+  - image: /images/uploads/St Johns Passion-03543.jpg
 draft: false
 ---
 

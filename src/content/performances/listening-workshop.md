@@ -8,8 +8,8 @@ featured: false
 videoUrl: ''
 feedbackFormUrl: ''
 images:
-  - /images/uploads/IMG_0964.JPG
-  - /images/uploads/IMG_0961.JPG
+  - image: /images/uploads/IMG_0964.JPG
+  - image: /images/uploads/IMG_0961.JPG
 draft: false
 ---
 

@@ -8,8 +8,8 @@ featured: false
 videoUrl: ''
 feedbackFormUrl: ''
 images:
-  - /images/uploads/2024-07-09 15.10.11.jpg
-  - /images/uploads/2024-07-09 14.56.03.jpg
+  - image: /images/uploads/2024-07-09 15.10.11.jpg
+  - image: /images/uploads/2024-07-09 14.56.03.jpg
 draft: false
 ---
 
