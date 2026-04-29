@@ -9,7 +9,9 @@ videoUrl: ''
 feedbackFormUrl: ''
 images:
   - image: /images/uploads/IMG_0964.JPG
+    caption: ''
   - image: /images/uploads/IMG_0961.JPG
+    caption: ''
 draft: false
 ---
 
