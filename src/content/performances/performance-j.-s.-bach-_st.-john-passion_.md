@@ -21,8 +21,8 @@ Margaret Faultless, Violin and Director
 
 #### Programme
 
-J.S Bach                        O Mensch bewein' dein' Sünde groß, BWV 622
-J.S Bach                        St John Passion BWV 245
+J.S. Bach                        O Mensch bewein' dein' Sünde groß, BWV 622
+J.S. Bach                        _St. John Passion_, BWV 245
 Jacob Handl                  Ecce, quomodo moritur iustus 
 
 #### Selected Feedback
