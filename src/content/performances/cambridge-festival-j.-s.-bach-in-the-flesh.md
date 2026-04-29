@@ -3,7 +3,7 @@ title: 'Cambridge Festival: J. S. Bach in the Flesh'
 date: 2023-03-22
 venue: Emmanuel College Chapel
 location: Cambridge
-description: A public performance workshop presented by Maggie Faultless and Bettina Varwig.
+description: A public performance workshop presented by Margaret Faultless and Bettina Varwig.
 featured: false
 videoUrl: ''
 feedbackFormUrl: ''
@@ -11,7 +11,7 @@ images: []
 draft: false
 ---
 
-A public performance workshop presented by Maggie Faultless and Bettina Varwig.
+A public performance workshop presented by Margaret Faultless and Bettina Varwig.
 
 With 
 
