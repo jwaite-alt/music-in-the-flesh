@@ -5,7 +5,7 @@ order: 2
 photo: /images/uploads/Unknown.jpg
 ---
 
-Violinist Margaret Faultless performs music from Monteverdi to the present day in a career that has included leading the contemporary music ensemble _Aquarius_, co-leading a West End Musical and The Scottish Ballet orchestra, and performing with ensembles such as the BBC Symphony Orchestra, the City of Birmingham Symphony Orchestra and the Academy of St Martin’s in the Fields. She has guest-led the Russian National Orchestra, the London Philharmonic Orchestra (London) and the Handel and Haydn Society (Boston). 
+Violinist **Margaret Faultless** performs music from Monteverdi to the present day in a career that has included leading the contemporary music ensemble _Aquarius_, co-leading a West End Musical and The Scottish Ballet orchestra, and performing with ensembles such as the BBC Symphony Orchestra, the City of Birmingham Symphony Orchestra and the Academy of St Martin’s in the Fields. She has guest-led the Russian National Orchestra, the London Philharmonic Orchestra (London) and the Handel and Haydn Society (Boston). 
 
 Now best known as a specialist in historical performance practice, she has held principal positions in and performed with many of the best-known period instrument ensembles. Margaret led the _Amsterdam Baroque Orchestra_(Ton Koopman) in their ten-year Bach cantata project, performing and recording every cantata. She was a member of The London Haydn Quartet, whose CD of Opus 9 was hailed as ‘one of the great Haydn quartet recordings’. She also lectures and broadcasts on performance. Her research interests include leadership, social interactions in Haydn symphonies and Bach's notation.
 
