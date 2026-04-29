@@ -23,8 +23,8 @@ Heinrich Ignaz Biber, _Mensa sonora:_ Sonata No. 1 in D Major: I. Grave – Alle
 Reinhard Keiser, _Croesus:_ ‘Liebe, sag, was fängst du an?’
 Johann Sebastian Bach, _Well-Tempered Clavier I:_ Fugue in B Minor (BWV 869)
 Georg Philipp Telemann, _Burlesque de Quichotte:_ ‘Ses soupirs amoureux après la Princesse Dulcinée’
-Johann Sebastian Bach_, St. Matthew Passion:_  ‘Gebt mir meinen Jesum wieder’
-Heinrich Schütz_, Symphoniae Sacrae I:_  ‘O quam tu pulchra es’
+Johann Sebastian Bach, \*St. Matthew Passion\*: ‘Gebt mir meinen Jesum wieder’
+Heinrich Schütz, \*Symphoniae Sacrae I\*:  ‘O quam tu pulchra es’
 
 Margaret Faultless, _violin and direction_
 Alana Mailes, _soprano_
