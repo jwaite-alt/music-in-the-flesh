@@ -1,6 +1,6 @@
 ---
 name: Bettina Varwig
-role: Professor of Music History · University of Cambridge
+role: ''
 order: 1
 photo: /images/uploads/BV cropped.jpg
 ---
