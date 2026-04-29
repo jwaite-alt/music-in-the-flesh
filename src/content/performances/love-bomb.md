@@ -27,13 +27,13 @@ This event was curated by Cambridge-based American artist Anna Brownsted, Delia 
 
 #### Read a blogpost about the event [here](https://musicatcambridge.wordpress.com/2025/11/18/bettina-varwig-on-creative-conversations/).
 
-### Performers:
+#### Performers:
 
 Laura Newey, Maryam Giraud, Myriam Lowe, Rachel Segman (voice)
 Stephane Crayton, Rachel Stroud (violin)
 Mike Hyman (cello)
 
-### Selected feedback: 
+#### Selected feedback: 
 
 _Being taken to a place where we were on edge and outside our comfort zones meant we interacted with the music in a state of high alertness. It was not always comfortable but it was provoking, particularly to consider how we can disrupt the traditional concert model and open up ourselves to different ways of listening. I loved the element of surprise and the way the soundscape and the live music blended into each other._
 
