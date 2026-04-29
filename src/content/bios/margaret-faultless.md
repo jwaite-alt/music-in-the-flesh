@@ -14,3 +14,5 @@ As a leader of The Orchestra of the Age of Enlightenment, she performs at the Pr
  A graduate and Honorary Fellow of Clare College, Cambridge,  Musician in Residence at St John’s College  and bye-fellow at Girton, she is the Artistic Director of the Cambridge University Collegium Musicum and of the University chamber music scheme (IAS), and works closely with the CMP. For 15 years Margaret was first Director of Performance at the Faculty of Music, a multi-faceted role which she helped to develop. She is the first Becket Chair of Historical Performance at The Royal Academy of Music, a Professor of the University of London and an Honorary Fellow of Birmingham Conservatoire, the city in which she grew up. 
 
 Margaret is the Artistic Director of _Music for Awhile_, a flexible ensemble she founded in 1996. This group of  eminent historical performance specialists is the professional ensemble collaborating with Bettina Varwig in the ground-breaking and artistically thrilling practice-based research project _Music in the Flesh._
+
+Photo credit: Eric Richards
