@@ -9,11 +9,13 @@ videoUrl: ''
 feedbackFormUrl: ''
 images:
   - image: /images/uploads/2024-07-09 15.10.11.jpg
+    caption: ''
   - image: /images/uploads/2024-07-09 14.56.03.jpg
+    caption: ''
 draft: false
 ---
 
-With Nicholas Mulroy (tenor), Maggie Faultess (violin), Stephane Crayton (violin), Mika Hyman (cello), Alexander Semple (organ)
+With Nicholas Mulroy (tenor), Margaret Faultless (violin), Stephane Crayton (violin), Mika Hyman (cello), Alexander Semple (organ)
 
 J. S. Bach, arias from _St. John Passion_
 
