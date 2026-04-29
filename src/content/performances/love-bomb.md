@@ -9,9 +9,13 @@ videoUrl: ''
 feedbackFormUrl: ''
 images:
   - image: /images/uploads/IMG-20251120-WA0016.jpeg
+    caption: ''
   - image: /images/uploads/IMG_2349.JPG
+    caption: ''
   - image: /images/uploads/IMG_2346.JPG
+    caption: ''
   - image: /images/uploads/acdab49a-ec26-4aa0-bb71-57670722a3f3.JPG
+    caption: ''
 draft: false
 ---
 
