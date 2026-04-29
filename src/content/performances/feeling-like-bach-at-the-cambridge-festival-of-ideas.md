@@ -3,7 +3,7 @@ title: 'Cambridge Festival of Ideas: Feeling (Like) Bach?'
 date: 2019-10-21
 venue: Emmanuel College
 location: Cambridge
-description: A performance workshop with Maggie Faultless and Bettina Varwig.
+description: A performance workshop with Margaret Faultless and Bettina Varwig.
 featured: false
 videoUrl: ''
 feedbackFormUrl: ''
