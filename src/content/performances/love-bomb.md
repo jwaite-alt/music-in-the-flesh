@@ -25,7 +25,7 @@ The performance centred on Claudio Monteverdi’s celebrated _Lamento della Nin
 
 This event was curated by Cambridge-based American artist Anna Brownsted, Delia Casadei, Stephane Crayton, Rachel Stroud, and Bettina Varwig.
 
-### Read a blogpost about the event [here](https://musicatcambridge.wordpress.com/2025/11/18/bettina-varwig-on-creative-conversations/).
+#### Read a blogpost about the event [here](https://musicatcambridge.wordpress.com/2025/11/18/bettina-varwig-on-creative-conversations/).
 
 ### Performers:
 
