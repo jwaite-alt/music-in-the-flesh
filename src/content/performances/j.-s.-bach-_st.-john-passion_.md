@@ -9,26 +9,41 @@ videoUrl: ''
 feedbackFormUrl: ''
 images:
   - image: /images/uploads/DSCF0899.jpg
+    caption: ''
   - image: /images/uploads/DSCF0620.jpg
+    caption: ''
   - image: /images/uploads/DSCF0748.jpg
+    caption: ''
   - image: /images/uploads/DSCF0826.jpg
+    caption: ''
   - image: /images/uploads/DSCF0806.jpg
+    caption: ''
   - image: /images/uploads/DSCF0590.jpg
+    caption: ''
   - image: /images/uploads/DSCF0831.jpg
+    caption: ''
   - image: /images/uploads/DSCF0591.jpg
+    caption: ''
   - image: /images/uploads/DSCF0843.jpg
+    caption: ''
   - image: /images/uploads/DSCF0865.jpg
+    caption: ''
   - image: /images/uploads/DSCF0921.jpg
+    caption: ''
   - image: /images/uploads/DSCF0998.jpg
+    caption: ''
   - image: /images/uploads/DSCF0651.jpg
+    caption: ''
   - image: /images/uploads/DSCF1009.jpg
+    caption: ''
   - image: /images/uploads/DSCF1003.jpg
+    caption: ''
 draft: false
 ---
 
 Music for Awhile, All Saints’ Alton Priors  
 
-Directors: Nicholas Mulroy, Maggie Faultless, Bettina Varwig 
+Directors: Nicholas Mulroy, Margaret Faultless, Bettina Varwig 
 
 A unique performance of J. S. Bach’s _St. John Passion_ that invited a profound sense of physical and emotional freedom and connection among its participants. Performed in the round, in the ancient spiritual aura of All Saints’ Church, Alton Priors, the event brought out the affective intensity of Bach’s music and its dramatic narrative to the full. 
 
