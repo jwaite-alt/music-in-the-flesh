@@ -80,5 +80,3 @@ _What we did on Sunday was elevate an ordinary period of two-hours into somethin
 _That was one of the most extraordinary … [I’m] completely sort of wrung out, moved … I could sit through it all over again … that was one of the most wonderful things I have ever witnessed._
 
 This project would not have been possible without support from The Cecil King Memorial Foundation, an anonymous Trust, Music for Awhile, The Royal Academy of Music, Continuo Foundation, the Faculty of Music and School of Arts and Humanities (University of Cambridge), the Churches Conservation Trust and The OAE Experience Scheme. We are deeply grateful for their support.
-
-Link to film TBC
