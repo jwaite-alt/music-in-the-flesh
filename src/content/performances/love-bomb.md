@@ -31,7 +31,7 @@ This event was curated by Cambridge-based American artist Anna Brownsted, Delia 
 
 Laura Newey, Maryam Giraud, Myriam Lowe, Rachel Segman (voice)
 Stephane Crayton, Rachel Stroud (violin)
-Mike Hyman (cello)
+Mika Hyman (cello)
 
 #### Selected feedback: 
 
