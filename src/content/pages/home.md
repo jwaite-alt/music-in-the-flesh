@@ -17,4 +17,4 @@ We start from and in the bodies: the breathing, moving, fleshy, sensitive, inter
 > ⎻ Rachel Stroud
 
 > Musically life-changing. 
-> ⎻ Maggie Faultless
+> ⎻ Margaret Faultless
