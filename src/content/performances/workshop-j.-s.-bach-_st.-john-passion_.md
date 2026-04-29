@@ -3,16 +3,21 @@ title: 'Workshop: J. S. Bach, _St. John Passion_'
 date: 2025-06-09
 venue: Royal Academy of Music
 location: London
-description: A two-day workshop with professional musicians and students exploring how to be in our bodies musically, led by Maggie Faultless, Nicholas Mulroy and Bettina Varwig.
+description: A two-day workshop with professional musicians and students exploring how to be in our bodies musically, led by Margaret Faultless, Nicholas Mulroy and Bettina Varwig.
 featured: false
 videoUrl: ''
 feedbackFormUrl: ''
 images:
   - image: /images/uploads/Lasset.jpg
+    caption: ''
   - image: /images/uploads/kreuzigten2.jpg
+    caption: ''
   - image: /images/uploads/Eilt4.jpg
+    caption: ''
   - image: /images/uploads/Erwäge2.jpg
+    caption: ''
   - image: /images/uploads/Ich folge dir.jpg
+    caption: ''
 draft: false
 ---
 
