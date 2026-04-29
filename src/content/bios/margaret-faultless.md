@@ -1,5 +1,5 @@
 ---
-name: Maggie Faultless
+name: Margaret Faultless
 role: ''
 order: 2
 photo: /images/uploads/Unknown.jpg
