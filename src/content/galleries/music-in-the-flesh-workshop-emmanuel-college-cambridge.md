@@ -14,5 +14,19 @@ images:
     caption: ''
   - image: /images/uploads/DSC01556.jpg
     caption: ''
+  - image: /images/uploads/DSC01947.jpg
+    caption: ''
+  - image: /images/uploads/DSC01375.jpg
+    caption: ''
+  - image: /images/uploads/DSC01534.jpg
+    caption: ''
+  - image: /images/uploads/DSC00885.jpg
+    caption: ''
+  - image: /images/uploads/DSC00575.jpg
+    caption: ''
+  - image: /images/uploads/DSC01099.jpg
+    caption: ''
 draft: false
 ---
+
+Photo credit: Zen Grisdale
