@@ -9,7 +9,9 @@ videoUrl: ''
 feedbackFormUrl: ''
 images:
   - image: /images/uploads/IMG_1432.JPG
+    caption: ''
   - image: /images/uploads/book event 5.jpeg
+    caption: ''
 draft: false
 ---
 
