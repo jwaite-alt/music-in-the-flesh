@@ -17,7 +17,7 @@ Cambridge University Chamber Choir
 Nicholas Mulroy, Evangelist and Director
 
 Cambridge University Collegium Musicum
-Maggie Faultless, Violin and Director
+Margaret Faultless, Violin and Director
 
 #### Programme
 
