@@ -36,3 +36,5 @@ images:
     caption: ''
 draft: false
 ---
+
+Photo credit: Nathan Giorgetti
