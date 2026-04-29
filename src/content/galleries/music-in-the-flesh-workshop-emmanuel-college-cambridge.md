@@ -1,5 +1,5 @@
 ---
-title: Music in the Flesh Workshop, Emmanuel College, Cambridge
+title: Music in the Flesh Workshop, Emmanuel College
 date: 2026-03-17
 description: Photographs from our Cambridge Festival event, March 2026.
 featured: false
