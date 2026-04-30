@@ -26,9 +26,25 @@ images:
     caption: ''
   - image: /images/uploads/DSCF0921.jpg
     caption: ''
+  - image: /images/uploads/DSCF0651.jpg
+    caption: ''
+  - image: /images/uploads/DSCF0827.jpg
+    caption: ''
+  - image: /images/uploads/DSCF0767.jpg
+    caption: ''
+  - image: /images/uploads/DSCF0992.jpg
+    caption: ''
   - image: /images/uploads/DSCF0998.jpg
     caption: ''
-  - image: /images/uploads/DSCF0651.jpg
+  - image: /images/uploads/DSCF0871.jpg
+    caption: ''
+  - image: /images/uploads/DSCF0405.jpg
+    caption: ''
+  - image: /images/uploads/DSCF0865.jpg
+    caption: ''
+  - image: /images/uploads/DSCF0603.jpg
+    caption: ''
+  - image: /images/uploads/DSCF0820.jpg
     caption: ''
   - image: /images/uploads/DSCF1009.jpg
     caption: ''
