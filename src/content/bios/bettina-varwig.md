@@ -7,7 +7,7 @@ photo: /images/uploads/BV cropped.jpg
 
 **Bettina Varwig** is Professor of Music History at the Faculty of Music and Fellow at Emmanuel College, University of Cambridge. Her research centres on the history of listening, the body, the senses and the emotions in early modern music. She works in close collaboration with performers in order to bring historical insight into productive dialogue with musical practice.
 
-Originally from Germany, Bettina took her undergraduate degree at King's College London and her PhD at Harvard University. She was a Fellow by Examination at Magdalen College, Oxford (2005-8) and a British Academy Fellow at the University of Cambridge (2008-9) before taking up a post as Lecturer/Senior Lecturer in Music at King's College London (2009). She has held her current post at the University of Cambridge since 2017.
+Originally from Germany, Bettina took her undergraduate degree at King's College London and her PhD at Harvard University. She was a Fellow by Examination at Magdalen College, Oxford and a British Academy Postdoctoral Fellow at the University of Cambridge, before taking up a post as Lecturer/Senior Lecturer in Music at King's College London. She has held her current post at the University of Cambridge since 2017.
 
 Bettina's work has been honoured with several prizes, including the Jerome Roche Prize of the Royal Musical Association and the William H. Scheide Prize of the American Bach Society. Her latest monograph, _Music in the Flesh: An Early Modern Musical Physiology_ (Chicago, 2023), won the Otto Kinkeldey Award of the American Musicological Society. In 2025 she received the Dent Medal of the Royal Musical Association.
 
