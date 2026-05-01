@@ -11,6 +11,8 @@ Originally from Germany, Bettina took her undergraduate degree at King's College
 
 Bettina's work has been honoured with several prizes, including the Jerome Roche Prize of the Royal Musical Association and the William H. Scheide Prize of the American Bach Society. Her latest monograph, _Music in the Flesh: An Early Modern Musical Physiology_ (Chicago, 2023), won the Otto Kinkeldey Award of the American Musicological Society. In 2025 she received the Dent Medal of the Royal Musical Association.
 
+       
+
 #### Selected Publications
 
 - [_Music in the Flesh: An Early Modern Musical Physiology_ (Chicago: University of Chicago Press, 2023)](https://press.uchicago.edu/ucp/books/book/chicago/M/bo196672081.html)
