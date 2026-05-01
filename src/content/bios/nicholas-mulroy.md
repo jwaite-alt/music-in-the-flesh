@@ -2,7 +2,7 @@
 name: Nicholas Mulroy
 role: ''
 order: 3
-photo: ''
+photo: /images/uploads/nick in action.jpg
 ---
 
 Born in Liverpool, **Nicholas Mulroy** has performed extensively in the baroque repertoire, and has sung Bach’s Evangelists all over the world: in Sydney opera House, at the BBC Proms, and in the USA as well as in Bach’s churches in Arnstadt, Weimar, Köthen and Leipzig. He has also enjoyed a long association with the music of Monteverdi, having recorded his Vespers several times and sung around 80 performances of the Full Monteverdi, an immersive dramatisation of the great Fourth Book of Madrigals, devised by John La Bouchardière and Robert Hollingworth. 
