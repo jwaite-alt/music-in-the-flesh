@@ -13,7 +13,6 @@ Bettina's work has been honoured with several prizes, including the Jerome Roche
 
 #### Selected Publications
 
-- 'Plenisentient Musicking', _Critical Inquiry_ (in press)
 - [_Music in the Flesh: An Early Modern Musical Physiology_ (Chicago: University of Chicago Press, 2023)](https://press.uchicago.edu/ucp/books/book/chicago/M/bo196672081.html)
 - [_Rethinking Bach_, ed. Bettina Varwig (New York: Oxford University Press, 2021)](https://global.oup.com/academic/product/rethinking-bach-9780190943899?cc=gb&lang=en&)
 - ['Music in the Thirty Years War: Towards an Emotional History of Listening'](https://sscm-jscm.org/jscm-issues/volume-26-no-1/varwig-emotional-listening/), [_Journal of Seventeenth-Century Music_ 26/1 (2020)](https://sscm-jscm.org/jscm-issues/volume-26-no-1/varwig-emotional-listening/) 
