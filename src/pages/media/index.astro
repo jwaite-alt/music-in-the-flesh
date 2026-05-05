@@ -1,16 +1,16 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getCollection, getEntry, render } from 'astro:content';
+import { getCollection } from 'astro:content';
 
 const base = import.meta.env.BASE_URL;
-
-const mediaPage = await getEntry('pages', 'media');
-const { Content: MediaContent } = await render(mediaPage);
 
 const allVideos = (await getCollection('videos', ({ data }) => !data.draft))
   .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
 
 const allGalleries = (await getCollection('galleries', ({ data }) => !data.draft))
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+
+const allWords = (await getCollection('words', ({ data }) => !data.draft))
   .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
 
 function youtubeThumbnail(embedUrl: string) {
@@ -83,25 +83,32 @@ function titleHtml(title: string) {
       )}
     </section>
 
-    <!-- Text -->
-    <section class="media-section" id="text">
+    <!-- Words -->
+    <section class="media-section" id="words">
       <h2 class="media-section__heading">
         <span class="label">Words</span>
       </h2>
       <hr class="rule rule--crimson" />
-      <div class="book-preview">
-        <a href={`${base}book`} class="book-preview__cover-link">
-          <img
-            src={`${base}images/book-cover.jpg`}
-            alt="Music in the Flesh — An Early Modern Musical Physiology, by Bettina Varwig"
-            class="book-preview__cover"
-          />
-        </a>
-        <div class="book-preview__text">
-          <p set:html={mediaPage.data.teaser} />
-          <a href={`${base}book`} class="btn btn--crimson" style="margin-top: var(--space-md);">About the book</a>
+      {allWords.length > 0 ? (
+        <div class="media-grid">
+          {allWords.map(w => {
+            const href = w.id === 'music-in-the-flesh'
+              ? `${base}book`
+              : `${base}media/words/${w.id}`;
+            return (
+              <a href={href} class="media-card">
+                <div class="media-card__thumb">
+                  {w.data.cover && <img src={w.data.cover} alt={w.data.title} />}
+                </div>
+                <p class="media-card__title" set:html={titleHtml(w.data.title)} />
+                <p class="media-card__desc">{w.data.description}</p>
+              </a>
+            );
+          })}
         </div>
-      </div>
+      ) : (
+        <p class="media-placeholder">Written content will be added here.</p>
+      )}
     </section>
 
   </div>

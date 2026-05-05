@@ -104,15 +104,30 @@ collections:
       - { label: "Draft (hidden)", name: draft, widget: boolean, default: false }
 
   # ── Media — Words ────────────────────────────────────────
-  - name: media-words
+  - name: words
     label: "Media — Words"
-    files:
-      - name: media
-        label: "Book description"
-        file: src/content/pages/media.md
-        fields:
-          - { label: "Media page teaser", name: teaser, widget: text, hint: "Short paragraph shown in the Words section of the Media page, beside the book cover." }
-          - { label: "Full book description", name: body, widget: markdown, hint: "Full text shown on the Book page — description, reviews etc." }
+    label_singular: "Words item"
+    folder: src/content/words
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    identifier_field: title
+    summary: "{{title}} — {{date}}"
+    sortable_fields: ["date", "title"]
+    fields:
+      - { label: "Title", name: title, widget: string }
+      - { label: "Date", name: date, widget: datetime, format: "YYYY-MM-DD", date_format: "DD MMMM YYYY", time_format: false }
+      - { label: "Short description", name: description, widget: text, hint: "Shown in listings and previews." }
+      - { label: "Cover / thumbnail image", name: cover, widget: image, required: false }
+      - { label: "Award or accolade", name: award, widget: string, required: false, hint: "e.g. 'Winner, Otto Kinkeldey Award'" }
+      - { label: "Buy / publisher link", name: buy_url, widget: string, required: false }
+      - { label: "Buy button label", name: buy_label, widget: string, required: false, default: "Buy" }
+      - { label: "Download URL", name: download_url, widget: string, required: false, hint: "Path to a PDF or other file, e.g. /downloads/my-essay.pdf" }
+      - { label: "Download button label", name: download_label, widget: string, required: false, default: "Download" }
+      - { label: "Feature on homepage", name: featured, widget: boolean, default: false, hint: "Tick to show this item in the homepage media preview." }
+      - { label: "Full text", name: body, widget: markdown, hint: "Full content shown on the item's own page." }
+      - { label: "Draft (hidden)", name: draft, widget: boolean, default: false }
 
   # ── Upcoming ─────────────────────────────────────────────
   - name: events
