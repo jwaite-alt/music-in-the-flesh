@@ -133,9 +133,16 @@ function titleHtml(title: string) {
   .hero__inner {
     display: grid;
     grid-template-columns: 1fr auto;
-    align-items: center;
+    align-items: start;
     gap: var(--space-xl);
     padding-block: var(--space-2xl);
+  }
+
+  .hero__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: stretch;
   }
 
   .hero__kicker {
