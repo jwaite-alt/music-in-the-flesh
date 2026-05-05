@@ -13,35 +13,29 @@ public_folder: /images/uploads
 
 collections:
 
-  # ── Pages ────────────────────────────────────────────────
-  - name: pages
-    label: Pages
+  # ── Home Page ────────────────────────────────────────────
+  - name: home
+    label: "Home Page"
     files:
       - name: home
-        label: Home Page
+        label: "Home Page"
         file: src/content/pages/home.md
         fields:
           - { label: "Hero introduction", name: hero_intro, widget: text, hint: "Short paragraph shown in the hero banner." }
           - { label: "Book description", name: body, widget: markdown, hint: "Descriptive text about the book, shown below the hero." }
+
+  # ── About ────────────────────────────────────────────────
+  - name: about
+    label: "About"
+    files:
       - name: about-project
-        label: About the Project
+        label: "About"
         file: src/content/pages/about-project.md
         fields:
           - { label: "Title", name: title, widget: string }
           - { label: "Project description", name: body, widget: markdown, hint: "Full description of the project and its intellectual aims." }
 
-  # ── Media — Words ────────────────────────────────────────
-  - name: media-words
-    label: "Media — Words"
-    files:
-      - name: media
-        label: "Book description"
-        file: src/content/pages/media.md
-        fields:
-          - { label: "Media page teaser", name: teaser, widget: text, hint: "Short paragraph shown in the Words section of the Media page, beside the book cover." }
-          - { label: "Full book description", name: body, widget: markdown, hint: "Full text shown on the Book page — description, reviews etc." }
-
-  # ── Biographies ─────────────────────────────────────────
+  # ── Biographies ──────────────────────────────────────────
   - name: bios
     label: Biographies
     label_singular: Biography
@@ -60,7 +54,7 @@ collections:
       - { label: "Photo", name: photo, widget: image, required: false }
       - { label: "Biography", name: body, widget: markdown, hint: "Full biography text, publications, contact details etc." }
 
-  # ── Media — Videos ──────────────────────────────────────
+  # ── Media — Videos ───────────────────────────────────────
   - name: videos
     label: "Media — Videos"
     label_singular: Video
@@ -82,7 +76,7 @@ collections:
       - { label: "Notes", name: body, widget: markdown, required: false, hint: "Optional additional text shown on the video page." }
       - { label: "Draft (hidden)", name: draft, widget: boolean, default: false }
 
-  # ── Media — Photography ─────────────────────────────────
+  # ── Media — Photography ──────────────────────────────────
   - name: galleries
     label: "Media — Photography"
     label_singular: Gallery
@@ -109,9 +103,42 @@ collections:
       - { label: "Notes", name: body, widget: markdown, required: false, hint: "Optional text shown on the gallery page." }
       - { label: "Draft (hidden)", name: draft, widget: boolean, default: false }
 
-  # ── Performances (Archive) ──────────────────────────────
+  # ── Media — Words ────────────────────────────────────────
+  - name: media-words
+    label: "Media — Words"
+    files:
+      - name: media
+        label: "Book description"
+        file: src/content/pages/media.md
+        fields:
+          - { label: "Media page teaser", name: teaser, widget: text, hint: "Short paragraph shown in the Words section of the Media page, beside the book cover." }
+          - { label: "Full book description", name: body, widget: markdown, hint: "Full text shown on the Book page — description, reviews etc." }
+
+  # ── Upcoming ─────────────────────────────────────────────
+  - name: events
+    label: Upcoming
+    label_singular: Event
+    folder: src/content/events
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    identifier_field: title
+    summary: "{{title}} — {{date}}"
+    sortable_fields: ["date", "title"]
+    fields:
+      - { label: "Title", name: title, widget: string }
+      - { label: "Date", name: date, widget: datetime, format: "YYYY-MM-DD", date_format: "DD MMMM YYYY", time_format: false }
+      - { label: "Venue", name: venue, widget: string }
+      - { label: "Location (city)", name: location, widget: string, required: false }
+      - { label: "Short description", name: description, widget: text, hint: "Shown in the events listing." }
+      - { label: "Ticket / booking URL", name: ticketUrl, widget: string, required: false }
+      - { label: "Body", name: body, widget: markdown, required: false, hint: "Any additional detail shown when the event has its own page." }
+      - { label: "Draft (hidden)", name: draft, widget: boolean, default: false }
+
+  # ── Archive ──────────────────────────────────────────────
   - name: performances
-    label: Performances
+    label: Archive
     label_singular: Performance
     folder: src/content/performances
     create: true
@@ -140,25 +167,3 @@ collections:
           - { label: "Caption", name: caption, widget: string, required: false, hint: "Optional caption shown beneath the image." }
       - { label: "Body", name: body, widget: markdown, hint: "Full description, programme notes, reflections. This appears on the individual performance page." }
       - { label: "Draft (hidden)", name: draft, widget: boolean, default: false, hint: "Tick to hide this from the site." }
-
-  # ── Upcoming Events ─────────────────────────────────────
-  - name: events
-    label: Upcoming Events
-    label_singular: Event
-    folder: src/content/events
-    create: true
-    slug: "{{slug}}"
-    extension: md
-    format: frontmatter
-    identifier_field: title
-    summary: "{{title}} — {{date}}"
-    sortable_fields: ["date", "title"]
-    fields:
-      - { label: "Title", name: title, widget: string }
-      - { label: "Date", name: date, widget: datetime, format: "YYYY-MM-DD", date_format: "DD MMMM YYYY", time_format: false }
-      - { label: "Venue", name: venue, widget: string }
-      - { label: "Location (city)", name: location, widget: string, required: false }
-      - { label: "Short description", name: description, widget: text, hint: "Shown in the events listing." }
-      - { label: "Ticket / booking URL", name: ticketUrl, widget: string, required: false }
-      - { label: "Body", name: body, widget: markdown, required: false, hint: "Any additional detail shown when the event has its own page." }
-      - { label: "Draft (hidden)", name: draft, widget: boolean, default: false }
