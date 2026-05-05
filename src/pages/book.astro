@@ -3,8 +3,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { getEntry, render } from 'astro:content';
 
 const base = import.meta.env.BASE_URL;
-const mediaPage = await getEntry('pages', 'media');
-const { Content: BookContent } = await render(mediaPage);
+const bookEntry = await getEntry('words', 'music-in-the-flesh');
+const { Content: BookContent } = await render(bookEntry);
+const book = bookEntry.data;
 ---
 
 <BaseLayout title="The Book — Music in the Flesh">
@@ -23,21 +24,33 @@ const { Content: BookContent } = await render(mediaPage);
 
       <!-- Cover + buttons -->
       <div class="book-cover-wrap">
-        <a href="https://press.uchicago.edu/ucp/books/book/chicago/M/bo196672081.html" target="_blank" rel="noopener">
+        {book.buy_url ? (
+          <a href={book.buy_url} target="_blank" rel="noopener">
+            <img
+              src={`${base}${book.cover?.replace(/^\//, '')}`}
+              alt={book.title}
+              class="book-cover"
+            />
+          </a>
+        ) : (
           <img
-            src={`${base}images/book-cover.jpg`}
-            alt="Music in the Flesh — An Early Modern Musical Physiology, by Bettina Varwig"
+            src={`${base}${book.cover?.replace(/^\//, '')}`}
+            alt={book.title}
             class="book-cover"
           />
-        </a>
-        <p class="book-award">Winner, Otto Kinkeldey Award,<br/>American Musicological Society</p>
+        )}
+        {book.award && <p class="book-award" set:html={book.award.replace(',', ',<br/>')} />}
         <div class="book-actions">
-          <a href="https://press.uchicago.edu/ucp/books/book/chicago/M/bo196672081.html" target="_blank" rel="noopener" class="btn btn--crimson">
-            Buy from Chicago Press
-          </a>
-          <a href={`${base}downloads/Varwig Music in the Flesh Hearing.pdf`} class="btn btn--ink" download>
-            Sample chapter
-          </a>
+          {book.buy_url && (
+            <a href={book.buy_url} target="_blank" rel="noopener" class="btn btn--crimson">
+              {book.buy_label ?? 'Buy'}
+            </a>
+          )}
+          {book.download_url && (
+            <a href={`${base}${book.download_url.replace(/^\//, '')}`} class="btn btn--ink" download>
+              {book.download_label ?? 'Download'}
+            </a>
+          )}
         </div>
       </div>
 

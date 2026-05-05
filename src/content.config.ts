@@ -76,4 +76,21 @@ const galleries = defineCollection({
   }),
 });
 
-export const collections = { performances, events, pages, videos, galleries };
+const words = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/words' }),
+  schema: z.object({
+    title: z.string(),
+    date: dateField,
+    description: z.string(),
+    cover: z.string().optional(),
+    award: z.string().optional(),
+    buy_url: z.string().optional(),
+    buy_label: z.string().optional(),
+    download_url: z.string().optional(),
+    download_label: z.string().optional(),
+    featured: z.boolean().default(false),
+    draft: z.boolean().default(false),
+  }),
+});
+
+export const collections = { performances, events, pages, videos, galleries, words };

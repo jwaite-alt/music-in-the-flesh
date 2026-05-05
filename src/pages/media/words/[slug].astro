@@ -1,0 +1,152 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const allWords = await getCollection('words', ({ data }) => !data.draft);
+  return allWords.map(entry => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+const base = import.meta.env.BASE_URL;
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const item = entry.data;
+---
+
+<BaseLayout title={`${item.title} — Music in the Flesh`}>
+
+  <header class="words-header section--parchment">
+    <div class="container">
+      <p class="label" style="color: var(--color-crimson); margin-bottom: 0.5em;">Words</p>
+      <h1 class="words-header__title">{item.title}</h1>
+    </div>
+  </header>
+
+  <div class="container words-body">
+    <div class="words-intro">
+
+      {item.cover && (
+        <div class="words-cover-wrap">
+          {item.buy_url ? (
+            <a href={item.buy_url} target="_blank" rel="noopener">
+              <img src={`${base}${item.cover.replace(/^\//, '')}`} alt={item.title} class="words-cover" />
+            </a>
+          ) : (
+            <img src={`${base}${item.cover.replace(/^\//, '')}`} alt={item.title} class="words-cover" />
+          )}
+          {item.award && <p class="words-award">{item.award}</p>}
+          <div class="words-actions">
+            {item.buy_url && (
+              <a href={item.buy_url} target="_blank" rel="noopener" class="btn btn--crimson">
+                {item.buy_label ?? 'Buy'}
+              </a>
+            )}
+            {item.download_url && (
+              <a href={`${base}${item.download_url.replace(/^\//, '')}`} class="btn btn--ink" download>
+                {item.download_label ?? 'Download'}
+              </a>
+            )}
+          </div>
+        </div>
+      )}
+
+      <div class="words-details">
+        <div class="prose">
+          <Content />
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</BaseLayout>
+
+<style>
+  .words-header {
+    border-bottom: 1px solid var(--color-kraft);
+    padding-block: var(--space-lg);
+  }
+
+  .words-header__title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--size-2xl);
+    color: var(--color-crimson);
+    line-height: 1.1;
+  }
+
+  .words-body {
+    padding-block: var(--space-xl);
+  }
+
+  .words-intro {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--space-xl);
+    align-items: start;
+  }
+
+  .words-intro:not(:has(.words-cover-wrap)) {
+    grid-template-columns: 1fr;
+  }
+
+  .words-cover-wrap {
+    flex-shrink: 0;
+  }
+
+  .words-cover {
+    width: 220px;
+    height: auto;
+    box-shadow: 8px 12px 32px rgba(28, 21, 13, 0.25);
+    transition: box-shadow var(--transition), transform var(--transition);
+  }
+
+  .words-cover-wrap a:hover .words-cover {
+    box-shadow: 12px 18px 40px rgba(28, 21, 13, 0.4);
+    transform: translateY(-3px);
+    opacity: 1;
+  }
+
+  .words-award {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: var(--size-sm);
+    color: var(--color-ink-light);
+    text-align: center;
+    margin-top: var(--space-sm);
+    line-height: 1.4;
+    max-width: 220px;
+  }
+
+  .words-actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    margin-top: var(--space-md);
+    width: 220px;
+  }
+
+  .words-actions .btn {
+    text-align: center;
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    .words-intro {
+      grid-template-columns: 1fr;
+    }
+
+    .words-cover {
+      width: 100%;
+      max-width: 220px;
+    }
+
+    .words-cover-wrap {
+      text-align: center;
+      margin-inline: auto;
+    }
+  }
+</style>

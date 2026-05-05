@@ -14,11 +14,13 @@ const recentArchive = performances
 // Featured media items for homepage preview
 const allVideos = await getCollection('videos', ({ data }) => !data.draft && data.featured);
 const allGalleries = await getCollection('galleries', ({ data }) => !data.draft && data.featured);
+const allWords = await getCollection('words', ({ data }) => !data.draft && data.featured);
 
-// Interleave featured videos and galleries, up to 2 items total
+// Interleave featured videos, galleries and words, up to 2 items total
 const featuredMedia = [
   ...allVideos.map(v => ({ type: 'video' as const, item: v })),
   ...allGalleries.map(g => ({ type: 'gallery' as const, item: g })),
+  ...allWords.map(w => ({ type: 'words' as const, item: w })),
 ].sort((a, b) => new Date(b.item.data.date).getTime() - new Date(a.item.data.date).getTime())
  .slice(0, 2);
 
@@ -81,10 +83,17 @@ function titleHtml(title: string) {
           {featuredMedia.map(({ type, item }) => {
             const href = type === 'video'
               ? `${base}media/videos/${item.id}`
-              : `${base}media/photos/${item.id}`;
+              : type === 'gallery'
+              ? `${base}media/photos/${item.id}`
+              : item.id === 'music-in-the-flesh'
+              ? `${base}book`
+              : `${base}media/words/${item.id}`;
             const thumb = type === 'video'
               ? (item.data.thumbnail || youtubeThumbnail((item.data as any).embedUrl))
-              : (item.data as any).images?.[0]?.image;
+              : type === 'gallery'
+              ? (item.data as any).images?.[0]?.image
+              : (item.data as any).cover;
+            const typeLabel = type === 'video' ? 'Video' : type === 'gallery' ? 'Photography' : 'Words';
             return (
               <a href={href} class="media-preview__card">
                 <div class="media-preview__thumb">
@@ -92,7 +101,7 @@ function titleHtml(title: string) {
                   {type === 'video' && <span class="media-preview__play">▶</span>}
                 </div>
                 <p class="label media-preview__type" style="color: var(--color-crimson); margin-top: var(--space-xs);">
-                  {type === 'video' ? 'Video' : 'Photography'}
+                  {typeLabel}
                 </p>
                 <p class="media-preview__title" set:html={titleHtml(item.data.title)} />
               </a>
