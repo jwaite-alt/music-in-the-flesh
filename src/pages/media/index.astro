@@ -97,7 +97,7 @@ function titleHtml(title: string) {
               : `${base}media/words/${w.id}`;
             return (
               <a href={href} class="media-card">
-                <div class="media-card__thumb">
+                <div class="media-card__thumb media-card__thumb--portrait">
                   {w.data.cover && <img src={w.data.cover} alt={w.data.title} />}
                 </div>
                 <p class="media-card__title" set:html={titleHtml(w.data.title)} />
@@ -196,6 +196,11 @@ function titleHtml(title: string) {
     background-color: var(--color-parchment);
     overflow: hidden;
     margin-bottom: var(--space-xs);
+  }
+
+  .media-card__thumb--portrait img {
+    object-fit: contain;
+    object-position: center;
   }
 
   .media-card__thumb img {
