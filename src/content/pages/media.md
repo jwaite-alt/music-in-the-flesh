@@ -1,5 +1,6 @@
 ---
 title: Media
+teaser: "My book *Music in the Flesh: An Early Modern Musical Physiology* (Chicago, 2023) reimagines the lived experiences of people making music—composers, performers, listeners—in seventeenth- and early eighteenth-century Europe. It explores how music affected and reshaped them in body, soul and spirit."
 ---
 
 My book _Music in the Flesh: An Early Modern Musical Physiology_ (Chicago, 2023) reimagines the lived experiences of people making music—composers, performers, listeners—in seventeenth- and early eighteenth-century Europe. It explores how music affected and reshaped them in body, soul and spirit. 

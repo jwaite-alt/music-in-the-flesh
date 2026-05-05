@@ -44,6 +44,7 @@ const pages = defineCollection({
   schema: z.object({
     title: z.string().optional(),
     hero_intro: z.string().optional(),
+    teaser: z.string().optional(),
   }),
 });
 

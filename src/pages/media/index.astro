@@ -98,7 +98,7 @@ function titleHtml(title: string) {
           />
         </a>
         <div class="book-preview__text">
-          <p>My book <em>Music in the Flesh: An Early Modern Musical Physiology</em> (Chicago, 2023) reimagines the lived experiences of people making music—composers, performers, listeners—in seventeenth- and early eighteenth-century Europe. It explores how music affected and reshaped them in body, soul and spirit.</p>
+          <p set:html={mediaPage.data.teaser} />
           <a href={`${base}book`} class="btn btn--crimson" style="margin-top: var(--space-md);">About the book</a>
         </div>
       </div>
