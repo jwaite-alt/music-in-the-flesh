@@ -96,7 +96,7 @@ function titleHtml(title: string) {
             const typeLabel = type === 'video' ? 'Video' : type === 'gallery' ? 'Photography' : 'Words';
             return (
               <a href={href} class="media-preview__card">
-                <div class="media-preview__thumb">
+                <div class={`media-preview__thumb${type === 'words' ? ' media-preview__thumb--portrait' : ''}`}>
                   {thumb && <img src={thumb} alt={item.data.title} />}
                   {type === 'video' && <span class="media-preview__play">▶</span>}
                 </div>
@@ -275,6 +275,11 @@ function titleHtml(title: string) {
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  .media-preview__thumb--portrait img {
+    object-fit: contain;
+    object-position: center;
   }
 
   .media-preview__play {
