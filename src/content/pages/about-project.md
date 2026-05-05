@@ -16,7 +16,7 @@ These were not merely metaphors. They described real experiences of bodily and s
 
 ## The Practice 
 
-The historical ideas unearthed in my research form the foundation for a long-standing collaboration with the distinguished violinist Margaret Faultless (Becket Chair of Historical Performance, Royal Academy of Music) and the internationally renowned tenor Nicholas Mulroy. We take these early modern musical experiences as an inspiration for experimenting with how we listen and perform today. 
+The historical ideas unearthed in my research form the foundation for a long-standing collaboration with the distinguished violinist [Margaret Faultless](/about#margaret-faultless) (Becket Chair of Historical Performance, Royal Academy of Music) and the internationally renowned tenor [Nicholas Mulroy](/about#nicholas-mulroy). We take these early modern musical experiences as an inspiration for experimenting with how we listen and perform today. 
 
 We work with professional and student musicians, classical music audiences and those who have never heard this music. Our music making strives to be fleshy, gutsy, alive, humane and from the heart. We prize affective immediacy, collaborative creativity, collective attunement and the spontaneity and vulnerability of live performance. We embrace the technical and  physical challenges posed by historical instruments  as catalysts for enhanced expression. We move when we feel moved.
 
