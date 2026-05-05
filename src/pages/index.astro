@@ -133,16 +133,9 @@ function titleHtml(title: string) {
   .hero__inner {
     display: grid;
     grid-template-columns: 1fr auto;
-    align-items: start;
+    align-items: center;
     gap: var(--space-xl);
     padding-block: var(--space-2xl);
-  }
-
-  .hero__text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-self: stretch;
   }
 
   .hero__kicker {
@@ -197,6 +190,14 @@ function titleHtml(title: string) {
   .hero__book {
     flex-shrink: 0;
     align-self: center;
+    position: relative;
+  }
+
+  .hero__award {
+    position: absolute;
+    top: calc(100% + var(--space-xs));
+    left: 0;
+    right: 0;
   }
 
   .hero__book-link {
