@@ -29,12 +29,17 @@ collections:
         fields:
           - { label: "Title", name: title, widget: string }
           - { label: "Project description", name: body, widget: markdown, hint: "Full description of the project and its intellectual aims." }
+
+  # ── Media — Words ────────────────────────────────────────
+  - name: media-words
+    label: "Media — Words"
+    files:
       - name: media
-        label: Media Page
+        label: "Book description"
         file: src/content/pages/media.md
         fields:
-          - { label: "Title", name: title, widget: string }
-          - { label: "Text section", name: body, widget: markdown, hint: "Written content shown in the Text section of the Media page — reflections, responses, programme notes." }
+          - { label: "Media page teaser", name: teaser, widget: text, hint: "Short paragraph shown in the Words section of the Media page, beside the book cover." }
+          - { label: "Full book description", name: body, widget: markdown, hint: "Full text shown on the Book page — description, reviews etc." }
 
   # ── Biographies ─────────────────────────────────────────
   - name: bios
@@ -55,9 +60,9 @@ collections:
       - { label: "Photo", name: photo, widget: image, required: false }
       - { label: "Biography", name: body, widget: markdown, hint: "Full biography text, publications, contact details etc." }
 
-  # ── Videos ──────────────────────────────────────────────
+  # ── Media — Videos ──────────────────────────────────────
   - name: videos
-    label: Videos
+    label: "Media — Videos"
     label_singular: Video
     folder: src/content/videos
     create: true
@@ -77,9 +82,9 @@ collections:
       - { label: "Notes", name: body, widget: markdown, required: false, hint: "Optional additional text shown on the video page." }
       - { label: "Draft (hidden)", name: draft, widget: boolean, default: false }
 
-  # ── Photo Galleries ──────────────────────────────────────
+  # ── Media — Photography ─────────────────────────────────
   - name: galleries
-    label: Photo Galleries
+    label: "Media — Photography"
     label_singular: Gallery
     folder: src/content/galleries
     create: true
