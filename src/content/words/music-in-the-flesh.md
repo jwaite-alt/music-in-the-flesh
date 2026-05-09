@@ -1,13 +1,13 @@
 ---
-title: "Music in the Flesh: An Early Modern Musical Physiology"
-date: "2023-01-01"
-description: "My book reimagines the lived experiences of people making music—composers, performers, listeners—in seventeenth- and early eighteenth-century Europe. It explores how music affected and reshaped them in body, soul and spirit."
+title: 'Music in the Flesh: An Early Modern Musical Physiology'
+date: 2026-05-09
+description: My book reimagines the lived experiences of people making music—composers, performers, listeners—in seventeenth- and early eighteenth-century Europe. It explores how music affected and reshaped them in body, soul and spirit.
 cover: /images/book-cover.jpg
-award: "Winner, Otto Kinkeldey Award, American Musicological Society"
-buy_url: "https://press.uchicago.edu/ucp/books/book/chicago/M/bo196672081.html"
-buy_label: "Buy from Chicago Press"
-download_url: "/downloads/Varwig Music in the Flesh Hearing.pdf"
-download_label: "Sample chapter"
+award: Winner, Otto Kinkeldey Award, American Musicological Society
+buy_url: https://press.uchicago.edu/ucp/books/book/chicago/M/bo196672081.html
+buy_label: Buy from Chicago Press
+download_url: /downloads/Varwig Music in the Flesh Hearing.pdf
+download_label: Sample chapter
 featured: true
 draft: false
 ---
