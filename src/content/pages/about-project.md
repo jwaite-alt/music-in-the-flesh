@@ -10,6 +10,8 @@ Music is made and received by human bodies. But in present-day classical concert
 
 [My book](https://musicintheflesh.org/book/) unearths an extraordinary body of testimony about the physical and spiritual effects of music from the seventeenth and early eighteenth centuries. Philosophers, music theorists, theologians, devotional writers, poets, anatomists, medics and listeners described music as moving, ravishing, painful, dangerous, curative, and miraculous. 
 
+![](/images/uploads/Untitled.jpg)
+
 Music could soften your heart, pierce your brain, make your teeth grate and rattle, melt your earwax, contract your innards, constrict your chest like it was bound with ropes, flood you with honeyed sweetness or taste like vinegar in your throat. It could enter your body through the pores of your skin and spread contagiously between people. It could induce melancholic disorders or drive out the plague. It could draw your soul out of your body. 
 
 These were not merely metaphors. They described real experiences of bodily and spiritual transformation. These early modern subjects inhabited bodies that were ensouled, porous, fluid, volatile and open to influxes from the environment. As music spread contagiously within and between their bodies, it produced affective responses of ecstasy, despair and catharsis. 
@@ -18,6 +20,10 @@ These were not merely metaphors. They described real experiences of bodily and s
 
 The historical ideas unearthed in my research form the foundation for a long-standing collaboration with the distinguished violinist [Margaret Faultless](/about#margaret-faultless) (Becket Chair of Historical Performance, Royal Academy of Music) and the internationally renowned tenor [Nicholas Mulroy](/about#nicholas-mulroy). We take these early modern musical experiences as an inspiration for experimenting with how we listen and perform today. 
 
+![](/images/uploads/St%20Johns%20Passion-03679.jpg)
+
 We work with professional and student musicians, classical music audiences and those who have never heard this music. Our music making strives to be fleshy, gutsy, alive, humane and from the heart. We prize affective immediacy, collaborative creativity, collective attunement and the spontaneity and vulnerability of live performance. We embrace the technical and  physical challenges posed by historical instruments  as catalysts for enhanced expression. We move when we feel moved.
+
+![](/images/uploads/St%20Johns%20Passion-03831.jpg)
 
 We encourage our participants to feel themselves into unfamiliar, porous, flowing ways of being-in-the-body. We play with aspects of traditional concert ritual; we use movement, physical proximity and touch, alternative kinds of seating and multi-sensory immersion as ways to  foreground bodily presence. We invite participants to use their whole being as a resonator; to listen with their skin, heart, liver and feet; to open their minds and bodies to being permeated with musical affect.
