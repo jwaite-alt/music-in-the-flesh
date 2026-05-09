@@ -20,6 +20,8 @@ These were not merely metaphors. They described real experiences of bodily and s
 
 The historical ideas unearthed in my research form the foundation for a long-standing collaboration with the distinguished violinist [Margaret Faultless](/about#margaret-faultless) (Becket Chair of Historical Performance, Royal Academy of Music) and the internationally renowned tenor [Nicholas Mulroy](/about#nicholas-mulroy). We take these early modern musical experiences as an inspiration for experimenting with how we listen and perform today. 
 
+![](/images/uploads/St%20Johns%20Passion-03679.jpg)
+
 We work with professional and student musicians, classical music audiences and those who have never heard this music. Our music making strives to be fleshy, gutsy, alive, humane and from the heart. We prize affective immediacy, collaborative creativity, collective attunement and the spontaneity and vulnerability of live performance. We embrace the technical and  physical challenges posed by historical instruments  as catalysts for enhanced expression. We move when we feel moved.
 
 We encourage our participants to feel themselves into unfamiliar, porous, flowing ways of being-in-the-body. We play with aspects of traditional concert ritual; we use movement, physical proximity and touch, alternative kinds of seating and multi-sensory immersion as ways to  foreground bodily presence. We invite participants to use their whole being as a resonator; to listen with their skin, heart, liver and feet; to open their minds and bodies to being permeated with musical affect.
