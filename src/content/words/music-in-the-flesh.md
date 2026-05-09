@@ -1,6 +1,6 @@
 ---
 title: "Music in the Flesh: An Early Modern Musical Physiology"
-date: 2023-01-01
+date: "2023-01-01"
 description: "My book reimagines the lived experiences of people making music—composers, performers, listeners—in seventeenth- and early eighteenth-century Europe. It explores how music affected and reshaped them in body, soul and spirit."
 cover: /images/book-cover.jpg
 award: "Winner, Otto Kinkeldey Award, American Musicological Society"
