@@ -10,6 +10,8 @@ Music is made and received by human bodies. But in present-day classical concert
 
 [My book](https://musicintheflesh.org/book/) unearths an extraordinary body of testimony about the physical and spiritual effects of music from the seventeenth and early eighteenth centuries. Philosophers, music theorists, theologians, devotional writers, poets, anatomists, medics and listeners described music as moving, ravishing, painful, dangerous, curative, and miraculous. 
 
+![](/images/uploads/Untitled.jpg)
+
 Music could soften your heart, pierce your brain, make your teeth grate and rattle, melt your earwax, contract your innards, constrict your chest like it was bound with ropes, flood you with honeyed sweetness or taste like vinegar in your throat. It could enter your body through the pores of your skin and spread contagiously between people. It could induce melancholic disorders or drive out the plague. It could draw your soul out of your body. 
 
 These were not merely metaphors. They described real experiences of bodily and spiritual transformation. These early modern subjects inhabited bodies that were ensouled, porous, fluid, volatile and open to influxes from the environment. As music spread contagiously within and between their bodies, it produced affective responses of ecstasy, despair and catharsis. 
