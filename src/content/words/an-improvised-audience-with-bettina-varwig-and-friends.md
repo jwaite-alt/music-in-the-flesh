@@ -12,7 +12,9 @@ featured: false
 draft: false
 ---
 
-**An improvised audience with Bettina Varwig and friends.**
+An Improvised Audience With Bettina Varwig and Friends.
+
+James Waite
 
 Cambridge Music Festival
 
