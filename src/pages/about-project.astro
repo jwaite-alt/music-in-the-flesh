@@ -23,3 +23,24 @@ const { Content: ProjectContent } = await render(projectPage);
   </div>
 
 </PageLayout>
+
+<style>
+  .prose :global(img.snake-right) {
+    float: right;
+    width: 45%;
+    margin: 0 0 var(--space-md) var(--space-md);
+  }
+  .prose :global(img.snake-left) {
+    float: left;
+    width: 45%;
+    margin: 0 var(--space-md) var(--space-md) 0;
+  }
+</style>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.prose img').forEach((img, i) => {
+      img.classList.add(i % 2 === 0 ? 'snake-right' : 'snake-left');
+    });
+  });
+</script>
