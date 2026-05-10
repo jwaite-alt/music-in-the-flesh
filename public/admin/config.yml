@@ -74,7 +74,7 @@ collections:
       - { label: "Thumbnail image", name: thumbnail, widget: image, required: false, hint: "Optional. YouTube thumbnails are generated automatically — only needed for Vimeo or custom images." }
       - { label: "Feature on homepage", name: featured, widget: boolean, default: false, hint: "Tick to show this item in the homepage media preview." }
       - { label: "Notes", name: body, widget: markdown, required: false, hint: "Optional additional text shown on the video page." }
-      - { label: "Draft (hidden)", name: draft, widget: boolean, default: false }
+      - { label: "Draft (hidden)", name: draft, widget: boolean, default: false, required: false }
 
   # ── Media — Photography ──────────────────────────────────
   - name: galleries
@@ -101,7 +101,7 @@ collections:
           - { label: Image, name: image, widget: image }
           - { label: Caption, name: caption, widget: string, required: false }
       - { label: "Notes", name: body, widget: markdown, required: false, hint: "Optional text shown on the gallery page." }
-      - { label: "Draft (hidden)", name: draft, widget: boolean, default: false }
+      - { label: "Draft (hidden)", name: draft, widget: boolean, default: false, required: false }
 
   # ── Media — Words ────────────────────────────────────────
   - name: words
@@ -127,7 +127,7 @@ collections:
       - { label: "Download button label", name: download_label, widget: string, required: false, default: "Download" }
       - { label: "Feature on homepage", name: featured, widget: boolean, default: false, hint: "Tick to show this item in the homepage media preview." }
       - { label: "Full text", name: body, widget: markdown, hint: "Full content shown on the item's own page." }
-      - { label: "Draft (hidden)", name: draft, widget: boolean, default: false }
+      - { label: "Draft (hidden)", name: draft, widget: boolean, default: false, required: false }
 
   # ── Upcoming ─────────────────────────────────────────────
   - name: events
@@ -149,7 +149,7 @@ collections:
       - { label: "Short description", name: description, widget: text, hint: "Shown in the events listing." }
       - { label: "Ticket / booking URL", name: ticketUrl, widget: string, required: false }
       - { label: "Body", name: body, widget: markdown, required: false, hint: "Any additional detail shown when the event has its own page." }
-      - { label: "Draft (hidden)", name: draft, widget: boolean, default: false }
+      - { label: "Draft (hidden)", name: draft, widget: boolean, default: false, required: false }
 
   # ── Archive ──────────────────────────────────────────────
   - name: performances
