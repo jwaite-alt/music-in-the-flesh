@@ -1,5 +1,5 @@
 ---
-title: What Music Could Do To Listener's Bodies
+title: What Music Could Do To Listeners' Bodies
 date: 2020-06-09
 description: A blogpost by Bettina Varwig for The British Academy.
 cover: ''
