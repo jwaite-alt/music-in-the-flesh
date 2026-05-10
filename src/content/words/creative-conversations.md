@@ -2,7 +2,7 @@
 title: Creative Conversations
 date: 2025-11-30
 description: A blogpost by Bettina Varwig about our event LOVE BOMB.
-cover: ''
+cover: /images/uploads/Untitled-1.jpg
 award: ''
 buy_url: ''
 buy_label: Buy
