@@ -28,3 +28,6 @@ public/oauth/credentials.php
 
 # Claude Code memory (local only)
 .claude/
+
+# Local project docs — not for version control
+_docs/
