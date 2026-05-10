@@ -1,5 +1,5 @@
 ---
-hero_intro: 'How can music move us? This project brings together historical research and present-day performance practice: we harness early modern ways of music-making - flowing, visceral, contagious, cathartic - as an inspiration for transforming live performance today. How did it feel to be an early modern musical body? And how might these insights inspire us to imagine new ways of playing, hearing and loving this music now?'
+hero_intro: 'How can music move us? This project brings together historical research and present-day performance practice: we explore early modern ways of music-making - flowing, visceral, contagious, cathartic - as an inspiration for transforming live performance today. How did it feel to be an early modern musical body? And how might these insights inspire us to imagine new ways of playing, hearing and loving this music now?'
 ---
 
 We start from and in the bodies: the breathing, moving, fleshy, sensitive, interconnected bodies that make and receive the music. We use historical imagery and words to encourage flow, porousness, affective contagion, tears, dance. We show how the music of Johann Sebastian Bach and his contemporaries can still powerfully move and transform us now, by making us feel our fragile, fallible, precious shared humanity in our bones and hearts. 
