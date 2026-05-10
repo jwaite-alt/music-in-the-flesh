@@ -20,9 +20,6 @@ pnpm-debug.log*
 # OAuth credentials — never commit, copy from credentials.php.example
 public/oauth/credentials.php
 
-# Staging publish tool — contains PAT, never commit
-staging-publish.php
-
 # macOS-specific files
 .DS_Store
 
@@ -31,3 +28,6 @@ staging-publish.php
 
 # Claude Code memory (local only)
 .claude/
+
+# Local project docs — not for version control
+_docs/
