@@ -8,6 +8,8 @@ _Music in the Flesh_ began as a scholarly monograph and has grown into a much mo
 
 Music is made and received by human bodies. But in present-day classical concert culture, music is often presented and received as a disembodied artefact. Performers are placed at a safe distance from the audience, clad in body-effacing black dress; listeners are seated in neat rows and asked not to move, make a noise or otherwise share their affective responses to the music. We are asked to leave our breathing, pulsing, feeling bodies at the door. 
 
+![](/images/uploads/verheyen-680x1024.jpg)
+
 [My book](https://musicintheflesh.org/book/) unearths an extraordinary body of testimony about the physical and spiritual effects of music from the seventeenth and early eighteenth centuries. Philosophers, music theorists, theologians, devotional writers, poets, anatomists, medics and listeners described music as moving, ravishing, painful, dangerous, curative, and miraculous. 
 
 ![](/images/uploads/Kern%20heart.jpg)
