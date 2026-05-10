@@ -195,6 +195,11 @@ em {
   margin-bottom: var(--space-xs);
 }
 
+.prose h4 {
+  margin-top: var(--space-md);
+  margin-bottom: 0.1rem;
+}
+
 .prose p {
   margin-top: 1em;
 }
