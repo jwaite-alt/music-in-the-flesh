@@ -2,7 +2,7 @@
 title: Bach in the Flesh at Girton
 date: 2024-03-27
 description: A blogpost by Bettina Varwig.
-cover: ''
+cover: /images/uploads/St Johns Passion-03482.jpg
 award: ''
 buy_url: ''
 buy_label: Buy
