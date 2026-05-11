@@ -84,6 +84,7 @@ const words = defineCollection({
     description: z.string(),
     cover: z.string().optional(),
     award: z.string().optional(),
+    external_url: z.string().optional(),
     buy_url: z.string().optional(),
     buy_label: z.string().optional(),
     download_url: z.string().optional(),
