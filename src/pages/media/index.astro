@@ -92,20 +92,25 @@ function titleHtml(title: string) {
       {allWords.length > 0 ? (
         <div class="words-list">
           {allWords.map(w => {
-            const href = w.id === 'music-in-the-flesh'
-              ? `${base}book`
-              : `${base}media/words/${w.id}`;
+            const href = w.data.external_url
+              ? w.data.external_url
+              : w.id === 'music-in-the-flesh'
+                ? `${base}book`
+                : `${base}media/words/${w.id}`;
+            const isExternal = !!w.data.external_url;
             return (
               <div class="words-teaser">
                 {w.data.cover && (
-                  <a href={href} class="words-teaser__cover-link">
+                  <a href={href} class="words-teaser__cover-link" target={isExternal ? '_blank' : undefined} rel={isExternal ? 'noopener noreferrer' : undefined}>
                     <img src={w.data.cover} alt={w.data.title} class="words-teaser__cover" />
                   </a>
                 )}
                 <div class="words-teaser__text">
                   <p class="words-teaser__title" set:html={titleHtml(w.data.title)} />
                   <p class="words-teaser__desc">{w.data.description}</p>
-                  <a href={href} class="btn btn--crimson" style="margin-top: var(--space-md);">Read more</a>
+                  <a href={href} class="btn btn--crimson" style="margin-top: var(--space-md);" target={isExternal ? '_blank' : undefined} rel={isExternal ? 'noopener noreferrer' : undefined}>
+                    {isExternal ? 'Read article' : 'Read more'}
+                  </a>
                 </div>
               </div>
             );
