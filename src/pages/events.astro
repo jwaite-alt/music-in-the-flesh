@@ -68,6 +68,13 @@ const past = events
         <label for="email" class="label">Email</label>
         <input type="email" id="email" name="email" autocomplete="email" required />
       </div>
+      <div class="form-field form-field--check">
+        <label class="check-label">
+          <input type="checkbox" id="privacy" name="privacy" required />
+          <span>I have read and agree to the <a href="/privacy" target="_blank">Privacy Policy</a>. I understand that my contact details will be stored securely and used only to notify me of <em>Music in the Flesh</em> events. <span class="required">*</span></span>
+        </label>
+      </div>
+
       <button type="submit" class="btn btn--crimson" id="interest-submit">Register interest</button>
       <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
     </form>
@@ -86,9 +93,15 @@ const past = events
       const name    = form.name.value.trim();
       const email   = form.email.value.trim();
       const website = form.website.value; // honeypot
+      const privacy = form.privacy.checked;
 
       if (!name || !email) {
         showStatus('Please fill in both fields.', 'error');
+        return;
+      }
+
+      if (!privacy) {
+        showStatus('Please accept the Privacy Policy to continue.', 'error');
         return;
       }
 
@@ -197,6 +210,38 @@ const past = events
     width: 1px;
     height: 1px;
     overflow: hidden;
+  }
+
+  .form-field--check {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .check-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6em;
+    font-family: var(--font-body);
+    font-size: var(--size-base);
+    font-weight: 400;
+    color: var(--color-ink);
+    cursor: pointer;
+  }
+
+  .check-label input[type="checkbox"] {
+    margin-top: 0.6em;
+    flex-shrink: 0;
+    accent-color: var(--color-crimson);
+    width: 1.1em;
+    height: 1.1em;
+  }
+
+  .check-label a {
+    color: var(--color-crimson);
+  }
+
+  .required {
+    color: var(--color-crimson);
   }
 
   .form-status {
