@@ -38,6 +38,13 @@ const FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzTBsOf1AwhujooMv
         </label>
       </div>
 
+      <div class="field field--check">
+        <label class="check-label">
+          <input type="checkbox" id="privacy" name="privacy" required />
+          <span>I have read and agree to the <a href="/privacy" target="_blank">Privacy Policy</a>. I understand that my contact details will be stored securely and used only to respond to my message and, if opted in above, to send updates about <em>Music in the Flesh</em>. <span class="required">*</span></span>
+        </label>
+      </div>
+
       <button type="submit" class="btn btn--crimson" id="contact-submit">Send message</button>
 
       <p class="form-status" id="form-status" aria-live="polite"></p>
@@ -59,9 +66,16 @@ const FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzTBsOf1AwhujooMv
     const message = form.message.value.trim();
     const website = form.website.value;
     const updates = form.updates.checked;
+    const privacy = form.privacy.checked;
 
     if (!name || !email || !message) {
       status.textContent = 'Please fill in all required fields.';
+      status.className = 'form-status form-status--error';
+      return;
+    }
+
+    if (!privacy) {
+      status.textContent = 'Please accept the Privacy Policy to continue.';
       status.className = 'form-status form-status--error';
       return;
     }
@@ -165,7 +179,7 @@ const FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzTBsOf1AwhujooMv
 
   .check-label {
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
     gap: 0.6em;
     font-family: var(--font-body);
     font-size: var(--size-base);
@@ -177,7 +191,7 @@ const FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzTBsOf1AwhujooMv
   }
 
   .check-label input[type="checkbox"] {
-    margin-top: 0;
+    margin-top: 0.6em;
     flex-shrink: 0;
     accent-color: var(--color-crimson);
     width: 1.1em;
