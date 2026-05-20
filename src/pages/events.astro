@@ -116,7 +116,7 @@ const past = events
         await fetch(FORM_ENDPOINT, {
           method: 'POST',
           mode: 'no-cors',
-          body: JSON.stringify({ name, email, website }),
+          body: JSON.stringify({ name, email, website, updates: true }),
         });
 
         form.reset();
@@ -229,7 +229,7 @@ const past = events
   }
 
   .check-label input[type="checkbox"] {
-    margin-top: 0.6em;
+    margin-top: 0.2em;
     flex-shrink: 0;
     accent-color: var(--color-crimson);
     width: 1.1em;
