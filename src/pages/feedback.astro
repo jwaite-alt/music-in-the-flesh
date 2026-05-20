@@ -74,7 +74,7 @@ const FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzTBsOf1AwhujooMv
     try {
       const res = await fetch(FORM_ENDPOINT, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'text/plain;charset=UTF-8' },
         body: JSON.stringify({ type: 'contact', name, email, message, website, updates }),
       });
 
