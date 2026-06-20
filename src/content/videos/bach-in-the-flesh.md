@@ -1,5 +1,5 @@
 ---
-title: Bach in the Flesh
+title: 'Documentary: Bach in the Flesh'
 date: 2025-06-06
 description: A documentary of a two-day workshop exploring J. S. Bach's John Passion.
 embedUrl: ''
