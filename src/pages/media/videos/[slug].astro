@@ -95,7 +95,8 @@ const titleHtml = video.data.title.replace(/[*_](.*?)[*_]/g, '<em>$1</em>');
     margin-bottom: var(--space-lg);
   }
 
-  .video-embed iframe {
+  .video-embed iframe,
+  .video-embed video {
     position: absolute;
     inset: 0;
     width: 100%;
