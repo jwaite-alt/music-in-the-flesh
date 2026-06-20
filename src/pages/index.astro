@@ -89,7 +89,7 @@ function titleHtml(title: string) {
               ? `${base}book`
               : `${base}media/words/${item.id}`;
             const thumb = type === 'video'
-              ? (item.data.thumbnail || youtubeThumbnail((item.data as any).embedUrl))
+              ? (item.data.thumbnail || ((item.data as any).embedUrl ? youtubeThumbnail((item.data as any).embedUrl) : ''))
               : type === 'gallery'
               ? (item.data as any).images?.[0]?.image
               : (item.data as any).cover;
