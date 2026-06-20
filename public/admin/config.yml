@@ -70,8 +70,10 @@ collections:
       - { label: "Title", name: title, widget: string }
       - { label: "Date", name: date, widget: datetime, format: "YYYY-MM-DD", date_format: "DD MMMM YYYY", time_format: false }
       - { label: "Short description", name: description, widget: text, hint: "Shown in listings and previews." }
-      - { label: "Embed URL", name: embedUrl, widget: string, hint: "YouTube or Vimeo embed URL (e.g. https://www.youtube.com/embed/xxxxx)" }
-      - { label: "Thumbnail image", name: thumbnail, widget: image, required: false, hint: "Optional. YouTube thumbnails are generated automatically — only needed for Vimeo or custom images." }
+      - { label: "Embed URL", name: embedUrl, widget: string, required: false, hint: "YouTube or Vimeo embed URL (e.g. https://www.youtube.com/embed/xxxxx). Leave blank if using self-hosted video files below." }
+      - { label: "Video file (H264 / .mp4)", name: videoUrl, widget: string, required: false, hint: "Path to self-hosted H264 file, e.g. /videos/my-video.mp4" }
+      - { label: "Video file (H265 / .mp4)", name: videoUrlH265, widget: string, required: false, hint: "Path to self-hosted H265 file, e.g. /videos/my-video-h265.mp4. Safari will use this; other browsers fall back to H264." }
+      - { label: "Thumbnail image", name: thumbnail, widget: image, required: false, hint: "Required for self-hosted videos. YouTube embeds generate their own thumbnail automatically." }
       - { label: "Feature on homepage", name: featured, widget: boolean, default: false, hint: "Tick to show this item in the homepage media preview." }
       - { label: "Notes", name: body, widget: markdown, required: false, hint: "Optional additional text shown on the video page." }
       - { label: "Draft (hidden)", name: draft, widget: boolean, default: false, required: false }
