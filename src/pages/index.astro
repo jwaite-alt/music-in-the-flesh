@@ -9,7 +9,7 @@ const { Content: HomeContent } = await render(homePage);
 const performances = await getCollection('performances', ({ data }) => !data.draft);
 const recentArchive = performances
   .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
-  .slice(0, 2);
+  .slice(0, 3);
 
 // Featured media items for homepage preview
 const allVideos = await getCollection('videos', ({ data }) => !data.draft && data.featured);
@@ -22,7 +22,7 @@ const featuredMedia = [
   ...allGalleries.map(g => ({ type: 'gallery' as const, item: g })),
   ...allWords.map(w => ({ type: 'words' as const, item: w })),
 ].sort((a, b) => new Date(b.item.data.date).getTime() - new Date(a.item.data.date).getTime())
- .slice(0, 2);
+ .slice(0, 3);
 
 function youtubeThumbnail(embedUrl: string) {
   const match = embedUrl.match(/youtube\.com\/embed\/([^?]+)/);
@@ -247,7 +247,7 @@ function titleHtml(title: string) {
   /* Media preview */
   .media-preview {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--space-md);
     margin-top: var(--space-md);
   }
