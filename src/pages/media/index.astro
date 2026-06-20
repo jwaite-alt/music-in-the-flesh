@@ -42,7 +42,7 @@ function titleHtml(title: string) {
       {allVideos.length > 0 ? (
         <div class="media-grid">
           {allVideos.map(v => {
-            const thumb = v.data.thumbnail || youtubeThumbnail(v.data.embedUrl);
+            const thumb = v.data.thumbnail || (v.data.embedUrl ? youtubeThumbnail(v.data.embedUrl) : '');
             return (
               <a href={`${base}media/videos/${v.id}`} class="media-card">
                 <div class="media-card__thumb">
