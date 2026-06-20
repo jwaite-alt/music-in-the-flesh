@@ -56,6 +56,7 @@ const videos = defineCollection({
     description: z.string(),
     embedUrl: z.string().optional(),
     videoUrl: z.string().optional(),
+    videoUrlH265: z.string().optional(),
     thumbnail: z.string().optional(),
     featured: z.boolean().default(false),
     draft: z.boolean().default(false),

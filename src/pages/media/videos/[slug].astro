@@ -32,9 +32,10 @@ const titleHtml = video.data.title.replace(/[*_](.*?)[*_]/g, '<em>$1</em>');
   <div class="container video-body">
 
     <div class="video-embed">
-      {video.data.videoUrl ? (
+      {(video.data.videoUrl || video.data.videoUrlH265) ? (
         <video controls preload="metadata" playsinline>
-          <source src={video.data.videoUrl} type="video/mp4" />
+          {video.data.videoUrlH265 && <source src={video.data.videoUrlH265} type='video/mp4; codecs="hvc1"' />}
+          {video.data.videoUrl && <source src={video.data.videoUrl} type='video/mp4; codecs="avc1"' />}
         </video>
       ) : (
         <iframe
