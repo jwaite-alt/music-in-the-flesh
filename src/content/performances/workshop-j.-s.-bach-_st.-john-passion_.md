@@ -5,7 +5,8 @@ venue: Royal Academy of Music
 location: London
 description: A two-day workshop with professional musicians and students exploring how to be in our bodies musically, led by Margaret Faultless, Nicholas Mulroy and Bettina Varwig.
 featured: false
-videoUrl: ''
+videoUrl: /videos/Bach-in-the-Flesh_264.mp4
+videoUrlH265: /videos/Bach-in-the-Flesh_265.mp4
 feedbackFormUrl: ''
 images:
   - image: /images/uploads/Lasset.jpg
