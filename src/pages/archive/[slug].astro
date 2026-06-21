@@ -28,14 +28,12 @@ const formattedDate = dateObj.toLocaleDateString('en-GB', {
   description={performance.data.description}
 >
 
-  {performance.data.videoUrl ? (
+  {(performance.data.videoUrl || performance.data.videoUrlH265) ? (
     <div class="video-embed" style="margin-bottom: var(--space-lg);">
-      <iframe
-        src={performance.data.videoUrl}
-        title={`Video: ${performance.data.title}`}
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
+      <video controls preload="metadata" playsinline>
+        {performance.data.videoUrlH265 && <source src={performance.data.videoUrlH265} type='video/mp4; codecs="hvc1"' />}
+        {performance.data.videoUrl && <source src={performance.data.videoUrl} type="video/mp4" />}
+      </video>
     </div>
   ) : null}
 
@@ -70,3 +68,19 @@ const formattedDate = dateObj.toLocaleDateString('en-GB', {
   </div>
 
 </PageLayout>
+
+<style>
+  .video-embed {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    background-color: var(--color-ink);
+  }
+
+  .video-embed video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>
