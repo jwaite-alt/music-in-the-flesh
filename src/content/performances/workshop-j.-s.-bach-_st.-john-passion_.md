@@ -7,6 +7,7 @@ description: A two-day workshop with professional musicians and students explori
 featured: false
 videoUrl: /videos/Bach-in-the-Flesh_264.mp4
 videoUrlH265: /videos/Bach-in-the-Flesh_265.mp4
+videoCaption: 'Bach in the Flesh: a documentary record of the workshop'
 feedbackFormUrl: ''
 images:
   - image: /images/uploads/Lasset.jpg
