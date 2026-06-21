@@ -5,7 +5,9 @@ venue: Royal Academy of Music
 location: London
 description: A two-day workshop with professional musicians and students exploring how to be in our bodies musically, led by Margaret Faultless, Nicholas Mulroy and Bettina Varwig.
 featured: false
-videoUrl: ''
+videoUrl: /videos/Bach-in-the-Flesh_264.mp4
+videoUrlH265: /videos/Bach-in-the-Flesh_265.mp4
+videoCaption: 'Bach in the Flesh: a documentary record of the workshop'
 feedbackFormUrl: ''
 images:
   - image: /images/uploads/Lasset.jpg
@@ -45,10 +47,4 @@ _I honestly find it hard to put into words what an extraordinary experience it w
 
 _I keep saying to myself … that I'll carry what we did forward with me. I've not often been so aware of the memory of the body as well as the mind, and recollections come back very vividly which is rarely the case in more conventional settings. I feel incredibly fortunate to have somehow been in the right place at the right time and been involved in this unforgettably enriching and inspiring process._ 
 
-_This project showed me what can happen when musicians let their bodies and instruments follow their feelings completely, and it was life changing.. it was the most engaging and moving musical occurrence I've ever been part of._ 
-
-Link to documentary (short/long) TBC
-
-Link to article TBC
-
-Put the trailer right at the top TBC
+_This project showed me what can happen when musicians let their bodies and instruments follow their feelings completely, and it was life changing.. it was the most engaging and moving musical occurrence I've ever been part of._
