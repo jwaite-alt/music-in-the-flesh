@@ -25,6 +25,8 @@ draft: false
 
 A two-day musicking workshop that was intended as a space for experimentation, not a rehearsal for a concert, though we presented a public performance at Alton Priors, Wiltshire a month later. We invited a group of musicians (professionals and students) to join us in exploring how we might be in our musical bodies. There was no conductor and no choreography, only an invitation to be porous, supported by some historical quotes and images to get the juices flowing; an invitation to be traversed by musical flows and to _move when you feel moved_.
 
+Read a review in the Guardian [here](https://www.theguardian.com/music/2026/jun/24/the-project-returning-music-to-our-bodies-bettina-varwig-faultless).
+
 #### Selected participant feedback:
 
 _A truly transformational experience which I will treasure for the rest of my performing career._
