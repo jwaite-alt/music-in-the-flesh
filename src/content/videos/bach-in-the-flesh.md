@@ -9,3 +9,5 @@ thumbnail: /images/uploads/JSB.jpg
 featured: true
 draft: false
 ---
+
+Read a write-up in the Guardian [here](https://www.theguardian.com/music/2026/jun/24/the-project-returning-music-to-our-bodies-bettina-varwig-faultless).
