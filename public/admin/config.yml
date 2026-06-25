@@ -175,6 +175,7 @@ collections:
       - { label: "Featured performance", name: featured, widget: boolean, default: false, hint: "Tick to show this as a current/upcoming performance on the home page." }
       - { label: "Video file (H264 / .mp4)", name: videoUrl, widget: string, required: false, hint: "Path to self-hosted H264 file, e.g. /videos/my-video.mp4" }
       - { label: "Video file (H265 / .mp4)", name: videoUrlH265, widget: string, required: false, hint: "Path to self-hosted H265 file, e.g. /videos/my-video-h265.mp4. Safari will use this; other browsers fall back to H264." }
+      - { label: "Video poster image", name: videoPoster, widget: image, required: false, hint: "Still image shown before the video plays." }
       - { label: "Video caption", name: videoCaption, widget: string, required: false, hint: "Short caption displayed beneath the video preview." }
       - { label: "Feedback form URL", name: feedbackFormUrl, widget: string, required: false, hint: "Paste the Google Form embed URL for this performance." }
       - label: "Images"

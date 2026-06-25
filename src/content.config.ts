@@ -18,6 +18,7 @@ const performances = defineCollection({
     featured: z.boolean().default(false),
     videoUrl: z.string().optional(),
     videoUrlH265: z.string().optional(),
+    videoPoster: z.string().optional(),
     videoCaption: z.string().optional(),
     feedbackFormUrl: z.string().optional(),
     images: z.array(z.union([
