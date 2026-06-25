@@ -5,7 +5,10 @@ venue: Alton Priors, Wiltshire
 location: ''
 description: Eyes glistening. Hands on hearts. Extraordinary. Magical.
 featured: true
-videoUrl: ''
+videoUrl: /videos/Bach-Church-Performance_264.mp4
+videoUrlH265: /videos/Bach-Church-Performance_265.mp4
+videoPoster: /images/uploads/church.jpg
+videoCaption: Performance video
 feedbackFormUrl: ''
 images:
   - image: /images/uploads/DSCF0899.jpg
