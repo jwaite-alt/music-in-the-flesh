@@ -16,5 +16,5 @@ We start from and in the bodies: the breathing, moving, fleshy, sensitive, inter
 > _Affective contagion...passionate and impassioned performance...rituals and repression...compressed hearts...overflowing, porous bodies. These were just some of the things that came up during two days of powerful exploration and experimentation … It culminated in a performance of Bach's St John Passion that left us gasping for breath, unable to speak, utterly changed. Bettina's work on early-modern listening is going to transform the world of performance as we know it. We've started a revolution_. 
 > ⎻ Rachel Stroud
 
-> Musically life-changing. 
+> _Musically life-changing._ 
 > ⎻ Margaret Faultless
