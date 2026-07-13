@@ -2,8 +2,9 @@
 title: An Improvised Audience With Bettina Varwig and Friends
 date: 2026-03-17
 description: A Reflection on our Cambridge Festival Event in March 2026 by James Waite.
-cover: ''
+cover: /images/uploads/DSC01665.jpg
 award: ''
+external_url: ''
 buy_url: ''
 buy_label: Buy
 download_url: ''
