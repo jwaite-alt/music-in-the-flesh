@@ -13,4 +13,4 @@ featured: true
 draft: false
 ---
 
-"Making earwax melt and teeth rattle: the project returning music to our bodies", by Tom Service
+[Making earwax melt and teeth rattle: the project returning music to our bodies](https://www.theguardian.com/music/2026/jun/24/the-project-returning-music-to-our-bodies-bettina-varwig-faultless), by Tom Service, _The Guardian_, 23 June 2026
