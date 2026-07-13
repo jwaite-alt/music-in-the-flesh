@@ -1,5 +1,5 @@
 ---
-title: Tom Service in _The Guardian_ on Music in the Flesh
+title: Tom Service in _The Guardian_ on 'Bach in the Flesh'
 date: 2026-06-24
 description: A comment piece on our John Passion documentary.
 cover: /images/uploads/Performance at RCM_playing and singing on knees.jpg
