@@ -9,7 +9,7 @@ buy_url: ''
 buy_label: Buy
 download_url: ''
 download_label: Download
-featured: false
+featured: true
 draft: false
 ---
 
