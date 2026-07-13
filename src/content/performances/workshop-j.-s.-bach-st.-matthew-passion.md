@@ -5,7 +5,7 @@ venue: Royal Academy of Music
 location: London
 description: A workshop with leading early music professionals and students from the Royal Academy of Music and the University of Cambridge, led by Maggie Faultless, Nicholas Mulroy and Bettina Varwig.
 featured: false
-videoUrl: https://drive.google.com/file/d/1fkrKhMFZNcYaO5U4vkPOUCgr6szmE5Lh/view?usp=share_link
+videoUrl: https://youtu.be/JEk6cOQtXj8
 videoUrlH265: ''
 videoPoster: ''
 videoCaption: Mache dich, mein Herze rein - first run
