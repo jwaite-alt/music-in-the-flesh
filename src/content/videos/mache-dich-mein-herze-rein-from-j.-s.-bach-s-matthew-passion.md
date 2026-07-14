@@ -5,7 +5,7 @@ description: First run of this aria at a workshop at the Royal Academy of Music,
 embedUrl: ''
 videoUrl: /videos/Mache-Dich-v1_264.mp4
 videoUrlH265: /videos/Mache-Dich-v1_265.mp4
-thumbnail: /images/uploads/machedich.jpg
+thumbnail: /images/uploads/Mache dich.jpg
 featured: false
 draft: false
 ---
