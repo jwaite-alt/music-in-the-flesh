@@ -157,7 +157,7 @@ function titleHtml(title: string) {
   .hero__inner {
     display: grid;
     grid-template-columns: 3fr 2fr;
-    align-items: start;
+    align-items: stretch;
     gap: var(--space-xl);
     padding-block: var(--space-2xl);
   }
@@ -215,9 +215,8 @@ function titleHtml(title: string) {
   .hero__right {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     gap: var(--space-md);
-    align-self: center;
   }
 
   .hero__book-row {
