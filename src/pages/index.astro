@@ -159,7 +159,7 @@ function titleHtml(title: string) {
     const src265 = thumb.dataset.video265;
     const src264 = thumb.dataset.video264;
     thumb.innerHTML = `
-      <video controls autoplay playsinline>
+      <video controls autoplay playsinline style="width:100%;height:100%;object-fit:cover;display:block;">
         <source src="${src265}" type='video/mp4; codecs="hvc1"' />
         <source src="${src264}" type="video/mp4" />
       </video>
