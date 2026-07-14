@@ -39,45 +39,45 @@ function titleHtml(title: string) {
   <!-- Hero -->
   <section class="hero section--parchment">
     <div class="container hero__inner">
-      <div class="hero__text">
-        <h1 class="hero__title">
-          <span class="hero__title-music">Music</span>
-          <span class="hero__title-in">in the</span>
-          <span class="hero__title-flesh">Flesh</span>
-        </h1>
+      <h1 class="hero__title">
+        <span class="hero__title-music">Music</span>
+        <span class="hero__title-in">in the</span>
+        <span class="hero__title-flesh">Flesh</span>
+      </h1>
+      <div class="hero__book-row">
+        <a href={`${base}book`} class="hero__book-link">
+          <img
+            src={`${base}images/book-cover.jpg`}
+            alt="Music in the Flesh — An Early Modern Musical Physiology, by Bettina Varwig"
+            class="hero__cover"
+          />
+        </a>
+        <div class="hero__book-info">
+          <p class="hero__book-title">Music in the Flesh</p>
+          <p class="hero__award">Winner, Otto Kinkeldey Award, American Musicological Society</p>
+          <a href={`${base}book`} class="hero__book-more">Buy or read more →</a>
+        </div>
+      </div>
+
+      <div class="hero__mid-left">
         <p class="hero__subtitle display-subtitle">History, Performance, Experiment</p>
         <p class="hero__intro">{homePage.data.hero_intro}</p>
-        <div class="hero__actions">
-          <a href={`${base}about-project`} class="btn btn--crimson">About</a>
-          <a href={`${base}media`} class="btn btn--ink">Media</a>
-          <a href={`${base}about`} class="btn btn--ink">Biographies</a>
-        </div>
       </div>
-      <div class="hero__right">
-        <div class="hero__book-row">
-          <a href={`${base}book`} class="hero__book-link">
-            <img
-              src={`${base}images/book-cover.jpg`}
-              alt="Music in the Flesh — An Early Modern Musical Physiology, by Bettina Varwig"
-              class="hero__cover"
-            />
-          </a>
-          <div class="hero__book-info">
-            <p class="hero__book-title">Music in the Flesh</p>
-            <p class="hero__award">Winner, Otto Kinkeldey Award, American Musicological Society</p>
-            <a href={`${base}book`} class="hero__book-more">Buy or read more →</a>
-          </div>
-        </div>
-        <hr class="rule rule--kraft hero__divider" />
-        <a href={`${base}media/videos/bach-in-the-flesh`} class="hero__video-link">
-          <div class="hero__video-thumb">
-            <img src={`${base}images/uploads/bachinthefleshedit_poster.jpg`} alt="Bach in the Flesh — documentary film" />
-            <span class="hero__video-play">▶</span>
-          </div>
-          <p class="label hero__video-label">Video</p>
-          <p class="hero__video-caption">Watch: <em>Bach in the Flesh</em></p>
-        </a>
+      <hr class="rule rule--kraft hero__divider" />
+
+      <div class="hero__actions">
+        <a href={`${base}about-project`} class="btn btn--crimson">About</a>
+        <a href={`${base}media`} class="btn btn--ink">Media</a>
+        <a href={`${base}about`} class="btn btn--ink">Biographies</a>
       </div>
+      <a href={`${base}media/videos/bach-in-the-flesh`} class="hero__video-link">
+        <div class="hero__video-thumb">
+          <img src={`${base}images/uploads/bachinthefleshedit_poster.jpg`} alt="Bach in the Flesh — documentary film" />
+          <span class="hero__video-play">▶</span>
+        </div>
+        <p class="label hero__video-label">Video</p>
+        <p class="hero__video-caption">Watch: <em>Bach in the Flesh</em></p>
+      </a>
     </div>
   </section>
 
@@ -157,9 +157,10 @@ function titleHtml(title: string) {
   .hero__inner {
     display: grid;
     grid-template-columns: 3fr 2fr;
-    align-items: stretch;
-    gap: var(--space-xl);
-    padding-block: var(--space-2xl);
+    grid-template-rows: auto 1fr auto;
+    column-gap: var(--space-xl);
+    row-gap: var(--space-sm);
+    padding-block: var(--space-lg);
   }
 
   .hero__kicker {
@@ -167,6 +168,9 @@ function titleHtml(title: string) {
   }
 
   .hero__title {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: start;
     display: flex;
     flex-direction: row;
     align-items: baseline;
@@ -195,31 +199,36 @@ function titleHtml(title: string) {
     white-space: nowrap;
   }
 
+  .hero__mid-left {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: start;
+  }
+
   .hero__subtitle {
     font-size: var(--size-lg);
-    margin-bottom: var(--space-md);
+    margin-bottom: var(--space-sm);
   }
 
   .hero__intro {
-    max-width: 54ch;
-    margin-bottom: var(--space-md);
+    max-width: 62ch;
     color: var(--color-ink-light);
   }
 
   .hero__actions {
+    grid-column: 1;
+    grid-row: 3;
+    align-self: end;
     display: flex;
     gap: var(--space-sm);
     flex-wrap: wrap;
   }
 
-  .hero__right {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: var(--space-md);
-  }
-
   .hero__book-row {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: start;
+    margin-top: 0.55em;
     display: flex;
     align-items: flex-start;
     gap: var(--space-sm);
@@ -231,7 +240,7 @@ function titleHtml(title: string) {
   }
 
   .hero__cover {
-    width: 140px;
+    width: 105px;
     height: auto;
     box-shadow: 4px 6px 16px rgba(28, 21, 13, 0.25);
     transition: box-shadow var(--transition), transform var(--transition);
@@ -277,12 +286,18 @@ function titleHtml(title: string) {
   }
 
   .hero__divider {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: start;
     margin: 0;
   }
 
   .hero__video-link {
+    grid-column: 2;
+    grid-row: 3;
+    align-self: end;
     display: block;
-    width: 75%;
+    width: 58%;
     text-decoration: none;
     color: var(--color-ink);
     transition: opacity var(--transition);
@@ -403,7 +418,9 @@ function titleHtml(title: string) {
       padding-block: var(--space-xl);
     }
 
-    .hero__right {
+    .hero__book-row,
+    .hero__divider,
+    .hero__video-link {
       display: none;
     }
 
