@@ -63,8 +63,8 @@ function titleHtml(title: string) {
             />
           </a>
           <div class="hero__book-info">
-            <a href={`${base}book`} class="hero__book-more">Read more →</a>
             <p class="hero__award">Winner, Otto Kinkeldey Award, American Musicological Society</p>
+            <a href={`${base}book`} class="hero__book-more">Read more →</a>
           </div>
         </div>
         <hr class="rule rule--kraft hero__divider" />
@@ -271,7 +271,8 @@ function titleHtml(title: string) {
   .hero__book-info {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-end;
+    gap: 0.3em;
   }
 
   .hero__award {
