@@ -63,20 +63,23 @@ function titleHtml(title: string) {
             />
           </a>
           <div class="hero__book-info">
-            <p class="hero__book-title">Music in the Flesh</p>
             <p class="hero__award">Winner, Otto Kinkeldey Award, American Musicological Society</p>
-            <a href={`${base}book`} class="hero__book-more">Buy or read more →</a>
+            <a href={`${base}book`} class="hero__book-more">Read more →</a>
           </div>
         </div>
         <hr class="rule rule--kraft hero__divider" />
-        <a href={`${base}media/videos/bach-in-the-flesh`} class="hero__video-link">
-          <div class="hero__video-thumb">
+        <div class="hero__video-block">
+          <div class="hero__video-thumb" id="hero-video-thumb" data-video265={`${base}videos/bachinthefleshedit_265.mp4`} data-video264={`${base}videos/bachinthefleshedit_264.mp4`}>
             <img src={`${base}images/uploads/bachinthefleshedit_poster.jpg`} alt="Bach in the Flesh — documentary film" />
             <span class="hero__video-play">▶</span>
           </div>
-          <p class="label hero__video-label">Video</p>
-          <p class="hero__video-caption">Watch: <em>Bach in the Flesh</em></p>
-        </a>
+          <p class="label hero__video-label">Bach in the Flesh</p>
+          <p class="hero__video-caption">
+            Watch: <a href="#" id="hero-trailer-link" class="hero__video-textlink">trailer</a>
+            {' / '}
+            <a href={`${base}media/videos/bach-in-the-flesh`} class="hero__video-textlink">full documentary</a>
+          </p>
+        </div>
       </div>
     </div>
   </section>
@@ -148,6 +151,27 @@ function titleHtml(title: string) {
   )}
 
 </BaseLayout>
+
+<script>
+  function playHeroTrailer() {
+    const thumb = document.getElementById('hero-video-thumb');
+    if (!thumb || thumb.querySelector('video')) return;
+    const src265 = thumb.dataset.video265;
+    const src264 = thumb.dataset.video264;
+    thumb.innerHTML = `
+      <video controls autoplay playsinline>
+        <source src="${src265}" type='video/mp4; codecs="hvc1"' />
+        <source src="${src264}" type="video/mp4" />
+      </video>
+    `;
+  }
+
+  document.getElementById('hero-video-thumb')?.addEventListener('click', playHeroTrailer);
+  document.getElementById('hero-trailer-link')?.addEventListener('click', (e) => {
+    e.preventDefault();
+    playHeroTrailer();
+  });
+</script>
 
 <style>
   .hero {
@@ -250,16 +274,6 @@ function titleHtml(title: string) {
     gap: 0.3em;
   }
 
-  .hero__book-title {
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: var(--size-sm);
-    text-transform: uppercase;
-    letter-spacing: var(--tracking-wide);
-    color: var(--color-ink);
-    line-height: 1.2;
-  }
-
   .hero__award {
     font-family: var(--font-display);
     font-style: italic;
@@ -281,16 +295,10 @@ function titleHtml(title: string) {
     margin: 0;
   }
 
-  .hero__video-link {
+  .hero__video-block {
     display: block;
     width: 75%;
-    text-decoration: none;
     color: var(--color-ink);
-    transition: opacity var(--transition);
-  }
-
-  .hero__video-link:hover {
-    opacity: 0.85;
   }
 
   .hero__video-thumb {
@@ -299,9 +307,11 @@ function titleHtml(title: string) {
     aspect-ratio: 16 / 9;
     overflow: hidden;
     background-color: var(--color-ink);
+    cursor: pointer;
   }
 
-  .hero__video-thumb img {
+  .hero__video-thumb img,
+  .hero__video-thumb video {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -316,6 +326,11 @@ function titleHtml(title: string) {
     font-size: 2rem;
     color: var(--color-cream);
     text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    transition: opacity var(--transition);
+  }
+
+  .hero__video-thumb:hover .hero__video-play {
+    opacity: 0.85;
   }
 
   .hero__video-label {
@@ -328,6 +343,15 @@ function titleHtml(title: string) {
     font-size: var(--size-sm);
     color: var(--color-ink-light);
     margin-top: 0.15em;
+  }
+
+  .hero__video-textlink {
+    color: var(--color-crimson);
+    text-decoration: none;
+  }
+
+  .hero__video-textlink:hover {
+    text-decoration: underline;
   }
 
   .section-heading {
