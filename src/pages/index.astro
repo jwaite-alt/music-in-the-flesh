@@ -53,15 +53,30 @@ function titleHtml(title: string) {
           <a href={`${base}about`} class="btn btn--ink">Biographies</a>
         </div>
       </div>
-      <div class="hero__book">
-        <a href={`${base}book`} class="hero__book-link">
-          <img
-            src={`${base}images/book-cover.jpg`}
-            alt="Music in the Flesh — An Early Modern Musical Physiology, by Bettina Varwig"
-            class="hero__cover"
-          />
+      <div class="hero__right">
+        <div class="hero__book-row">
+          <a href={`${base}book`} class="hero__book-link">
+            <img
+              src={`${base}images/book-cover.jpg`}
+              alt="Music in the Flesh — An Early Modern Musical Physiology, by Bettina Varwig"
+              class="hero__cover"
+            />
+          </a>
+          <div class="hero__book-info">
+            <p class="hero__book-title">Music in the Flesh</p>
+            <p class="hero__award">Winner, Otto Kinkeldey Award, American Musicological Society</p>
+            <a href={`${base}book`} class="hero__book-more">Buy or read more →</a>
+          </div>
+        </div>
+        <hr class="rule rule--kraft hero__divider" />
+        <a href={`${base}media/videos/bach-in-the-flesh`} class="hero__video-link">
+          <div class="hero__video-thumb">
+            <img src={`${base}images/uploads/bachinthefleshedit_poster.jpg`} alt="Bach in the Flesh — documentary film" />
+            <span class="hero__video-play">▶</span>
+          </div>
+          <p class="label hero__video-label">Video</p>
+          <p class="hero__video-caption">Watch: <em>Bach in the Flesh</em></p>
         </a>
-        <p class="hero__award">Winner, Otto Kinkeldey Award,<br/>American Musicological Society</p>
       </div>
     </div>
   </section>
@@ -141,7 +156,7 @@ function titleHtml(title: string) {
 
   .hero__inner {
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 3fr 2fr;
     align-items: center;
     gap: var(--space-xl);
     padding-block: var(--space-2xl);
@@ -196,44 +211,122 @@ function titleHtml(title: string) {
     flex-wrap: wrap;
   }
 
-  .hero__book {
-    flex-shrink: 0;
+  .hero__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--space-md);
     align-self: center;
-    position: relative;
   }
 
-  .hero__award {
-    position: absolute;
-    top: calc(100% + var(--space-xs));
-    left: 0;
-    right: 0;
+  .hero__book-row {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-sm);
   }
 
   .hero__book-link {
     display: block;
+    flex-shrink: 0;
+  }
+
+  .hero__cover {
+    width: 80px;
+    height: auto;
+    box-shadow: 4px 6px 16px rgba(28, 21, 13, 0.25);
+    transition: box-shadow var(--transition), transform var(--transition);
+  }
+
+  .hero__book-link:hover .hero__cover {
+    box-shadow: 6px 10px 24px rgba(28, 21, 13, 0.4);
+    transform: translateY(-2px);
+    opacity: 1;
+  }
+
+  .hero__book-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+  }
+
+  .hero__book-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--size-sm);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wide);
+    color: var(--color-ink);
+    line-height: 1.2;
   }
 
   .hero__award {
     font-family: var(--font-display);
     font-style: italic;
-    font-size: var(--size-sm);
+    font-size: var(--size-xs);
     color: var(--color-ink-light);
-    text-align: center;
-    margin-top: var(--space-sm);
     line-height: 1.4;
   }
 
-  .hero__cover {
-    width: 340px;
-    height: auto;
-    box-shadow: 8px 12px 32px rgba(28, 21, 13, 0.25);
-    transition: box-shadow var(--transition), transform var(--transition);
+  .hero__book-more {
+    font-family: var(--font-display);
+    font-size: var(--size-xs);
+    letter-spacing: var(--tracking-wide);
+    text-transform: uppercase;
+    color: var(--color-crimson);
+    margin-top: 0.2em;
   }
 
-  .hero__book-link:hover .hero__cover {
-    box-shadow: 12px 18px 40px rgba(28, 21, 13, 0.4);
-    transform: translateY(-3px);
-    opacity: 1;
+  .hero__divider {
+    margin: 0;
+  }
+
+  .hero__video-link {
+    display: block;
+    width: 75%;
+    text-decoration: none;
+    color: var(--color-ink);
+    transition: opacity var(--transition);
+  }
+
+  .hero__video-link:hover {
+    opacity: 0.85;
+  }
+
+  .hero__video-thumb {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background-color: var(--color-ink);
+  }
+
+  .hero__video-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero__video-play {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--color-cream);
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  }
+
+  .hero__video-label {
+    color: var(--color-crimson);
+    margin-top: var(--space-xs);
+  }
+
+  .hero__video-caption {
+    font-family: var(--font-display);
+    font-size: var(--size-sm);
+    color: var(--color-ink-light);
+    margin-top: 0.15em;
   }
 
   .section-heading {
@@ -310,7 +403,7 @@ function titleHtml(title: string) {
       padding-block: var(--space-xl);
     }
 
-    .hero__book {
+    .hero__right {
       display: none;
     }
 
