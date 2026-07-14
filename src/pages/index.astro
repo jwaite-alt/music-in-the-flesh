@@ -63,8 +63,8 @@ function titleHtml(title: string) {
             />
           </a>
           <div class="hero__book-info">
-            <p class="hero__award">Winner, Otto Kinkeldey Award, American Musicological Society</p>
             <a href={`${base}book`} class="hero__book-more">Read more →</a>
+            <p class="hero__award">Winner, Otto Kinkeldey Award, American Musicological Society</p>
           </div>
         </div>
         <hr class="rule rule--kraft hero__divider" />
@@ -245,7 +245,7 @@ function titleHtml(title: string) {
 
   .hero__book-row {
     display: flex;
-    align-items: flex-start;
+    align-items: stretch;
     gap: var(--space-sm);
     margin-top: 12px;
   }
@@ -271,7 +271,7 @@ function titleHtml(title: string) {
   .hero__book-info {
     display: flex;
     flex-direction: column;
-    gap: 0.3em;
+    justify-content: space-between;
   }
 
   .hero__award {
@@ -288,7 +288,6 @@ function titleHtml(title: string) {
     letter-spacing: var(--tracking-wide);
     text-transform: uppercase;
     color: var(--color-crimson);
-    margin-top: 0.2em;
   }
 
   .hero__divider {
