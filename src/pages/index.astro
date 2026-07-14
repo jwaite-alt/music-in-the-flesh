@@ -53,15 +53,33 @@ function titleHtml(title: string) {
           <a href={`${base}about`} class="btn btn--ink">Biographies</a>
         </div>
       </div>
-      <div class="hero__book">
-        <a href={`${base}book`} class="hero__book-link">
-          <img
-            src={`${base}images/book-cover.jpg`}
-            alt="Music in the Flesh — An Early Modern Musical Physiology, by Bettina Varwig"
-            class="hero__cover"
-          />
-        </a>
-        <p class="hero__award">Winner, Otto Kinkeldey Award,<br/>American Musicological Society</p>
+      <div class="hero__right">
+        <div class="hero__book-row">
+          <a href={`${base}book`} class="hero__book-link">
+            <img
+              src={`${base}images/book-cover.jpg`}
+              alt="Music in the Flesh — An Early Modern Musical Physiology, by Bettina Varwig"
+              class="hero__cover"
+            />
+          </a>
+          <div class="hero__book-info">
+            <p class="hero__award">Winner, Otto Kinkeldey Award, American Musicological Society</p>
+            <a href={`${base}book`} class="hero__book-more">Read more →</a>
+          </div>
+        </div>
+        <hr class="rule rule--kraft hero__divider" />
+        <div class="hero__video-block">
+          <div class="hero__video-thumb" id="hero-video-thumb" data-video265={`${base}videos/bachinthefleshedit_265.mp4`} data-video264={`${base}videos/bachinthefleshedit_264.mp4`}>
+            <img src={`${base}images/uploads/bachinthefleshedit_poster.jpg`} alt="Bach in the Flesh — documentary film" />
+            <span class="hero__video-play">▶</span>
+          </div>
+          <p class="label hero__video-label">Bach in the Flesh</p>
+          <p class="hero__video-caption">
+            Watch: <a href="#" id="hero-trailer-link" class="hero__video-textlink">trailer</a>
+            {' / '}
+            <a href={`${base}media/videos/bach-in-the-flesh`} class="hero__video-textlink">full documentary</a>
+          </p>
+        </div>
       </div>
     </div>
   </section>
@@ -134,6 +152,27 @@ function titleHtml(title: string) {
 
 </BaseLayout>
 
+<script>
+  function playHeroTrailer() {
+    const thumb = document.getElementById('hero-video-thumb');
+    if (!thumb || thumb.querySelector('video')) return;
+    const src265 = thumb.dataset.video265;
+    const src264 = thumb.dataset.video264;
+    thumb.innerHTML = `
+      <video controls autoplay playsinline style="width:100%;height:100%;object-fit:cover;display:block;">
+        <source src="${src265}" type='video/mp4; codecs="hvc1"' />
+        <source src="${src264}" type="video/mp4" />
+      </video>
+    `;
+  }
+
+  document.getElementById('hero-video-thumb')?.addEventListener('click', playHeroTrailer);
+  document.getElementById('hero-trailer-link')?.addEventListener('click', (e) => {
+    e.preventDefault();
+    playHeroTrailer();
+  });
+</script>
+
 <style>
   .hero {
     border-bottom: 1px solid var(--color-kraft);
@@ -141,8 +180,8 @@ function titleHtml(title: string) {
 
   .hero__inner {
     display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: center;
+    grid-template-columns: 3fr 2fr;
+    align-items: stretch;
     gap: var(--space-xl);
     padding-block: var(--space-2xl);
   }
@@ -177,6 +216,7 @@ function titleHtml(title: string) {
     font-weight: 400;
     font-size: clamp(1.5rem, 2.5vw, 2.5rem);
     color: var(--color-slate);
+    white-space: nowrap;
   }
 
   .hero__subtitle {
@@ -196,44 +236,122 @@ function titleHtml(title: string) {
     flex-wrap: wrap;
   }
 
-  .hero__book {
-    flex-shrink: 0;
-    align-self: center;
-    position: relative;
+  .hero__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
   }
 
-  .hero__award {
-    position: absolute;
-    top: calc(100% + var(--space-xs));
-    left: 0;
-    right: 0;
+  .hero__book-row {
+    display: flex;
+    align-items: stretch;
+    gap: var(--space-sm);
+    margin-top: 12px;
   }
 
   .hero__book-link {
     display: block;
+    flex-shrink: 0;
+  }
+
+  .hero__cover {
+    width: 140px;
+    height: auto;
+    box-shadow: 4px 6px 16px rgba(28, 21, 13, 0.25);
+    transition: box-shadow var(--transition), transform var(--transition);
+  }
+
+  .hero__book-link:hover .hero__cover {
+    box-shadow: 6px 10px 24px rgba(28, 21, 13, 0.4);
+    transform: translateY(-2px);
+    opacity: 1;
+  }
+
+  .hero__book-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 0.3em;
   }
 
   .hero__award {
     font-family: var(--font-display);
     font-style: italic;
-    font-size: var(--size-sm);
+    font-size: var(--size-xs);
     color: var(--color-ink-light);
-    text-align: center;
-    margin-top: var(--space-sm);
     line-height: 1.4;
   }
 
-  .hero__cover {
-    width: 340px;
-    height: auto;
-    box-shadow: 8px 12px 32px rgba(28, 21, 13, 0.25);
-    transition: box-shadow var(--transition), transform var(--transition);
+  .hero__book-more {
+    font-family: var(--font-display);
+    font-size: var(--size-xs);
+    letter-spacing: var(--tracking-wide);
+    text-transform: uppercase;
+    color: var(--color-crimson);
   }
 
-  .hero__book-link:hover .hero__cover {
-    box-shadow: 12px 18px 40px rgba(28, 21, 13, 0.4);
-    transform: translateY(-3px);
-    opacity: 1;
+  .hero__divider {
+    margin: 0;
+  }
+
+  .hero__video-block {
+    display: block;
+    width: 75%;
+    color: var(--color-ink);
+  }
+
+  .hero__video-thumb {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background-color: var(--color-ink);
+    cursor: pointer;
+  }
+
+  .hero__video-thumb img,
+  .hero__video-thumb video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero__video-play {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--color-cream);
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    transition: opacity var(--transition);
+  }
+
+  .hero__video-thumb:hover .hero__video-play {
+    opacity: 0.85;
+  }
+
+  .hero__video-label {
+    color: var(--color-crimson);
+    margin-top: var(--space-xs);
+  }
+
+  .hero__video-caption {
+    font-family: var(--font-display);
+    font-size: var(--size-sm);
+    color: var(--color-ink-light);
+    margin-top: 0.15em;
+  }
+
+  .hero__video-textlink {
+    color: var(--color-crimson);
+    text-decoration: none;
+  }
+
+  .hero__video-textlink:hover {
+    text-decoration: underline;
   }
 
   .section-heading {
@@ -310,7 +428,7 @@ function titleHtml(title: string) {
       padding-block: var(--space-xl);
     }
 
-    .hero__book {
+    .hero__right {
       display: none;
     }
 
