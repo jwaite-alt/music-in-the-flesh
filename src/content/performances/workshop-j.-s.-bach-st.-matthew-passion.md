@@ -7,7 +7,7 @@ description: A workshop with leading early music professionals and students from
 featured: false
 videoUrl: /videos/Mache-Dich-v1_264.mp4
 videoUrlH265: /videos/Mache-Dich-v1_265.mp4
-videoPoster: ''
+videoPoster: /images/uploads/machedich.jpg
 videoCaption: Mache dich, mein Herze rein - first run
 feedbackFormUrl: ''
 images: []
