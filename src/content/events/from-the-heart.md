@@ -1,5 +1,5 @@
 ---
-title: From the Heart
+title: 'Workshop: From the Heart'
 date: 2026-11-07
 venue: Emmanuel College
 location: Cambridge
