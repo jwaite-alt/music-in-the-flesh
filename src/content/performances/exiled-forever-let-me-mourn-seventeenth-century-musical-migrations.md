@@ -1,5 +1,5 @@
 ---
-title: 'Exiled, Forever Let Me Mourn: Seventeenth-Century Musical Migrations'
+title: 'Exiled Forever, Let Me Mourn: Seventeenth-Century Musical Migrations'
 date: 2026-08-20
 venue: Baroque Music Summer School
 location: Caversham
