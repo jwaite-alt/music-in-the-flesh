@@ -1,5 +1,5 @@
 ---
-title: 'Workshop: From the Heart'
+title: 'Workshop: Heart of Bach'
 date: 2026-11-07
 venue: Emmanuel College
 location: Cambridge
