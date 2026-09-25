@@ -1,5 +1,5 @@
 ---
-title: 'Performance: From the Heart'
+title: 'Performance: Heart of Bach'
 date: 2027-03-19
 venue: Emmanuel College Chapel
 location: Cambridge
