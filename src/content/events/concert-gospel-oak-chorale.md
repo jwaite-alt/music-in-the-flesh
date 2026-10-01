@@ -1,14 +1,9 @@
 ---
 title: 'Concert: Gospel Oak Chorale'
 date: 2026-10-04
-venue: All Hallows Church
+venue: All Hallows Church, Savernake Road NW3
 location: London
-description: |-
-  All Hallows Church, Savernake Road NW3
-  6.30pm
-
-  Free Entry
-  Donations to London Churches Refugee Fund
+description: 6.30pm, Free Entry, Donations to London Churches Refugee Fund
 ticketUrl: ''
 draft: false
 ---
