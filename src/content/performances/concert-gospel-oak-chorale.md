@@ -7,10 +7,12 @@ description: A free concert by Gospel Oak Chorale, featuring works by Tallis, Ba
 featured: false
 videoUrl: ''
 videoUrlH265: ''
-videoPoster: /images/uploads/IMG_4240.jpeg
+videoPoster: ''
 videoCaption: ''
 feedbackFormUrl: ''
-images: []
+images:
+  - image: /images/uploads/IMG_4240.jpeg
+    caption: ''
 draft: false
 ---
 
