@@ -1,0 +1,93 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  return posts.map(entry => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+const base = import.meta.env.BASE_URL;
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const post = entry.data;
+
+const titleHtml = post.title.replace(/[*_](.*?)[*_]/g, '<em>$1</em>');
+const plainTitle = post.title.replace(/[*_](.*?)[*_]/g, '$1');
+
+const formattedDate = new Date(post.date).toLocaleDateString('en-GB', {
+  day: 'numeric', month: 'long', year: 'numeric',
+});
+---
+
+<BaseLayout title={plainTitle} description={post.description}>
+
+  <header class="post-header section--parchment">
+    <div class="container container--prose">
+      <p class="label" style="color: var(--color-crimson); margin-bottom: 0.5em;">Blog</p>
+      <h1 class="post-header__title" set:html={titleHtml} />
+      <p class="post-header__meta">
+        {formattedDate}{post.author && ` · ${post.author}`}
+      </p>
+    </div>
+  </header>
+
+  <div class="container container--prose post-body">
+    {post.cover && (
+      <img
+        src={`${base}${post.cover.replace(/^\//, '')}`}
+        alt=""
+        class="post-cover"
+      />
+    )}
+
+    <div class="prose">
+      <Content />
+    </div>
+
+    <div class="post-back">
+      <a href={`${base}blog`} class="btn btn--ink">&larr; Back to blog</a>
+    </div>
+  </div>
+
+</BaseLayout>
+
+<style>
+  .post-header {
+    border-bottom: 1px solid var(--color-kraft);
+    padding-block: var(--space-lg);
+  }
+
+  .post-header__title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--size-2xl);
+    color: var(--color-crimson);
+    line-height: 1.1;
+    text-wrap: balance;
+  }
+
+  .post-header__meta {
+    margin-top: 0.6em;
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: var(--size-md);
+    color: var(--color-slate);
+  }
+
+  .post-body {
+    padding-block: var(--space-xl);
+  }
+
+  .post-cover {
+    width: 100%;
+    margin-bottom: var(--space-md);
+  }
+
+  .post-back {
+    margin-top: var(--space-xl);
+  }
+</style>

@@ -99,4 +99,16 @@ const words = defineCollection({
   }),
 });
 
-export const collections = { performances, events, pages, videos, galleries, words };
+const blog = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/blog' }),
+  schema: z.object({
+    title: z.string(),
+    date: dateField,
+    author: z.string().optional(),
+    description: z.string(),
+    cover: z.string().optional(),
+    draft: z.boolean().default(false),
+  }),
+});
+
+export const collections = { performances, events, pages, videos, galleries, words, blog };

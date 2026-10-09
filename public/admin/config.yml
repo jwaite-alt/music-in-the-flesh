@@ -188,3 +188,24 @@ collections:
           - { label: "Caption", name: caption, widget: string, required: false, hint: "Optional caption shown beneath the image." }
       - { label: "Body", name: body, widget: markdown, hint: "Full description, programme notes, reflections. This appears on the individual performance page." }
       - { label: "Draft (hidden)", name: draft, widget: boolean, default: false, hint: "Tick to hide this from the site." }
+
+  # ── Blog ─────────────────────────────────────────────────
+  - name: blog
+    label: Blog
+    label_singular: "Blog post"
+    folder: src/content/blog
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    identifier_field: title
+    summary: "{{title}} — {{date}}"
+    sortable_fields: ["date", "title"]
+    fields:
+      - { label: "Title", name: title, widget: string, hint: "Use *asterisks* around words to italicise them, e.g. *St. John Passion*." }
+      - { label: "Date", name: date, widget: datetime, format: "YYYY-MM-DD", date_format: "DD MMMM YYYY", time_format: false }
+      - { label: "Author", name: author, widget: string, required: false, hint: "Shown beneath the title, e.g. 'Bettina Varwig'." }
+      - { label: "Short description", name: description, widget: text, hint: "Shown in the blog listing and in search results. 1–3 sentences." }
+      - { label: "Cover image", name: cover, widget: image, required: false, hint: "Optional image shown at the top of the post. Compress to under 1MB first (Squoosh)." }
+      - { label: "Post", name: body, widget: markdown, hint: "The full text of the post. Images can be added with the image button in the toolbar." }
+      - { label: "Draft (hidden)", name: draft, widget: boolean, default: false, hint: "Tick to hide this post from the site while you work on it." }
