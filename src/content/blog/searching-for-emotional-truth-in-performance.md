@@ -3,6 +3,9 @@ title: Searching for emotional truth in performance
 date: 2026-10-09
 author: Christopher Gayford
 description: Christopher Gayford on how the search for emotional truth, begun in early music, is reaching musicians who perform later repertoire, and on the experimental concerts he and friends are giving at All Hallows' Church, Gospel Oak.
+cover: /images/uploads/gospel-oak-chorale-4-oct-2026.webp
+coverAlt: Poster for the Gospel Oak Chorale concert at All Hallows Church, Savernake Road NW3, at 6.30pm on Sunday 4th October. Free entry, with donations to the London Churches Refugee Fund. A circular photograph of the choir seen from above, ringed by composers' names.
+coverLayout: side
 draft: false
 ---
 

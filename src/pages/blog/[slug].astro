@@ -39,8 +39,8 @@ const formattedDate = new Date(post.date).toLocaleDateString('en-GB', {
     {post.cover && (
       <img
         src={`${base}${post.cover.replace(/^\//, '')}`}
-        alt=""
-        class="post-cover"
+        alt={post.coverAlt ?? ''}
+        class={`post-cover post-cover--${post.coverLayout}`}
       />
     )}
 
@@ -83,11 +83,32 @@ const formattedDate = new Date(post.date).toLocaleDateString('en-GB', {
   }
 
   .post-cover {
-    width: 100%;
     margin-bottom: var(--space-md);
   }
 
+  .post-cover--wide {
+    width: 100%;
+  }
+
+  /* Small image floated beside the opening text — for portrait images and posters */
+  .post-cover--side {
+    float: right;
+    width: 36%;
+    max-width: 260px;
+    margin: 0.4rem 0 var(--space-sm) var(--space-md);
+  }
+
   .post-back {
-    margin-top: var(--space-xl);
+    clear: both;
+    padding-top: var(--space-lg);
+  }
+
+  @media (max-width: 600px) {
+    .post-cover--side {
+      float: none;
+      width: 100%;
+      max-width: 280px;
+      margin: 0 0 var(--space-md);
+    }
   }
 </style>

@@ -107,6 +107,8 @@ const blog = defineCollection({
     author: z.string().optional(),
     description: z.string(),
     cover: z.string().optional(),
+    coverAlt: z.string().optional(),
+    coverLayout: z.enum(['wide', 'side']).default('wide'),
     draft: z.boolean().default(false),
   }),
 });
