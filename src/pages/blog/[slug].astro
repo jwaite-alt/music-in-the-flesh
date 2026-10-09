@@ -90,12 +90,15 @@ const formattedDate = new Date(post.date).toLocaleDateString('en-GB', {
     width: 100%;
   }
 
-  /* Small image floated beside the opening text — for portrait images and posters */
+  /* Small image floated beside the opening text — for portrait images and posters.
+     Top margin lines the image's top edge up with the top of the first line's lettering:
+     1em (the first paragraph's own top margin) + 0.375em (half-leading + font ascent
+     above the glyphs, measured for EB Garamond at the body size). */
   .post-cover--side {
     float: right;
     width: 36%;
     max-width: 260px;
-    margin: 0.4rem 0 var(--space-sm) var(--space-md);
+    margin: 1.375em 0 var(--space-sm) var(--space-md);
   }
 
   .post-back {
