@@ -1,7 +1,7 @@
 ---
 name: Gospel Oak Chorale
 role: ''
-order: 98
+order: 100
 photo: /images/uploads/gospel-oak-chorale-4-oct-2026.webp
 ---
 
