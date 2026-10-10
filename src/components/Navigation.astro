@@ -3,10 +3,11 @@ const base = import.meta.env.BASE_URL;
 const navLinks = [
   { href: base,                        label: 'Home' },
   { href: `${base}about-project`,      label: 'About' },
-  { href: `${base}about`,              label: 'Biographies' },
+  { href: `${base}about`,              label: 'Collaborators' },
   { href: `${base}media`,              label: 'Media' },
   { href: `${base}events`,             label: 'Upcoming' },
   { href: `${base}archive`,            label: 'Archive' },
+  { href: `${base}blog`,               label: 'Blog' },
   { href: `${base}feedback`,           label: 'Contact' },
 ];
 
@@ -150,7 +151,7 @@ const currentPath = Astro.url.pathname;
     transition: transform var(--transition);
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 1140px) {
     .nav__toggle {
       display: flex;
     }
