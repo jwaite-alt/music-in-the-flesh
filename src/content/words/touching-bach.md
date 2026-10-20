@@ -8,9 +8,9 @@ external_url: https://www.continuoconnect.com/features/touching-bach-an-immersiv
 buy_url: ''
 buy_label: Buy
 download_url: ''
-download_label: Read here
+download_label: Read article
 featured: false
 draft: false
 ---
 
-TBC
+An essay by Bettina Varwig on our John Passion project, written for continuo connect
