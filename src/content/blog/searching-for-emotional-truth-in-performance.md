@@ -17,4 +17,6 @@ The problem for performers of music is that the idea of character is rarely made
 
 Along with a few friends, I’ve become a hostage to the aforementioned awkward questions, and we’re currently putting on small, experimental concerts every three months at All Hallows’ Church, Gospel Oak, a building with a remarkable acoustic, which sits at the bottom of Hampstead Heath in London. On 4th October, 2026, we gave our fourth free, un-ticketed performance, combining choral music, movement, a quartet of clarinets, and an experimental electronic instrument, playing music by Bach, Parry, Vaughan-Williams and Tallis, amongst others. As per our other events, we invite donations to the London Churches Refugee Fund.
 
-Our next performance is t 6.30pm on Sunday 29th November,
+Our next performance is t 6.30pm on Sunday 29th November.
+
+_Chris Gayford trained as a conductor at the Royal College and Royal Northern College of Music, going on to win joint first prize at the Besançon International Conducting Competition and second prize in Cadaqués. He’s worked in France, Austria, Spain, Holland, Germany, Poland, Ukraine, Italy and the U.S. as well as with many of the UK’s leading orchestras. In 2001, he started a research project with music psychologists, professors John Sloboda and Jane Ginsborg, exploring expressivity, embodiment and emotion._
