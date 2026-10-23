@@ -4,7 +4,7 @@ date: 2026-07-01
 venue: Royal Academy of Music
 location: London
 description: A workshop with leading early music professionals and students from the Royal Academy of Music and the University of Cambridge, led by Maggie Faultless, Nicholas Mulroy and Bettina Varwig.
-featured: false
+featured: true
 videoUrl: /videos/Mache-Dich-v1_264.mp4
 videoUrlH265: /videos/Mache-Dich-v1_265.mp4
 videoPoster: /images/uploads/machedich.jpg
