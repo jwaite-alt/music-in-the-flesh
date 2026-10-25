@@ -31,3 +31,6 @@ public/oauth/credentials.php
 
 # Local project docs — not for version control
 _docs/
+
+# Staging publish script — contains a GitHub token and password, uploaded by hand
+_publish.php
