@@ -56,7 +56,7 @@ collections:
 
   # ── Media — Videos ───────────────────────────────────────
   - name: videos
-    label: "Media — Videos"
+    label: "Media: Look — Videos"
     label_singular: Video
     folder: src/content/videos
     create: true
@@ -80,7 +80,7 @@ collections:
 
   # ── Media — Photography ──────────────────────────────────
   - name: galleries
-    label: "Media — Photography"
+    label: "Media: Look — Photography"
     label_singular: Gallery
     folder: src/content/galleries
     create: true
@@ -105,9 +105,31 @@ collections:
       - { label: "Notes", name: body, widget: markdown, required: false, hint: "Optional text shown on the gallery page." }
       - { label: "Draft (hidden)", name: draft, widget: boolean, default: false, required: false }
 
+  # ── Media — Podcasts ─────────────────────────────────────
+  - name: podcasts
+    label: "Media: Listen — Podcasts"
+    label_singular: Podcast
+    folder: src/content/podcasts
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    identifier_field: title
+    summary: "{{title}} — {{date}}"
+    sortable_fields: ["date", "title"]
+    fields:
+      - { label: "Title", name: title, widget: string, hint: "Use *asterisks* around words to italicise them." }
+      - { label: "Date", name: date, widget: datetime, format: "YYYY-MM-DD", date_format: "DD MMMM YYYY", time_format: false }
+      - { label: "Short description", name: description, widget: text, hint: "Shown beneath the title in the Listen list." }
+      - { label: "Audio file", name: audioUrl, widget: string, required: false, hint: "Path to a self-hosted audio file, e.g. /audio/my-episode.mp3. Shows a player on the page." }
+      - { label: "Embed URL", name: embedUrl, widget: string, required: false, hint: "Player embed URL from Spotify, Apple Podcasts, SoundCloud etc. (the src of their embed code). Use this or the audio file." }
+      - { label: "External link", name: external_url, widget: string, required: false, hint: "Optional 'Listen' button linking to the episode elsewhere. Use this alone if there is no player." }
+      - { label: "Cover image", name: cover, widget: image, required: false }
+      - { label: "Draft (hidden)", name: draft, widget: boolean, default: false, required: false }
+
   # ── Media — Words ────────────────────────────────────────
   - name: words
-    label: "Media — Words"
+    label: "Media: Read — Words"
     label_singular: "Words item"
     folder: src/content/words
     create: true
@@ -134,7 +156,7 @@ collections:
 
   # ── Upcoming ─────────────────────────────────────────────
   - name: events
-    label: Upcoming
+    label: "Events: Upcoming"
     label_singular: Event
     folder: src/content/events
     create: true
@@ -156,7 +178,7 @@ collections:
 
   # ── Archive ──────────────────────────────────────────────
   - name: performances
-    label: Archive
+    label: "Events: Archive"
     label_singular: Performance
     folder: src/content/performances
     create: true

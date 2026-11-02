@@ -1,51 +1,15 @@
 ---
+import SubNav from './SubNav.astro';
+
 interface Props {
   current: 'upcoming' | 'archive';
 }
 
-const { current } = Astro.props;
 const base = import.meta.env.BASE_URL;
-const tabs = [
+const items = [
   { key: 'upcoming', href: `${base}events`,  label: 'Upcoming' },
   { key: 'archive',  href: `${base}archive`, label: 'Archive' },
 ];
 ---
 
-<nav class="events-tabs" aria-label="Events sections">
-  {tabs.map(({ key, href, label }) => (
-    <a
-      href={href}
-      class={`events-tabs__link ${current === key ? 'events-tabs__link--active' : ''}`}
-      aria-current={current === key ? 'page' : undefined}
-    >
-      {label}
-    </a>
-  ))}
-</nav>
-
-<style>
-  .events-tabs {
-    display: flex;
-    gap: var(--space-md);
-    margin-top: var(--space-sm);
-  }
-
-  .events-tabs__link {
-    font-family: var(--font-display);
-    font-size: var(--size-sm);
-    font-weight: 500;
-    letter-spacing: 0.07em;
-    text-transform: uppercase;
-    color: var(--color-ink);
-    padding-bottom: 2px;
-    border-bottom: 1px solid transparent;
-    transition: color var(--transition), border-color var(--transition);
-  }
-
-  .events-tabs__link:hover,
-  .events-tabs__link--active {
-    color: var(--color-crimson);
-    border-color: var(--color-crimson);
-    opacity: 1;
-  }
-</style>
+<SubNav items={items} current={Astro.props.current} label="Events sections" />

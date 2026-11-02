@@ -1,0 +1,48 @@
+---
+interface Props {
+  items: { key: string; href: string; label: string }[];
+  current: string;
+  label: string;
+}
+
+const { items, current, label } = Astro.props;
+---
+
+<nav class="subnav" aria-label={label}>
+  {items.map(({ key, href, label }) => (
+    <a
+      href={href}
+      class={`subnav__link ${current === key ? 'subnav__link--active' : ''}`}
+      aria-current={current === key ? 'page' : undefined}
+    >
+      {label}
+    </a>
+  ))}
+</nav>
+
+<style>
+  .subnav {
+    display: flex;
+    gap: var(--space-md);
+    margin-top: var(--space-sm);
+  }
+
+  .subnav__link {
+    font-family: var(--font-display);
+    font-size: var(--size-sm);
+    font-weight: 500;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--color-ink);
+    padding-bottom: 2px;
+    border-bottom: 1px solid transparent;
+    transition: color var(--transition), border-color var(--transition);
+  }
+
+  .subnav__link:hover,
+  .subnav__link--active {
+    color: var(--color-crimson);
+    border-color: var(--color-crimson);
+    opacity: 1;
+  }
+</style>

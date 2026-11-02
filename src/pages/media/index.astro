@@ -1,5 +1,6 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageLayout from '../../layouts/PageLayout.astro';
+import MediaTabs from '../../components/MediaTabs.astro';
 import { getCollection } from 'astro:content';
 
 const base = import.meta.env.BASE_URL;
@@ -8,9 +9,6 @@ const allVideos = (await getCollection('videos', ({ data }) => !data.draft))
   .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
 
 const allGalleries = (await getCollection('galleries', ({ data }) => !data.draft))
-  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
-
-const allWords = (await getCollection('words', ({ data }) => !data.draft))
   .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
 
 function youtubeThumbnail(embedUrl: string) {
@@ -23,15 +21,14 @@ function titleHtml(title: string) {
 }
 ---
 
-<BaseLayout title="Media — Music in the Flesh">
+<PageLayout
+  title="Media"
+  heading="Media"
+  description="Videos and photography from Music in the Flesh."
+>
+  <MediaTabs slot="header" current="look" />
 
-  <header class="page-header section--parchment">
-    <div class="container">
-      <h1 class="page-header__title">Media</h1>
-    </div>
-  </header>
-
-  <div class="container media-body">
+  <div class="media-body">
 
     <!-- Videos -->
     <section class="media-section" id="videos">
@@ -83,95 +80,12 @@ function titleHtml(title: string) {
       )}
     </section>
 
-    <!-- Words -->
-    <section class="media-section" id="words">
-      <h2 class="media-section__heading">
-        <span class="label">Words</span>
-      </h2>
-      <hr class="rule rule--crimson" />
-      {allWords.length > 0 ? (
-        <div class="words-list">
-          {allWords.map(w => {
-            const href = w.data.external_url
-              ? w.data.external_url
-              : w.id === 'music-in-the-flesh'
-                ? `${base}book`
-                : `${base}media/words/${w.id}`;
-            const isExternal = !!w.data.external_url;
-            return (
-              <div class="words-teaser">
-                {w.data.cover && (
-                  <a href={href} class="words-teaser__cover-link" target={isExternal ? '_blank' : undefined} rel={isExternal ? 'noopener noreferrer' : undefined}>
-                    <img src={w.data.cover} alt={w.data.title} class="words-teaser__cover" />
-                  </a>
-                )}
-                <div class="words-teaser__text">
-                  <p class="words-teaser__title" set:html={titleHtml(w.data.title)} />
-                  <p class="words-teaser__desc">{w.data.description}</p>
-                  <a href={href} class="btn btn--crimson" style="margin-top: var(--space-md);" target={isExternal ? '_blank' : undefined} rel={isExternal ? 'noopener noreferrer' : undefined}>
-                    {isExternal ? 'Read article' : 'Read more'}
-                  </a>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      ) : (
-        <p class="media-placeholder">Written content will be added here.</p>
-      )}
-    </section>
-
   </div>
 
-</BaseLayout>
-
-<script>
-  async function sizeBookCover() {
-    await document.fonts.ready;
-
-    const link  = document.querySelector<HTMLElement>('.book-preview__cover-link');
-    const cover = document.querySelector<HTMLImageElement>('.book-preview__cover');
-    const text  = document.querySelector<HTMLElement>('.book-preview__text');
-    if (!link || !cover || !text) return;
-
-    // Wait for image to load so naturalWidth/Height are available
-    if (!cover.complete) {
-      await new Promise(r => cover.addEventListener('load', r, { once: true }));
-    }
-
-    const ratio = cover.naturalWidth / cover.naturalHeight; // e.g. ~0.69 for this cover
-
-    // Iterate: setting link width changes text column width → changes text height
-    // → changes required image width. 3 passes converges completely.
-    link.style.width = '';
-    for (let i = 0; i < 3; i++) {
-      const textH = text.getBoundingClientRect().height;
-      link.style.width = Math.round(textH * ratio) + 'px';
-      void link.offsetWidth; // force reflow before next measurement
-    }
-  }
-
-  sizeBookCover();
-  window.addEventListener('resize', sizeBookCover);
-</script>
-
+</PageLayout>
 
 <style>
-  .page-header {
-    border-bottom: 1px solid var(--color-kraft);
-    padding-block: var(--space-lg);
-  }
-
-  .page-header__title {
-    color: var(--color-crimson);
-    font-size: var(--size-3xl);
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: var(--tracking-wide);
-  }
-
   .media-body {
-    padding-block: var(--space-xl);
     display: flex;
     flex-direction: column;
     gap: var(--space-xl);
@@ -208,11 +122,6 @@ function titleHtml(title: string) {
     margin-bottom: var(--space-xs);
   }
 
-  .media-card__thumb--portrait img {
-    object-fit: contain;
-    object-position: center;
-  }
-
   .media-card__thumb img {
     width: 100%;
     height: 100%;
@@ -247,106 +156,5 @@ function titleHtml(title: string) {
     color: var(--color-ink-light);
     font-style: italic;
     padding-block: var(--space-md);
-  }
-
-  /* Words teaser list */
-  .words-list {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-xl);
-    margin-top: var(--space-md);
-  }
-
-  .words-teaser {
-    display: flex;
-    gap: var(--space-lg);
-    align-items: flex-start;
-  }
-
-  .words-teaser__cover-link {
-    flex-shrink: 0;
-    display: block;
-  }
-
-  .words-teaser__cover {
-    width: 160px;
-    height: auto;
-    display: block;
-    box-shadow: 4px 6px 16px rgba(28, 21, 13, 0.2);
-    transition: box-shadow var(--transition), transform var(--transition);
-  }
-
-  .words-teaser__cover-link:hover .words-teaser__cover {
-    box-shadow: 6px 10px 24px rgba(28, 21, 13, 0.35);
-    transform: translateY(-2px);
-    opacity: 1;
-  }
-
-  .words-teaser__text {
-    flex: 1;
-    min-width: 0;
-  }
-
-  .words-teaser__title {
-    font-family: var(--font-display);
-    font-size: var(--size-lg);
-    font-weight: 600;
-    margin-bottom: 0.4em;
-    color: var(--color-ink);
-  }
-
-  .words-teaser__desc {
-    color: var(--color-ink-light);
-    max-width: 60ch;
-  }
-
-  @media (max-width: 600px) {
-    .words-teaser {
-      flex-direction: column;
-    }
-    .words-teaser__cover {
-      width: 140px;
-    }
-  }
-
-  .book-preview {
-    display: flex;
-    gap: var(--space-lg);
-    align-items: flex-start;
-    margin-top: var(--space-md);
-  }
-
-  .book-preview__cover-link {
-    flex-shrink: 0;
-    display: block;
-  }
-
-  .book-preview__cover {
-    display: block;
-    width: 100%;
-    height: auto;
-    box-shadow: 4px 6px 16px rgba(28, 21, 13, 0.2);
-    transition: box-shadow var(--transition), transform var(--transition);
-  }
-
-  .book-preview__cover-link:hover .book-preview__cover {
-    box-shadow: 6px 10px 24px rgba(28, 21, 13, 0.35);
-    transform: translateY(-2px);
-    opacity: 1;
-  }
-
-  .book-preview__text {
-    flex: 1;
-    min-width: 0;
-  }
-
-  @media (max-width: 600px) {
-    .book-preview {
-      flex-direction: column;
-    }
-
-    .book-preview__cover-link {
-      width: 180px !important;
-    }
   }
 </style>

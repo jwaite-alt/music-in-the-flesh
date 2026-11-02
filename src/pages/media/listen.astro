@@ -1,0 +1,138 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import MediaTabs from '../../components/MediaTabs.astro';
+import { getCollection } from 'astro:content';
+
+const podcasts = (await getCollection('podcasts', ({ data }) => !data.draft))
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+
+function titleHtml(title: string) {
+  return title.replace(/[*_](.*?)[*_]/g, '<em>$1</em>');
+}
+
+function formatDate(date: string) {
+  return new Date(date).toLocaleDateString('en-GB', {
+    day: 'numeric', month: 'long', year: 'numeric',
+  });
+}
+---
+
+<PageLayout
+  title="Media — Listen"
+  heading="Media"
+  description="Podcasts and audio from Music in the Flesh."
+>
+  <MediaTabs slot="header" current="listen" />
+
+  {podcasts.length > 0 ? (
+    <div class="podcast-list">
+      {podcasts.map(p => {
+        const external = p.data.external_url;
+        return (
+          <article class="podcast">
+            {p.data.cover && <img src={p.data.cover} alt="" class="podcast__cover" />}
+            <div class="podcast__text">
+              <p class="label podcast__date">{formatDate(p.data.date)}</p>
+              <h2 class="podcast__title" set:html={titleHtml(p.data.title)} />
+              <p class="podcast__desc">{p.data.description}</p>
+              {p.data.audioUrl && (
+                <audio class="podcast__audio" controls preload="none" src={p.data.audioUrl}></audio>
+              )}
+              {!p.data.audioUrl && p.data.embedUrl && (
+                <iframe
+                  class="podcast__embed"
+                  src={p.data.embedUrl}
+                  title={p.data.title}
+                  loading="lazy"
+                  allow="autoplay; clipboard-write; encrypted-media"
+                ></iframe>
+              )}
+              {external && (
+                <a href={external} class="btn btn--crimson" target="_blank" rel="noopener noreferrer">Listen</a>
+              )}
+            </div>
+          </article>
+        );
+      })}
+    </div>
+  ) : (
+    <p class="media-placeholder">Podcasts will be added here.</p>
+  )}
+
+</PageLayout>
+
+<style>
+  .media-placeholder {
+    color: var(--color-ink-light);
+    font-style: italic;
+    padding-block: var(--space-md);
+  }
+
+  .podcast-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .podcast {
+    display: flex;
+    gap: var(--space-lg);
+    align-items: flex-start;
+    border-top: 1px solid var(--color-kraft);
+    padding-block: var(--space-md);
+  }
+
+  .podcast__cover {
+    flex-shrink: 0;
+    width: 160px;
+    height: auto;
+    display: block;
+    box-shadow: 4px 6px 16px rgba(28, 21, 13, 0.2);
+  }
+
+  .podcast__text {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .podcast__date {
+    color: var(--color-ink-light);
+    margin-bottom: 0.25em;
+  }
+
+  .podcast__title {
+    font-size: var(--size-xl);
+    color: var(--color-ink);
+    margin-bottom: 0.25em;
+  }
+
+  .podcast__desc {
+    color: var(--color-ink-light);
+    max-width: 60ch;
+    margin-bottom: var(--space-sm);
+  }
+
+  .podcast__audio {
+    display: block;
+    width: 100%;
+    max-width: 60ch;
+    margin-bottom: var(--space-sm);
+  }
+
+  .podcast__embed {
+    display: block;
+    width: 100%;
+    max-width: 60ch;
+    height: 152px;
+    border: 0;
+    margin-bottom: var(--space-sm);
+  }
+
+  @media (max-width: 600px) {
+    .podcast {
+      flex-direction: column;
+    }
+    .podcast__cover {
+      width: 140px;
+    }
+  }
+</style>

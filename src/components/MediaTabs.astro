@@ -1,0 +1,16 @@
+---
+import SubNav from './SubNav.astro';
+
+interface Props {
+  current: 'look' | 'listen' | 'read';
+}
+
+const base = import.meta.env.BASE_URL;
+const items = [
+  { key: 'look',   href: `${base}media`,        label: 'Look' },
+  { key: 'listen', href: `${base}media/listen`, label: 'Listen' },
+  { key: 'read',   href: `${base}media/read`,   label: 'Read' },
+];
+---
+
+<SubNav items={items} current={Astro.props.current} label="Media sections" />
