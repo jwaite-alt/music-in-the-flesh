@@ -18,6 +18,7 @@ const headingHtml = heading?.replace(/[*_](.*?)[*_]/g, '<em>$1</em>');
     <div class="container">
       {headingHtml && <h1 class="page-header__title" set:html={headingHtml} />}
       {subheading && <p class="page-header__sub display-subtitle">{subheading}</p>}
+      <slot name="header" />
     </div>
   </header>
 
