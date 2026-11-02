@@ -211,6 +211,50 @@ collections:
       - { label: "Body", name: body, widget: markdown, hint: "Full description, programme notes, reflections. This appears on the individual performance page." }
       - { label: "Draft (hidden)", name: draft, widget: boolean, default: false, hint: "Tick to hide this from the site." }
 
+  # ── Resources ────────────────────────────────────────────
+  - name: resources_page
+    label: "Resources: Page text"
+    files:
+      - name: resources
+        label: "Resources page"
+        file: src/content/pages/resources.md
+        fields:
+          - { label: "Title", name: title, widget: string }
+          - { label: "Introduction", name: body, widget: markdown, required: false, hint: "Text shown at the top of the Resources page, above the items." }
+
+  - name: resources
+    label: "Resources: Items"
+    label_singular: "Resource"
+    folder: src/content/resources
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    identifier_field: title
+    summary: "{{title}} — {{kind}}"
+    sortable_fields: ["order", "title"]
+    fields:
+      - { label: "Title", name: title, widget: string, hint: "Use *asterisks* around words to italicise them." }
+      - label: "Type"
+        name: kind
+        widget: select
+        default: link
+        options:
+          - { label: "Web link", value: link }
+          - { label: "Document / file to download", value: document }
+          - { label: "Video", value: video }
+          - { label: "Audio", value: audio }
+          - { label: "Image", value: image }
+          - { label: "Text only", value: text }
+        hint: "Decides how the item is shown. Fill in only the fields that apply to the type."
+      - { label: "Short description", name: description, widget: text, required: false }
+      - { label: "Web address", name: url, widget: string, required: false, hint: "Web link: the page to open. Video or audio: the embed URL (e.g. https://www.youtube.com/embed/xxxxx), or a path to a hand-uploaded video such as /videos/my-video.mp4." }
+      - { label: "File", name: file, widget: file, required: false, hint: "Document (PDF etc.) to download, or an audio file. Keep files small; large videos are uploaded separately, not here." }
+      - { label: "Image", name: image, widget: image, required: false, hint: "Shown for the Image type, and as a picture alongside other types." }
+      - { label: "Text", name: body, widget: markdown, required: false, hint: "Full text for a Text item, or extra notes for any other type." }
+      - { label: "Display order", name: order, widget: number, default: 99, hint: "1 = first." }
+      - { label: "Draft (hidden)", name: draft, widget: boolean, default: false, required: false }
+
   # ── Blog ─────────────────────────────────────────────────
   - name: blog
     label: Blog

@@ -113,6 +113,20 @@ const podcasts = defineCollection({
   }),
 });
 
+const resources = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/resources' }),
+  schema: z.object({
+    title: z.string(),
+    kind: z.enum(['link', 'document', 'video', 'audio', 'image', 'text']).default('link'),
+    description: z.string().optional(),
+    url: z.string().optional(),
+    file: z.string().optional(),
+    image: z.string().optional(),
+    order: z.number().default(99),
+    draft: z.boolean().default(false),
+  }),
+});
+
 const blog = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/blog' }),
   schema: z.object({
@@ -127,4 +141,4 @@ const blog = defineCollection({
   }),
 });
 
-export const collections = { performances, events, pages, videos, galleries, words, podcasts, blog };
+export const collections = { performances, events, pages, videos, galleries, words, podcasts, resources, blog };

@@ -1,0 +1,129 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import { getEntry, getCollection, render } from 'astro:content';
+
+const base = import.meta.env.BASE_URL;
+
+const page = await getEntry('pages', 'resources');
+const { Content: Intro } = await render(page);
+
+const items = (await getCollection('resources', ({ data }) => !data.draft))
+  .sort((a, b) => a.data.order - b.data.order || a.data.title.localeCompare(b.data.title));
+
+const rendered = await Promise.all(items.map(async item => ({
+  item,
+  Body: (await render(item)).Content,
+  hasBody: !!item.body?.trim(),
+})));
+
+function titleHtml(title: string) {
+  return title.replace(/[*_](.*?)[*_]/g, '<em>$1</em>');
+}
+
+const href = (path: string) => (/^(https?:)?\/\//.test(path) ? path : `${base}${path.replace(/^\//, '')}`);
+---
+
+<PageLayout
+  title="Resources"
+  heading="Resources"
+  description="Resources from Music in the Flesh."
+  narrow
+>
+
+  <div class="prose">
+    <Intro />
+  </div>
+
+  {rendered.length > 0 && (
+    <div class="resource-list">
+      {rendered.map(({ item, Body, hasBody }) => {
+        const d = item.data;
+        const isVideoFile = !!d.url && /\.(mp4|m4v|webm)$/i.test(d.url);
+        return (
+          <article class="resource">
+            <h2 class="resource__title" set:html={titleHtml(d.title)} />
+            {d.description && <p class="resource__desc">{d.description}</p>}
+
+            {d.image && <img src={d.image} alt="" class="resource__image" />}
+
+            {d.kind === 'video' && d.url && (isVideoFile
+              ? <video class="resource__media" controls preload="metadata" src={href(d.url)}></video>
+              : <iframe class="resource__embed" src={d.url} title={d.title} loading="lazy" allowfullscreen
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+            )}
+
+            {d.kind === 'audio' && d.file && (
+              <audio class="resource__media" controls preload="none" src={href(d.file)}></audio>
+            )}
+            {d.kind === 'audio' && !d.file && d.url && (
+              <iframe class="resource__embed resource__embed--audio" src={d.url} title={d.title} loading="lazy"
+                allow="autoplay; clipboard-write; encrypted-media"></iframe>
+            )}
+
+            {hasBody && <div class="prose resource__body"><Body /></div>}
+
+            {d.kind === 'link' && d.url && (
+              <a href={d.url} class="btn btn--crimson" target="_blank" rel="noopener noreferrer">Visit</a>
+            )}
+            {d.kind === 'document' && d.file && (
+              <a href={href(d.file)} class="btn btn--crimson" download>Download</a>
+            )}
+          </article>
+        );
+      })}
+    </div>
+  )}
+
+</PageLayout>
+
+<style>
+  .resource-list {
+    margin-top: var(--space-lg);
+  }
+
+  .resource {
+    border-top: 1px solid var(--color-kraft);
+    padding-block: var(--space-md);
+  }
+
+  .resource__title {
+    font-size: var(--size-xl);
+    color: var(--color-ink);
+    margin-bottom: 0.25em;
+  }
+
+  .resource__desc {
+    color: var(--color-ink-light);
+    margin-bottom: var(--space-sm);
+  }
+
+  .resource__image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: var(--space-sm);
+  }
+
+  .resource__media {
+    display: block;
+    width: 100%;
+    margin-bottom: var(--space-sm);
+  }
+
+  .resource__embed {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
+    margin-bottom: var(--space-sm);
+  }
+
+  .resource__embed--audio {
+    aspect-ratio: auto;
+    height: 152px;
+  }
+
+  .resource__body {
+    margin-bottom: var(--space-sm);
+  }
+</style>
