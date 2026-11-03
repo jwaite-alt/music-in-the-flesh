@@ -35,10 +35,10 @@ collections:
           - { label: "Title", name: title, widget: string }
           - { label: "Project description", name: body, widget: markdown, hint: "Full description of the project and its intellectual aims." }
 
-  # ── Collaborators ──────────────────────────────────────────
+  # ── People ────────────────────────────────────────────────
   - name: bios
-    label: Collaborators
-    label_singular: Collaborator
+    label: People
+    label_singular: Person
     folder: src/content/bios
     create: true
     slug: "{{slug}}"
