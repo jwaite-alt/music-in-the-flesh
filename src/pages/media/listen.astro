@@ -35,20 +35,10 @@ function formatDate(date: string) {
               <p class="label podcast__date">{formatDate(p.data.date)}</p>
               <h2 class="podcast__title" set:html={titleHtml(p.data.title)} />
               <p class="podcast__desc">{p.data.description}</p>
-              {p.data.audioUrl && (
-                <audio class="podcast__audio" controls preload="none" src={p.data.audioUrl}></audio>
-              )}
-              {!p.data.audioUrl && p.data.embedUrl && (
-                <iframe
-                  class="podcast__embed"
-                  src={p.data.embedUrl}
-                  title={p.data.title}
-                  loading="lazy"
-                  allow="autoplay; clipboard-write; encrypted-media"
-                ></iframe>
-              )}
               {external && (
-                <a href={external} class="btn btn--crimson" target="_blank" rel="noopener noreferrer">Listen</a>
+                <a href={external} class="btn btn--crimson" target="_blank" rel="noopener noreferrer">
+                  {p.data.platform ? `Listen on ${p.data.platform}` : 'Listen'}
+                </a>
               )}
             </div>
           </article>
@@ -108,22 +98,6 @@ function formatDate(date: string) {
   .podcast__desc {
     color: var(--color-ink-light);
     max-width: 60ch;
-    margin-bottom: var(--space-sm);
-  }
-
-  .podcast__audio {
-    display: block;
-    width: 100%;
-    max-width: 60ch;
-    margin-bottom: var(--space-sm);
-  }
-
-  .podcast__embed {
-    display: block;
-    width: 100%;
-    max-width: 60ch;
-    height: 152px;
-    border: 0;
     margin-bottom: var(--space-sm);
   }
 

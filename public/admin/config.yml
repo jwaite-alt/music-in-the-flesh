@@ -121,9 +121,8 @@ collections:
       - { label: "Title", name: title, widget: string, hint: "Use *asterisks* around words to italicise them." }
       - { label: "Date", name: date, widget: datetime, format: "YYYY-MM-DD", date_format: "DD MMMM YYYY", time_format: false }
       - { label: "Short description", name: description, widget: text, hint: "Shown beneath the title in the Listen list." }
-      - { label: "Audio file", name: audioUrl, widget: string, required: false, hint: "Path to a self-hosted audio file, e.g. /audio/my-episode.mp3. Shows a player on the page." }
-      - { label: "Embed URL", name: embedUrl, widget: string, required: false, hint: "Player embed URL from Spotify, Apple Podcasts, SoundCloud etc. (the src of their embed code). Use this or the audio file." }
-      - { label: "External link", name: external_url, widget: string, required: false, hint: "Optional 'Listen' button linking to the episode elsewhere. Use this alone if there is no player." }
+      - { label: "Link to the episode", name: external_url, widget: string, hint: "Web address of the episode on Spotify, YouTube etc. The page shows a Listen button that opens it in a new tab (nothing plays on this site)." }
+      - { label: "Platform", name: platform, widget: string, required: false, hint: "e.g. Spotify or YouTube. Makes the button read 'Listen on Spotify'." }
       - { label: "Cover image", name: cover, widget: image, required: false }
       - { label: "Draft (hidden)", name: draft, widget: boolean, default: false, required: false }
 
