@@ -198,6 +198,16 @@ const past = events
     margin-bottom: var(--space-sm);
   }
 
+  .event-listing__desc :global(a) {
+    color: var(--color-crimson);
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+  }
+
+  .event-listing__desc :global(a:hover) {
+    text-decoration-thickness: 2px;
+  }
+
   .interest-form__heading {
     color: var(--color-crimson);
     text-transform: uppercase;
