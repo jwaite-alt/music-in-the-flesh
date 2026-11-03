@@ -99,6 +99,19 @@ const words = defineCollection({
   }),
 });
 
+const podcasts = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/podcasts' }),
+  schema: z.object({
+    title: z.string(),
+    date: dateField,
+    description: z.string(),
+    external_url: z.string(),
+    platform: z.string().optional(),
+    cover: z.string().optional(),
+    draft: z.boolean().default(false),
+  }),
+});
+
 const blog = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/blog' }),
   schema: z.object({
@@ -113,4 +126,4 @@ const blog = defineCollection({
   }),
 });
 
-export const collections = { performances, events, pages, videos, galleries, words, blog };
+export const collections = { performances, events, pages, videos, galleries, words, podcasts, blog };

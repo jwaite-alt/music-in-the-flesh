@@ -1,6 +1,7 @@
 ---
 import PageLayout from '../../layouts/PageLayout.astro';
 import EventCard from '../../components/EventCard.astro';
+import EventsTabs from '../../components/EventsTabs.astro';
 import { getCollection } from 'astro:content';
 
 const performances = await getCollection('performances', ({ data }) => !data.draft);
@@ -10,11 +11,12 @@ const sorted = performances.sort(
 ---
 
 <PageLayout
-  title="Archive"
-  heading="Archive"
+  title="Events — Archive"
+  heading="Events"
   subheading="Past performances, events and experiments"
   description="A record of all past Music in the Flesh performances and research events."
 >
+  <EventsTabs slot="header" current="archive" />
 
   {sorted.map(p => (
     <EventCard

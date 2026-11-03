@@ -1,0 +1,15 @@
+---
+import SubNav from './SubNav.astro';
+
+interface Props {
+  current: 'upcoming' | 'archive';
+}
+
+const base = import.meta.env.BASE_URL;
+const items = [
+  { key: 'upcoming', href: `${base}events`,  label: 'Upcoming' },
+  { key: 'archive',  href: `${base}archive`, label: 'Archive' },
+];
+---
+
+<SubNav items={items} current={Astro.props.current} label="Events sections" />

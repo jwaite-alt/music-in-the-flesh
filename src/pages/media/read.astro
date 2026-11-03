@@ -1,0 +1,120 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import MediaTabs from '../../components/MediaTabs.astro';
+import { getCollection } from 'astro:content';
+
+const base = import.meta.env.BASE_URL;
+
+const allWords = (await getCollection('words', ({ data }) => !data.draft))
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+
+function titleHtml(title: string) {
+  return title.replace(/[*_](.*?)[*_]/g, '<em>$1</em>');
+}
+---
+
+<PageLayout
+  title="Media — Read"
+  heading="Media"
+  description="Writing about and from Music in the Flesh: the book, press coverage and articles."
+>
+  <MediaTabs slot="header" current="read" />
+
+  {allWords.length > 0 ? (
+    <div class="words-list">
+      {allWords.map(w => {
+        const href = w.data.external_url
+          ? w.data.external_url
+          : w.id === 'music-in-the-flesh'
+            ? `${base}book`
+            : `${base}media/words/${w.id}`;
+        const isExternal = !!w.data.external_url;
+        return (
+          <div class="words-teaser">
+            {w.data.cover && (
+              <a href={href} class="words-teaser__cover-link" target={isExternal ? '_blank' : undefined} rel={isExternal ? 'noopener noreferrer' : undefined}>
+                <img src={w.data.cover} alt={w.data.title} class="words-teaser__cover" />
+              </a>
+            )}
+            <div class="words-teaser__text">
+              <p class="words-teaser__title" set:html={titleHtml(w.data.title)} />
+              <p class="words-teaser__desc">{w.data.description}</p>
+              <a href={href} class="btn btn--crimson" style="margin-top: var(--space-md);" target={isExternal ? '_blank' : undefined} rel={isExternal ? 'noopener noreferrer' : undefined}>
+                {isExternal ? 'Read article' : 'Read more'}
+              </a>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  ) : (
+    <p class="media-placeholder">Written content will be added here.</p>
+  )}
+
+</PageLayout>
+
+<style>
+  .media-placeholder {
+    color: var(--color-ink-light);
+    font-style: italic;
+    padding-block: var(--space-md);
+  }
+
+  .words-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+  }
+
+  .words-teaser {
+    display: flex;
+    gap: var(--space-lg);
+    align-items: flex-start;
+  }
+
+  .words-teaser__cover-link {
+    flex-shrink: 0;
+    display: block;
+  }
+
+  .words-teaser__cover {
+    width: 160px;
+    height: auto;
+    display: block;
+    box-shadow: 4px 6px 16px rgba(28, 21, 13, 0.2);
+    transition: box-shadow var(--transition), transform var(--transition);
+  }
+
+  .words-teaser__cover-link:hover .words-teaser__cover {
+    box-shadow: 6px 10px 24px rgba(28, 21, 13, 0.35);
+    transform: translateY(-2px);
+    opacity: 1;
+  }
+
+  .words-teaser__text {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .words-teaser__title {
+    font-family: var(--font-display);
+    font-size: var(--size-lg);
+    font-weight: 600;
+    margin-bottom: 0.4em;
+    color: var(--color-ink);
+  }
+
+  .words-teaser__desc {
+    color: var(--color-ink-light);
+    max-width: 60ch;
+  }
+
+  @media (max-width: 600px) {
+    .words-teaser {
+      flex-direction: column;
+    }
+    .words-teaser__cover {
+      width: 140px;
+    }
+  }
+</style>

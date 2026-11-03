@@ -3,15 +3,16 @@ const base = import.meta.env.BASE_URL;
 const navLinks = [
   { href: base,                        label: 'Home' },
   { href: `${base}about-project`,      label: 'About' },
-  { href: `${base}about`,              label: 'Collaborators' },
+  { href: `${base}about`,              label: 'People' },
   { href: `${base}media`,              label: 'Media' },
-  { href: `${base}events`,             label: 'Upcoming' },
-  { href: `${base}archive`,            label: 'Archive' },
+  { href: `${base}events`,             label: 'Events', also: [`${base}archive`] },
   { href: `${base}blog`,               label: 'Blog' },
   { href: `${base}feedback`,           label: 'Contact' },
 ];
 
 const currentPath = Astro.url.pathname;
+const isActive = (href: string, also: string[] = []) =>
+  [href, ...also].some(h => currentPath === h || currentPath === `${h}/` || (h !== base && currentPath.startsWith(`${h}/`)));
 ---
 
 <nav class="nav" aria-label="Main navigation">
@@ -26,12 +27,12 @@ const currentPath = Astro.url.pathname;
     </button>
 
     <ul class="nav__links" id="nav-menu" role="list">
-      {navLinks.map(({ href, label }) => (
+      {navLinks.map(({ href, label, also }) => (
         <li>
           <a
             href={href}
-            class={`nav__link ${currentPath === href ? 'nav__link--active' : ''}`}
-            aria-current={currentPath === href ? 'page' : undefined}
+            class={`nav__link ${isActive(href, also) ? 'nav__link--active' : ''}`}
+            aria-current={isActive(href, also) ? 'page' : undefined}
           >
             {label}
           </a>
