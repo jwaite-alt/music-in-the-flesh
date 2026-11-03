@@ -2,6 +2,7 @@
 import PageLayout from '../layouts/PageLayout.astro';
 import EventsTabs from '../components/EventsTabs.astro';
 import { getCollection } from 'astro:content';
+import { inlineLinks } from '../utils/inlineLinks';
 
 const events = await getCollection('events', ({ data }) => !data.draft);
 const upcoming = events
@@ -34,15 +35,18 @@ const past = events
         });
         return (
           <article class="event-listing">
-            <p class="label event-listing__date">{formattedDate}</p>
-            <h3 class="event-listing__title">{e.data.title}</h3>
-            <p class="event-listing__venue">{e.data.venue}{e.data.location ? `, ${e.data.location}` : ''}</p>
-            <p class="event-listing__desc">{e.data.description}</p>
-            {e.data.ticketUrl && (
-              <a href={e.data.ticketUrl} class="btn btn--crimson" target="_blank" rel="noopener">
-                Tickets / more information
-              </a>
-            )}
+            {e.data.image && <img src={e.data.image} alt={e.data.imageAlt ?? ''} class="event-listing__image" />}
+            <div class="event-listing__text">
+              <p class="label event-listing__date">{formattedDate}</p>
+              <h3 class="event-listing__title">{e.data.title}</h3>
+              <p class="event-listing__venue">{e.data.venue}{e.data.location ? `, ${e.data.location}` : ''}</p>
+              <p class="event-listing__desc" set:html={inlineLinks(e.data.description)} />
+              {e.data.ticketUrl && (
+                <a href={e.data.ticketUrl} class="btn btn--crimson" target="_blank" rel="noopener">
+                  Tickets / more information
+                </a>
+              )}
+            </div>
           </article>
         );
       })}
@@ -143,6 +147,31 @@ const past = events
   .event-listing {
     border-top: 1px solid var(--color-kraft);
     padding-block: var(--space-md);
+    display: flex;
+    gap: var(--space-lg);
+    align-items: flex-start;
+  }
+
+  .event-listing__image {
+    flex-shrink: 0;
+    width: 200px;
+    height: auto;
+    display: block;
+    box-shadow: 4px 6px 16px rgba(28, 21, 13, 0.2);
+  }
+
+  .event-listing__text {
+    flex: 1;
+    min-width: 0;
+  }
+
+  @media (max-width: 600px) {
+    .event-listing {
+      flex-direction: column;
+    }
+    .event-listing__image {
+      width: 180px;
+    }
   }
 
   .event-listing__date {
@@ -167,6 +196,16 @@ const past = events
     color: var(--color-ink-light);
     max-width: 60ch;
     margin-bottom: var(--space-sm);
+  }
+
+  .event-listing__desc :global(a) {
+    color: var(--color-crimson);
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+  }
+
+  .event-listing__desc :global(a:hover) {
+    text-decoration-thickness: 2px;
   }
 
   .interest-form__heading {
