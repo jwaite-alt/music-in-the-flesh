@@ -2,6 +2,7 @@
 import PageLayout from '../layouts/PageLayout.astro';
 import EventsTabs from '../components/EventsTabs.astro';
 import { getCollection } from 'astro:content';
+import { inlineLinks } from '../utils/inlineLinks';
 
 const events = await getCollection('events', ({ data }) => !data.draft);
 const upcoming = events
@@ -37,7 +38,7 @@ const past = events
             <p class="label event-listing__date">{formattedDate}</p>
             <h3 class="event-listing__title">{e.data.title}</h3>
             <p class="event-listing__venue">{e.data.venue}{e.data.location ? `, ${e.data.location}` : ''}</p>
-            <p class="event-listing__desc">{e.data.description}</p>
+            <p class="event-listing__desc" set:html={inlineLinks(e.data.description)} />
             {e.data.ticketUrl && (
               <a href={e.data.ticketUrl} class="btn btn--crimson" target="_blank" rel="noopener">
                 Tickets / more information

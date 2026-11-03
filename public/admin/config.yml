@@ -170,7 +170,7 @@ collections:
       - { label: "Date", name: date, widget: datetime, format: "YYYY-MM-DD", date_format: "DD MMMM YYYY", time_format: false }
       - { label: "Venue", name: venue, widget: string }
       - { label: "Location (city)", name: location, widget: string, required: false }
-      - { label: "Short description", name: description, widget: text, hint: "Shown in the events listing." }
+      - { label: "Short description", name: description, widget: text, hint: "Shown in the events listing. To add a link, write [words to link](https://address). For a page on this site use e.g. [Gospel Oak Chorale](/about#gospel-oak-chorale)." }
       - { label: "Ticket / booking URL", name: ticketUrl, widget: string, required: false }
       - { label: "Body", name: body, widget: markdown, required: false, hint: "Any additional detail shown when the event has its own page." }
       - { label: "Draft (hidden)", name: draft, widget: boolean, default: false, required: false }
