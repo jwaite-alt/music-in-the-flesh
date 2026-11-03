@@ -172,7 +172,9 @@ collections:
       - { label: "Location (city)", name: location, widget: string, required: false }
       - { label: "Short description", name: description, widget: text, hint: "Shown in the events listing. To make a link, type the words in square brackets and the web address straight after in round brackets, with no space between: `[words to link](https://address)`. For a page on this site, give just the page, e.g. `[Gospel Oak Chorale](/about#gospel-oak-chorale)`." }
       - { label: "Ticket / booking URL", name: ticketUrl, widget: string, required: false }
-      - { label: "Body", name: body, widget: markdown, required: false, hint: "Any additional detail shown when the event has its own page." }
+      - { label: "Image (poster)", name: image, widget: image, required: false, hint: "Portrait poster, shown beside the listing. Leave empty for no image." }
+      - { label: "Image description", name: imageAlt, widget: string, required: false, hint: "Describe the poster for people who can't see it (screen readers), e.g. what it announces." }
+      - { label: "Body", name: body, widget: markdown, required: false, hint: "Not shown on the site at present: upcoming events have no page of their own. Put what visitors should see in the short description and the poster image above." }
       - { label: "Draft (hidden)", name: draft, widget: boolean, default: false, required: false }
 
   # ── Archive ──────────────────────────────────────────────

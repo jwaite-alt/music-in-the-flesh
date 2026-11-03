@@ -38,6 +38,8 @@ const events = defineCollection({
     location: z.string().optional(),
     description: z.string(),
     ticketUrl: z.string().optional(),
+    image: z.string().optional(),
+    imageAlt: z.string().optional(),
     draft: z.boolean().default(false),
   }),
 });
