@@ -3,6 +3,8 @@ name: Build and deploy to musicintheflesh.org
 on:
   push:
     branches: [main]
+  schedule:
+    - cron: '30 0 * * *'
     
 concurrency:
   group: deploy-main
