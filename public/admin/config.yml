@@ -168,18 +168,20 @@ collections:
     fields:
       - { label: "Title", name: title, widget: string }
       - { label: "Date", name: date, widget: datetime, format: "YYYY-MM-DD", date_format: "DD MMMM YYYY", time_format: false }
+      - { label: "Start time", name: time, widget: string, required: false, hint: "Optional, shown after the date. Type it as you want it to appear, e.g. 6.30pm." }
       - { label: "Venue", name: venue, widget: string }
       - { label: "Location (city)", name: location, widget: string, required: false }
       - { label: "Short description", name: description, widget: text, hint: "Shown in the events listing. To make a link, type the words in square brackets and the web address straight after in round brackets, with no space between: `[words to link](https://address)`. For a page on this site, give just the page, e.g. `[Gospel Oak Chorale](/about#gospel-oak-chorale)`." }
       - { label: "Ticket / booking URL", name: ticketUrl, widget: string, required: false }
       - { label: "Image (poster)", name: image, widget: image, required: false, hint: "Portrait poster, shown beside the listing. Leave empty for no image." }
       - { label: "Image description", name: imageAlt, widget: string, required: false, hint: "Describe the poster for people who can't see it (screen readers), e.g. what it announces." }
-      - { label: "Body", name: body, widget: markdown, required: false, hint: "Not shown on the site at present: upcoming events have no page of their own. Put what visitors should see in the short description and the poster image above." }
+      - { label: "Body", name: body, widget: markdown, required: false, hint: "Not shown while the event is upcoming. Once the event has passed, it appears on the event's page in the Archive, below the short description." }
       - { label: "Draft (hidden)", name: draft, widget: boolean, default: false, required: false }
 
   # ── Archive ──────────────────────────────────────────────
   - name: performances
     label: "Events: Archive"
+    description: "Past events move to the Archive by themselves, with a basic page (title, date, venue, poster, short description and body). To give one a fuller page with photos, video and notes, add an entry here with the same title and date as the event: it replaces the basic page."
     label_singular: Performance
     folder: src/content/performances
     create: true

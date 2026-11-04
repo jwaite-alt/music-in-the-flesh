@@ -2,17 +2,26 @@
 import PageLayout from '../../layouts/PageLayout.astro';
 import Slideshow from '../../components/Slideshow.astro';
 import { getCollection, render } from 'astro:content';
+import { getDefaultArchiveEvents } from '../../utils/archiveEvents';
+import { inlineLinks, stripLinks } from '../../utils/inlineLinks';
 const base = import.meta.env.BASE_URL;
 
 export async function getStaticPaths() {
   const performances = await getCollection('performances', ({ data }) => !data.draft);
-  return performances.map(p => ({
-    params: { slug: p.id },
-    props: { performance: p },
-  }));
+  const pastEvents = await getDefaultArchiveEvents();
+  return [
+    ...performances.map(p => ({
+      params: { slug: p.id },
+      props: { performance: p, fromEvent: false },
+    })),
+    ...pastEvents.map(({ slug, entry }) => ({
+      params: { slug },
+      props: { performance: entry, fromEvent: true },
+    })),
+  ];
 }
 
-const { performance } = Astro.props;
+const { performance, fromEvent } = Astro.props;
 const { Content } = await render(performance);
 
 const dateObj = new Date(performance.data.date);
@@ -25,8 +34,17 @@ const formattedDate = dateObj.toLocaleDateString('en-GB', {
   title={performance.data.title}
   heading={performance.data.title}
   subheading={`${formattedDate} · ${performance.data.venue}${performance.data.location ? ', ' + performance.data.location : ''}`}
-  description={performance.data.description}
+  description={stripLinks(performance.data.description)}
 >
+
+  {fromEvent && (
+    <div class="event-basic">
+      {performance.data.image && (
+        <img src={performance.data.image} alt={performance.data.imageAlt ?? ''} class="event-basic__image" />
+      )}
+      <p class="event-basic__desc" set:html={inlineLinks(performance.data.description)} />
+    </div>
+  )}
 
   {performance.data.images && performance.data.images.length > 0 && (
     <div style="margin-bottom: var(--space-lg);">
@@ -73,6 +91,43 @@ const formattedDate = dateObj.toLocaleDateString('en-GB', {
 </PageLayout>
 
 <style>
+  .event-basic {
+    display: flex;
+    gap: var(--space-lg);
+    align-items: flex-start;
+    margin-bottom: var(--space-lg);
+  }
+
+  .event-basic__image {
+    flex-shrink: 0;
+    width: 200px;
+    height: auto;
+    display: block;
+    box-shadow: 4px 6px 16px rgba(28, 21, 13, 0.2);
+  }
+
+  .event-basic__desc {
+    flex: 1;
+    min-width: 0;
+    max-width: 60ch;
+    color: var(--color-ink-light);
+  }
+
+  .event-basic__desc :global(a) {
+    color: var(--color-crimson);
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+  }
+
+  @media (max-width: 600px) {
+    .event-basic {
+      flex-direction: column;
+    }
+    .event-basic__image {
+      width: 180px;
+    }
+  }
+
   .video-inline {
     width: 33%;
     margin-bottom: var(--space-lg);
