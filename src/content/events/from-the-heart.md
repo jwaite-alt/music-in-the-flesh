@@ -1,9 +1,12 @@
 ---
 title: 'Workshop: The Heart of Bach'
 date: 2026-11-07
+time: ''
 venue: Emmanuel College
 location: Cambridge
 description: A workshop on selected heart-themed movements from J. S. Bach's cantatas, with students from the University of Cambridge, led by Margaret Faultless, Nicholas Mulroy and Bettina Varwig.  This event is invitation only, but public performances are planned for 2027!
 ticketUrl: ''
+image: /images/uploads/kern.jpg
+imageAlt: ''
 draft: false
 ---
