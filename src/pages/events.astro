@@ -3,15 +3,13 @@ import PageLayout from '../layouts/PageLayout.astro';
 import EventsTabs from '../components/EventsTabs.astro';
 import { getCollection } from 'astro:content';
 import { inlineLinks } from '../utils/inlineLinks';
+import { isoDay, todayLondon } from '../utils/eventDates';
 
 const events = await getCollection('events', ({ data }) => !data.draft);
+const today = todayLondon();
 const upcoming = events
-  .filter(e => new Date(e.data.date) >= new Date())
+  .filter(e => isoDay(e.data.date) >= today)
   .sort((a, b) => new Date(a.data.date).getTime() - new Date(b.data.date).getTime());
-
-const past = events
-  .filter(e => new Date(e.data.date) < new Date())
-  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
 ---
 
 <PageLayout
@@ -34,10 +32,10 @@ const past = events
           day: 'numeric', month: 'long', year: 'numeric'
         });
         return (
-          <article class="event-listing">
+          <article class="event-listing" id={e.id}>
             {e.data.image && <img src={e.data.image} alt={e.data.imageAlt ?? ''} class="event-listing__image" />}
             <div class="event-listing__text">
-              <p class="label event-listing__date">{formattedDate}</p>
+              <p class="label event-listing__date">{formattedDate}{e.data.time ? ` · ${e.data.time}` : ''}</p>
               <h3 class="event-listing__title">{e.data.title}</h3>
               <p class="event-listing__venue">{e.data.venue}{e.data.location ? `, ${e.data.location}` : ''}</p>
               <p class="event-listing__desc" set:html={inlineLinks(e.data.description)} />
@@ -147,6 +145,7 @@ const past = events
   .event-listing {
     border-top: 1px solid var(--color-kraft);
     padding-block: var(--space-md);
+    scroll-margin-top: 6rem;
     display: flex;
     gap: var(--space-lg);
     align-items: flex-start;

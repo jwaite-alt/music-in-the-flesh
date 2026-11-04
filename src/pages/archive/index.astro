@@ -3,11 +3,14 @@ import PageLayout from '../../layouts/PageLayout.astro';
 import EventCard from '../../components/EventCard.astro';
 import EventsTabs from '../../components/EventsTabs.astro';
 import { getCollection } from 'astro:content';
+import { getDefaultArchiveEvents } from '../../utils/archiveEvents';
 
 const performances = await getCollection('performances', ({ data }) => !data.draft);
-const sorted = performances.sort(
-  (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
-);
+const pastEvents = await getDefaultArchiveEvents();
+const sorted = [
+  ...performances.map(p => ({ slug: p.id, data: p.data })),
+  ...pastEvents.map(({ slug, entry }) => ({ slug, data: { ...entry.data, featured: false } })),
+].sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
 ---
 
 <PageLayout
@@ -24,7 +27,7 @@ const sorted = performances.sort(
       date={p.data.date}
       venue={p.data.venue}
       description={p.data.description}
-      slug={p.id}
+      slug={p.slug}
       tag={p.data.featured ? 'Featured' : undefined}
     />
   ))}

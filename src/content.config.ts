@@ -34,6 +34,7 @@ const events = defineCollection({
   schema: z.object({
     title: z.string(),
     date: dateField,
+    time: z.string().optional(),
     venue: z.string(),
     location: z.string().optional(),
     description: z.string(),
