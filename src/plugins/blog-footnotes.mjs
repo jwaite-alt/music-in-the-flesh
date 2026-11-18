@@ -37,6 +37,55 @@ function superscript(n, { href, id, label } = {}) {
   };
 }
 
+// ── Italics repair ────────────────────────────────────────────────────────
+// The CMS editor sometimes saves italic text as \_like this\_ (escaped
+// underscores) instead of _like this_, which then shows literal underscores.
+// It flips between the two on successive saves, especially around links.
+// Treat the escaped form as italics too, so it never matters which one is saved.
+const OPEN = /(^|[\s(‘“'"])_$/;
+const CLOSE = /^_(?=$|[\s.,;:!?)’”'"])/;
+const WHOLE = /(^|[\s(‘“'"])_([^_\s](?:[^_]*[^_\s])?)_(?=$|[\s.,;:!?)’”'"])/g;
+
+const em = (children) => ({ type: 'element', tagName: 'em', properties: {}, children });
+
+// "_" text, one or more inline elements (e.g. a link), then "_" text → <em>…</em>
+function repairAcrossElements(children) {
+  const out = [];
+  for (let i = 0; i < children.length; i++) {
+    const c = children[i];
+    if (c.type === 'text' && OPEN.test(c.value)) {
+      let j = i + 1;
+      while (j < children.length && isElement(children[j])) j++;
+      const closer = children[j];
+      if (j > i + 1 && closer && closer.type === 'text' && CLOSE.test(closer.value)) {
+        const before = c.value.slice(0, -1);
+        if (before) out.push({ type: 'text', value: before });
+        out.push(em(children.slice(i + 1, j)));
+        closer.value = closer.value.slice(1);
+        i = j - 1; // closer is handled on the next pass
+        continue;
+      }
+    }
+    out.push(c);
+  }
+  return out;
+}
+
+// "_words_" inside a single text node → text + <em>words</em> + text
+function repairWithinText(value) {
+  const out = [];
+  let last = 0;
+  for (const m of value.matchAll(WHOLE)) {
+    const start = m.index + m[1].length;
+    if (start > last) out.push({ type: 'text', value: value.slice(last, start) });
+    out.push(em([{ type: 'text', value: m[2] }]));
+    last = m.index + m[0].length;
+  }
+  if (last === 0) return null;
+  if (last < value.length) out.push({ type: 'text', value: value.slice(last) });
+  return out;
+}
+
 // Footnote numbers that actually have a footnote line, so we only link those.
 function collectFootnotes(node, found = new Set()) {
   for (const child of node.children ?? []) {
@@ -83,9 +132,15 @@ export default function blogFootnotes() {
     function walk(node, inFootnote) {
       if (!node.children) return;
       const next = [];
-      for (const child of node.children) {
-        if (child.type === 'text' && !inFootnote) {
-          next.push(...(splitMarkers(child.value) ?? [child]));
+      for (const child of repairAcrossElements(node.children)) {
+        if (child.type === 'text') {
+          for (const piece of repairWithinText(child.value) ?? [child]) {
+            if (piece.type === 'text' && !inFootnote) {
+              next.push(...(splitMarkers(piece.value) ?? [piece]));
+            } else {
+              next.push(piece);
+            }
+          }
           continue;
         }
         if (isElement(child)) {
