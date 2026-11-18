@@ -232,6 +232,28 @@ em {
   margin-left: 0.1em;
 }
 
+/* Footnote number links: no underline (too fussy at this size); crimson and
+   bold so they still read as links. Offset keeps the target clear of the sticky header. */
+.prose sup.footnote-ref a:not(.btn) {
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0 0.15em;
+}
+
+.prose sup.footnote-ref a:not(.btn):hover {
+  text-decoration: underline;
+  opacity: 1;
+}
+
+.prose a[id^="fnref-"],
+.prose p.footnote[id^="fn-"] {
+  scroll-margin-top: 6rem;
+}
+
+.prose p.footnote:target {
+  background-color: var(--color-parchment);
+}
+
 .prose p.footnote {
   font-size: 0.82em;
   line-height: 1.4;
