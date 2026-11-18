@@ -213,6 +213,43 @@ em {
   margin-top: 0.4em;
 }
 
+/* Links inside running text: underline as well as colour, so they don't
+   rely on colour alone (matters for colour-blind readers). Buttons excluded. */
+.prose a:not(.btn) {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.prose a:not(.btn):hover {
+  text-decoration-thickness: 2px;
+}
+
+/* Footnotes (blog posts): superscript markers, smaller note text */
+.prose sup.footnote-ref {
+  font-size: 0.7em;
+  line-height: 0;
+  vertical-align: super;
+  margin-left: 0.1em;
+}
+
+.prose p.footnote {
+  font-size: 0.82em;
+  line-height: 1.4;
+  margin-top: 0.7em;
+  color: var(--color-ink-light);
+}
+
+.prose p.footnote sup.footnote-ref {
+  margin-left: 0;
+}
+
+/* First footnote gets a little extra air above the block of notes */
+.prose p:not(.footnote) + p.footnote {
+  margin-top: var(--space-md);
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--color-kraft);
+}
+
 .prose blockquote {
   border-left: 3px solid var(--color-crimson);
   padding-left: var(--space-sm);
