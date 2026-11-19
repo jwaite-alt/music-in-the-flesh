@@ -213,6 +213,65 @@ em {
   margin-top: 0.4em;
 }
 
+/* Links inside running text: underline as well as colour, so they don't
+   rely on colour alone (matters for colour-blind readers). Buttons excluded. */
+.prose a:not(.btn) {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.prose a:not(.btn):hover {
+  text-decoration-thickness: 2px;
+}
+
+/* Footnotes (blog posts): superscript markers, smaller note text */
+.prose sup.footnote-ref {
+  font-size: 0.7em;
+  line-height: 0;
+  vertical-align: super;
+  margin-left: 0.1em;
+}
+
+/* Footnote number links: no underline (too fussy at this size); crimson and
+   bold so they still read as links. Offset keeps the target clear of the sticky header. */
+.prose sup.footnote-ref a:not(.btn) {
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0 0.15em;
+}
+
+.prose sup.footnote-ref a:not(.btn):hover {
+  text-decoration: underline;
+  opacity: 1;
+}
+
+.prose a[id^="fnref-"],
+.prose p.footnote[id^="fn-"] {
+  scroll-margin-top: 6rem;
+}
+
+.prose p.footnote:target {
+  background-color: var(--color-parchment);
+}
+
+.prose p.footnote {
+  font-size: 0.82em;
+  line-height: 1.4;
+  margin-top: 0.7em;
+  color: var(--color-ink-light);
+}
+
+.prose p.footnote sup.footnote-ref {
+  margin-left: 0;
+}
+
+/* First footnote gets a little extra air above the block of notes */
+.prose p:not(.footnote) + p.footnote {
+  margin-top: var(--space-md);
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--color-kraft);
+}
+
 .prose blockquote {
   border-left: 3px solid var(--color-crimson);
   padding-left: var(--space-sm);
