@@ -23,7 +23,7 @@ const formattedDate = new Date(post.date).toLocaleDateString('en-GB', {
 });
 ---
 
-<BaseLayout title={plainTitle} description={post.description}>
+<BaseLayout title={plainTitle} description={post.description} noindex={entry.id === 'a-system-of-the-musical-world'}>
 
   <header class="post-header section--parchment">
     <div class="container container--prose">
