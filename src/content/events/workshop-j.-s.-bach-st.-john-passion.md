@@ -1,5 +1,5 @@
 ---
-title: Workshop, J. S. Bach, St. John Passion
+title: 'Workshop: J. S. Bach, St. John Passion'
 date: 2027-01-23
 time: ''
 venue: Tonbridge Philharmonic Society
