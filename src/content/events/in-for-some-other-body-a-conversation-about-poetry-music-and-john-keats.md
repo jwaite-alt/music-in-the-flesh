@@ -1,5 +1,5 @@
 ---
-title: '"In for some other body": a conversation about poetry, music and John Keats'
+title: "'In for some other body': a conversation about poetry, music and John Keats"
 date: 2027-03-21
 time: '4.15'
 venue: Umney Theatre, Robinson College
